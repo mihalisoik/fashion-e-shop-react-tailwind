@@ -8,9 +8,13 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: #FFF8F0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: Bodoni Moda , sans-serif;
+}
+
+body {
+  background-color: #FFF8F0;
 }
 
 @layer components {

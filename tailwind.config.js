@@ -16,6 +16,9 @@ export default {
         "accent": "#A3B18A",
         "background": "#FFF8F0",
         "text-color": "#4B3E3E"
+      },
+      backgroundImage: {
+        'hero': "url('/hero-image.jpg')",
       }
     },
   },
