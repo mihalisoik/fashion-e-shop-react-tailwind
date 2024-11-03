@@ -5,7 +5,19 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        bonomimoda: ["Bodoni Moda", "sans-serif"],
+        opensans: ["Open Sans", "sans-serif"],
+      },
+      colors: {
+        "primary": "#FF6F61",
+        "secondary": "#FAE3D9",
+        "accent": "#A3B18A",
+        "background": "#FFF8F0",
+        "text-color": "#4B3E3E"
+      }
+    },
   },
   plugins: [],
 }
