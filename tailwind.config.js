@@ -14,6 +14,8 @@ export default {
         "primary": "#FF6F61",
         "secondary": "#FAE3D9",
         "accent": "#A3B18A",
+        "light-accent":"#BCC9A4",
+        "extra-light-accent":"#D6E1BF",
         "background": "#FFF8F0",
         "text-color": "#4B3E3E"
       },
