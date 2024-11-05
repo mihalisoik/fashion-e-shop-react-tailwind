@@ -5,360 +5,390 @@ export const clothes = [
     id: nanoid(),
     name: "Classic T-Shirt",
     image: "src/assets/logo.png",
-    price: 19.99,
+    priceCents: 1999,
     gender: "unisex",
     category: "t-shirt",
     color: "red",
     stock: 50,
     description: "A comfortable classic red t-shirt for everyday wear.",
-    isNew: true
+    isNew: true,
+    rating: 8
   },
   {
     id: nanoid(),
     name: "Denim Jacket",
     image: "src/assets/logo.png",
-    price: 49.99,
+    priceCents: 4999,
     gender: "male",
     category: "jacket",
     color: "blue",
     stock: 20,
     description: "A stylish blue denim jacket perfect for layering.",
-    isNew: false
+    isNew: false,
+    rating: 7
   },
   {
     id: nanoid(),
     name: "Chic Blouse",
     image: "src/assets/logo.png",
-    price: 29.99,
+    priceCents: 2999,
     gender: "female",
     category: "blouse",
     color: "white",
     stock: 15,
     description: "A chic white blouse for a polished look.",
-    isNew: true
+    isNew: true,
+    rating: 9
   },
   {
     id: nanoid(),
     name: "Cargo Pants",
     image: "src/assets/logo.png",
-    price: 39.99,
+    priceCents: 3999,
     gender: "unisex",
     category: "pants",
     color: "green",
     stock: 25,
     description: "Durable cargo pants with multiple pockets.",
-    isNew: false
+    isNew: false,
+    rating: 6
   },
   {
     id: nanoid(),
     name: "Running Sneakers",
     image: "src/assets/logo.png",
-    price: 69.99,
+    priceCents: 6999,
     gender: "unisex",
     category: "footwear",
     color: "black",
     stock: 30,
     description: "Lightweight running sneakers for optimal performance.",
-    isNew: true
+    isNew: true,
+    rating: 10
   },
   {
     id: nanoid(),
     name: "Leather Boots",
     image: "src/assets/logo.png",
-    price: 89.99,
+    priceCents: 8999,
     gender: "female",
     category: "footwear",
     color: "brown",
     stock: 10,
     description: "Stylish leather boots for any occasion.",
-    isNew: false
+    isNew: false,
+    rating: 8
   },
   {
     id: nanoid(),
     name: "Casual Dress",
     image: "src/assets/logo.png",
-    price: 54.99,
+    priceCents: 5499,
     gender: "female",
     category: "dress",
     color: "floral",
     stock: 12,
     description: "A casual dress with a beautiful floral pattern.",
-    isNew: false
+    isNew: false,
+    rating: 7
   },
   {
     id: nanoid(),
     name: "Sports Shorts",
     image: "src/assets/logo.png",
-    price: 24.99,
+    priceCents: 2499,
     gender: "unisex",
     category: "shorts",
     color: "grey",
     stock: 40,
     description: "Comfortable sports shorts for all your activities.",
-    isNew: true
+    isNew: true,
+    rating: 9
   },
   {
     id: nanoid(),
     name: "Wool Sweater",
     image: "src/assets/logo.png",
-    price: 59.99,
+    priceCents: 5999,
     gender: "male",
     category: "sweater",
     color: "navy",
     stock: 18,
     description: "A cozy wool sweater to keep you warm.",
-    isNew: false
+    isNew: false,
+    rating: 7
   },
   {
     id: nanoid(),
     name: "Formal Shirt",
     image: "src/assets/logo.png",
-    price: 39.99,
+    priceCents: 3999,
     gender: "male",
     category: "shirt",
     color: "white",
     stock: 22,
     description: "A crisp white formal shirt for special occasions.",
-    isNew: false
+    isNew: false,
+    rating: 8
   },
   {
     id: nanoid(),
     name: "Summer Sandals",
     image: "src/assets/logo.png",
-    price: 29.99,
+    priceCents: 2999,
     gender: "female",
     category: "footwear",
     color: "pink",
     stock: 35,
     description: "Comfortable sandals perfect for summer days.",
-    isNew: true
+    isNew: true,
+    rating: 6
   },
   {
     id: nanoid(),
     name: "Track Jacket",
     image: "src/assets/logo.png",
-    price: 44.99,
+    priceCents: 4499,
     gender: "unisex",
     category: "jacket",
     color: "black",
     stock: 15,
     description: "A stylish track jacket for sports and leisure.",
-    isNew: false
+    isNew: false,
+    rating: 8
   },
   {
     id: nanoid(),
     name: "Jeans",
     image: "src/assets/logo.png",
-    price: 49.99,
+    priceCents: 4999,
     gender: "unisex",
     category: "pants",
     color: "blue",
     stock: 40,
     description: "Classic blue jeans for casual wear.",
-    isNew: false
+    isNew: false,
+    rating: 9
   },
   {
     id: nanoid(),
     name: "Graphic Hoodie",
     image: "src/assets/logo.png",
-    price: 39.99,
+    priceCents: 3999,
     gender: "unisex",
     category: "hoodie",
     color: "grey",
     stock: 30,
     description: "A cozy hoodie with a fun graphic design.",
-    isNew: false
+    isNew: false,
+    rating: 6
   },
   {
     id: nanoid(),
     name: "Sweatpants",
     image: "src/assets/logo.png",
-    price: 34.99,
+    priceCents: 3499,
     gender: "unisex",
     category: "pants",
     color: "black",
     stock: 25,
     description: "Comfortable sweatpants for lounging or workouts.",
-    isNew: true
+    isNew: true,
+    rating: 9
   },
   {
     id: nanoid(),
     name: "Beach Cover-Up",
     image: "src/assets/logo.png",
-    price: 24.99,
+    priceCents: 2499,
     gender: "female",
     category: "cover-up",
     color: "light blue",
     stock: 15,
     description: "Light and breezy cover-up for beach days.",
-    isNew: false
+    isNew: false,
+    rating: 5
   },
   {
     id: nanoid(),
     name: "Polo Shirt",
     image: "src/assets/logo.png",
-    price: 29.99,
+    priceCents: 2999,
     gender: "male",
     category: "shirt",
     color: "green",
     stock: 20,
     description: "A classic polo shirt for smart casual looks.",
-    isNew: false
+    isNew: false,
+    rating: 7
   },
   {
     id: nanoid(),
     name: "Maxi Skirt",
     image: "src/assets/logo.png",
-    price: 39.99,
+    priceCents: 3999,
     gender: "female",
     category: "skirt",
     color: "purple",
     stock: 12,
     description: "Flowy maxi skirt for a feminine touch.",
-    isNew: false
+    isNew: false,
+    rating: 8
   },
   {
     id: nanoid(),
     name: "Lightweight Jacket",
     image: "src/assets/logo.png",
-    price: 59.99,
+    priceCents: 5999,
     gender: "unisex",
     category: "jacket",
     color: "olive",
     stock: 20,
     description: "Perfect for transitional weather, this jacket is lightweight and stylish.",
-    isNew: true
+    isNew: true,
+    rating: 9
   },
   {
     id: nanoid(),
     name: "Bikini Set",
     image: "src/assets/logo.png",
-    price: 39.99,
+    priceCents: 3999,
     gender: "female",
     category: "swimwear",
     color: "red",
     stock: 18,
     description: "A stylish bikini set for beach outings.",
-    isNew: false
+    isNew: false,
+    rating: 6
   },
   {
     id: nanoid(),
     name: "Puffer Vest",
     image: "src/assets/logo.png",
-    price: 69.99,
+    priceCents: 6999,
     gender: "unisex",
     category: "vest",
     color: "black",
     stock: 10,
     description: "A warm puffer vest for chilly days.",
-    isNew: false
+    isNew: false,
+    rating: 7
   },
   {
     id: nanoid(),
     name: "Cardigan",
     image: "src/assets/logo.png",
-    price: 49.99,
+    priceCents: 4999,
     gender: "female",
     category: "sweater",
     color: "beige",
     stock: 14,
     description: "A cozy cardigan to layer up your outfit.",
-    isNew: false
+    isNew: false,
+    rating: 8
   },
   {
     id: nanoid(),
     name: "Swim Trunks",
     image: "src/assets/logo.png",
-    price: 29.99,
+    priceCents: 2999,
     gender: "male",
     category: "swimwear",
     color: "blue",
     stock: 20,
     description: "Comfortable swim trunks for the pool or beach.",
-    isNew: true 
+    isNew: true,
+    rating: 9
   },
   {
     id: nanoid(),
     name: "Thermal Top",
     image: "src/assets/logo.png",
-    price: 34.99,
+    priceCents: 3499,
     gender: "unisex",
     category: "top",
     color: "black",
     stock: 22,
     description: "A warm thermal top for cold weather.",
-    isNew: false
+    isNew: false,
+    rating: 8
   },
   {
     id: nanoid(),
     name: "Flannel Shirt",
     image: "src/assets/logo.png",
-    price: 39.99,
+    priceCents: 3999,
     gender: "male",
     category: "shirt",
     color: "red plaid",
     stock: 18,
     description: "A comfortable flannel shirt for casual wear.",
-    isNew: false
+    isNew: false,
+    rating: 7
   },
   {
     id: nanoid(),
     name: "Lightweight Scarf",
     image: "src/assets/logo.png",
-    price: 19.99,
+    priceCents: 1999,
     gender: "unisex",
     category: "accessories",
     color: "grey",
     stock: 30,
     description: "A versatile lightweight scarf for layering.",
-    isNew: false
+    isNew: false,
+    rating: 5
   },
   {
     id: nanoid(),
     name: "Activewear Leggings",
     image: "src/assets/logo.png",
-    price: 39.99,
+    priceCents: 3999,
     gender: "female",
     category: "pants",
     color: "black",
     stock: 25,
     description: "High-performance leggings for your workouts.",
-    isNew: false
+    isNew: false,
+    rating: 8
   },
   {
     id: nanoid(),
     name: "Knit Beanie",
     image: "src/assets/logo.png",
-    price: 14.99,
+    priceCents: 1499,
     gender: "unisex",
     category: "accessories",
     color: "blue",
     stock: 40,
     description: "Warm knit beanie for cold weather.",
-    isNew: false
+    isNew: false,
+    rating: 6
   },
   {
     id: nanoid(),
     name: "Winter Coat",
     image: "src/assets/logo.png",
-    price: 129.99,
+    priceCents: 12999,
     gender: "unisex",
     category: "coat",
     color: "black",
     stock: 8,
     description: "A heavy-duty winter coat for extreme weather.",
-    isNew: false
+    isNew: false,
+    rating: 10
   },
   {
     id: nanoid(),
     name: "Gym Backpack",
     image: "src/assets/logo.png",
-    price: 49.99,
+    priceCents: 4999,
     gender: "unisex",
     category: "accessories",
     color: "red",
     stock: 20,
     description: "A spacious backpack for gym and daily use.",
-    isNew: false
+    isNew: false,
+    rating: 8
   }
 ];

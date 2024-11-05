@@ -4,8 +4,8 @@ function Hero() {
   return (
     <section 
       id="home"
-      className="mt-24 relative max-container">
-      <div className="absolute sm:w-full w-auto h-[50rem] md:h-[40rem] sm:h-[30rem] right-5 bg-contain bg-no-repeat bg-hero bg-right flex items-center justify-center"
+      className="md:mt-24  mt-10 relative max-container">
+      <div className="sm:w-full w-auto h-[50rem] md:h-[40rem] sm:h-[30rem bg-contain bg-no-repeat bg-hero bg-right flex items-center justify-center"
       >
         <div className='container mx-auto px-4 flex flex-col items-center sm:items-start gap-y-4'>
           <h1 className='text-[2.5rem] p-6 sm:p-3 sm:text-[3.5rem] text-text-color font-bold bg-background rounded-xl inline-block max-w-[90%]'>
