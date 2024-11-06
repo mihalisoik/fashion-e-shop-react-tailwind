@@ -12,7 +12,7 @@ export const clothes = [
     stock: 50,
     description: "A comfortable classic t-shirt available in red and black for everyday wear.",
     isNew: true,
-    rating: 8
+    rating: 4.1
   },
   {
     id: nanoid(),
@@ -25,7 +25,7 @@ export const clothes = [
     stock: 20,
     description: "A stylish denim jacket perfect for layering, available in blue and black.",
     isNew: false,
-    rating: 7
+    rating: 3.9
   },
   {
     id: nanoid(),
@@ -38,7 +38,7 @@ export const clothes = [
     stock: 15,
     description: "A chic blouse available in white and pink for a polished look.",
     isNew: true,
-    rating: 9
+    rating: 4.5
   },
   {
     id: nanoid(),
@@ -51,7 +51,7 @@ export const clothes = [
     stock: 25,
     description: "Durable cargo pants with multiple pockets.",
     isNew: false,
-    rating: 6
+    rating: 3.4
   },
   {
     id: nanoid(),
@@ -64,7 +64,7 @@ export const clothes = [
     stock: 30,
     description: "Lightweight running sneakers for optimal performance, available in black and white.",
     isNew: true,
-    rating: 10
+    rating: 5.0
   },
   {
     id: nanoid(),
@@ -77,7 +77,7 @@ export const clothes = [
     stock: 10,
     description: "Stylish leather boots for any occasion.",
     isNew: false,
-    rating: 8
+    rating: 4.0
   },
   {
     id: nanoid(),
@@ -90,7 +90,7 @@ export const clothes = [
     stock: 12,
     description: "A casual dress available in floral pattern and solid pink.",
     isNew: false,
-    rating: 7
+    rating: 3.7
   },
   {
     id: nanoid(),
@@ -103,7 +103,7 @@ export const clothes = [
     stock: 40,
     description: "Comfortable sports shorts available in grey and black for all your activities.",
     isNew: true,
-    rating: 9
+    rating: 4.6
   },
   {
     id: nanoid(),
@@ -116,7 +116,7 @@ export const clothes = [
     stock: 18,
     description: "A cozy wool sweater to keep you warm.",
     isNew: false,
-    rating: 7
+    rating: 3.8
   },
   {
     id: nanoid(),
@@ -129,7 +129,7 @@ export const clothes = [
     stock: 22,
     description: "A crisp formal shirt available in white and blue for special occasions.",
     isNew: false,
-    rating: 8
+    rating: 4.0
   },
   {
     id: nanoid(),
@@ -142,7 +142,7 @@ export const clothes = [
     stock: 35,
     description: "Comfortable sandals perfect for summer days.",
     isNew: true,
-    rating: 6
+    rating: 2.8
   },
   {
     id: nanoid(),
@@ -155,7 +155,7 @@ export const clothes = [
     stock: 15,
     description: "A stylish track jacket for sports and leisure.",
     isNew: false,
-    rating: 8
+    rating: 4.1
   },
   {
     id: nanoid(),
@@ -168,7 +168,7 @@ export const clothes = [
     stock: 40,
     description: "Classic blue jeans for casual wear.",
     isNew: false,
-    rating: 9
+    rating: 4.5
   },
   {
     id: nanoid(),
@@ -181,7 +181,7 @@ export const clothes = [
     stock: 30,
     description: "A cozy hoodie with a fun graphic design, available in grey and navy.",
     isNew: false,
-    rating: 6
+    rating: 3.1
   },
   {
     id: nanoid(),
@@ -194,7 +194,7 @@ export const clothes = [
     stock: 25,
     description: "Comfortable sweatpants available in black and grey for lounging or workouts.",
     isNew: true,
-    rating: 9
+    rating: 4.8
   },
   {
     id: nanoid(),
@@ -207,7 +207,7 @@ export const clothes = [
     stock: 15,
     description: "Light and breezy cover-up for beach days.",
     isNew: false,
-    rating: 5
+    rating: 2.9
   },
   {
     id: nanoid(),
@@ -220,7 +220,7 @@ export const clothes = [
     stock: 20,
     description: "A classic polo shirt available in green and navy for smart casual looks.",
     isNew: false,
-    rating: 7
+    rating: 3.7
   },
   {
     id: nanoid(),
@@ -233,7 +233,7 @@ export const clothes = [
     stock: 12,
     description: "Flowy maxi skirt for a feminine touch.",
     isNew: false,
-    rating: 8
+    rating: 4.1
   },
   {
     id: nanoid(),
@@ -246,7 +246,7 @@ export const clothes = [
     stock: 20,
     description: "Perfect for transitional weather, this jacket is lightweight and stylish.",
     isNew: true,
-    rating: 9
+    rating: 4.7
   },
   {
     id: nanoid(),
@@ -259,7 +259,7 @@ export const clothes = [
     stock: 18,
     description: "A stylish bikini set for beach outings.",
     isNew: false,
-    rating: 6
+    rating: 3.2
   },
   {
     id: nanoid(),
@@ -272,7 +272,7 @@ export const clothes = [
     stock: 10,
     description: "A warm puffer vest for chilly days.",
     isNew: false,
-    rating: 7
+    rating: 3.8
   },
   {
     id: nanoid(),
@@ -285,7 +285,7 @@ export const clothes = [
     stock: 14,
     description: "A cozy cardigan to layer up your outfit.",
     isNew: false,
-    rating: 8
+    rating: 4.0
   },
   {
     id: nanoid(),
@@ -298,7 +298,7 @@ export const clothes = [
     stock: 30,
     description: "Quick-dry swim trunks for pool or beach.",
     isNew: true,
-    rating: 7
+    rating: 3.8
   },
   {
     id: nanoid(),
@@ -311,7 +311,7 @@ export const clothes = [
     stock: 22,
     description: "A warm thermal top for cold weather, available in black and dark grey.",
     isNew: false,
-    rating: 8
+    rating: 4.3
   },
   {
     id: nanoid(),
@@ -324,7 +324,7 @@ export const clothes = [
     stock: 18,
     description: "A comfortable flannel shirt available in red and blue plaid for casual wear.",
     isNew: false,
-    rating: 7
+    rating: 3.7
   },
   {
     id: nanoid(),
@@ -337,7 +337,7 @@ export const clothes = [
     stock: 25,
     description: "High-performance leggings available in black and dark blue for your workouts.",
     isNew: false,
-    rating: 8
+    rating: 4.1
   },
   {
     id: nanoid(),
@@ -350,7 +350,7 @@ export const clothes = [
     stock: 8,
     description: "A heavy-duty winter coat for extreme weather, available in black and navy.",
     isNew: false,
-    rating: 10
+    rating: 5.0
   },
   {
     id: nanoid(),
@@ -363,6 +363,6 @@ export const clothes = [
     stock: 20,
     description: "A spacious backpack available in red and blue for gym and daily use.",
     isNew: false,
-    rating: 8
+    rating: 4.1
   }
 ];

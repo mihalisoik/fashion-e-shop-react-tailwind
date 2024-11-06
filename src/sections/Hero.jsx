@@ -11,7 +11,7 @@ function Hero() {
           <h1 className='text-[2.5rem] p-6 sm:p-3 sm:text-[3.5rem] text-text-color font-bold bg-background rounded-xl inline-block max-w-[90%]'>
             <span className='text-accent'>Elevate</span> Your Everyday Style!
           </h1>
-          <p className='font-opensans w-96 sm:w-full md:w-[40rem] leading-5 tracking-widest text-slate-700 bg-background p-4 rounded-xl'>
+          <p className='font-secondary w-96 sm:w-full md:w-[40rem] leading-5 tracking-widest text-slate-700 bg-background p-4 rounded-xl'>
             Discover a collection curated for trendsetters and timeless fashion lovers alike. From statement pieces to everyday essentials, our e-shop brings you quality, comfort, and style all in one place. With new arrivals every week, you’re bound to find something that fits just right. Step up your wardrobe and shop the looks you’ll love!
           </p>
           <button className='bg-accent py-4 px-10 rounded-full text-slate-100 shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 hover:bg-light-accent active:bg-extra-light-accent'>

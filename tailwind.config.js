@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        bonomimoda: ["Bodoni Moda", "sans-serif"],
-        opensans: ["Open Sans", "sans-serif"],
+        primary: ["Bodoni Moda", "sans-serif"],
+        secondary: ["Open Sans", "sans-serif"],
       },
       colors: {
         "primary": "#FF6F61",
