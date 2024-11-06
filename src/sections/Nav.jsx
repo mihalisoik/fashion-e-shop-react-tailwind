@@ -10,7 +10,7 @@ function Nav() {
         className="cursor-pointer"
         />
       </a>
-       <p className='text-slate-50 text-sm'>
+       <p className='text-slate-50 text-sm font-primary'>
         Free shipping for purchases of €50 and above
         </p>
        <div>

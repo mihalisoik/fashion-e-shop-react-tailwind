@@ -8,15 +8,15 @@ export default {
     extend: {
       fontFamily: {
         primary: ["Bodoni Moda", "sans-serif"],
-        secondary: ["Open Sans", "sans-serif"],
+        secondary: ["Open Sans", "sans-serif"]
       },
       colors: {
-        "primary": "#FF6F61",
-        "secondary": "#FAE3D9",
-        "accent": "#A3B18A",
+        primary: "#FF6F61",
+        secondary: "#FAE3D9",
+        accent: "#A3B18A",
         "light-accent":"#BCC9A4",
         "extra-light-accent":"#D6E1BF",
-        "background": "#FFF8F0",
+        background: "#FFF8F0",
         "text-color": "#4B3E3E"
       },
       backgroundImage: {
