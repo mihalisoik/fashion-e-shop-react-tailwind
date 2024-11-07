@@ -15,3 +15,19 @@ export function importProductToCart(id) {
   totalQuantity++
   console.log(totalQuantity)
 } 
+
+export function addToCart(id) {
+  cart.forEach(item => {
+    if (item.id === id) {
+      item.quantity++
+    }
+  })
+}
+
+export function removeFromCart(id) {
+  cart.forEach(item => {
+    if (item.id === id) {
+      item.quantity--
+    }
+  })
+}

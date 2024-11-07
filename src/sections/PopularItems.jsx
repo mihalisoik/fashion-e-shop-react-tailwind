@@ -4,8 +4,11 @@ import { clothes } from "../constants/clothes"
 function PopularItems({refreshProductsInTooltip}) {
   const popularClothes = clothes.filter(clothe => clothe.rating >= 4.3)
 
-  const popularItemsElements = popularClothes.map(clothe=>(
-    <ProductCard 
+  const popularItemsElements = popularClothes.map(clothe=> {
+
+    
+
+    return <ProductCard 
       key={clothe.id}
       id={clothe.id}
       image={clothe.image}
@@ -14,7 +17,7 @@ function PopularItems({refreshProductsInTooltip}) {
       priceCents={clothe.priceCents}
       refreshProductsInTooltip={refreshProductsInTooltip}
     />
-  ))
+  })
 
   return (
     <section
