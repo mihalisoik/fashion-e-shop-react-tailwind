@@ -1,6 +1,6 @@
-import { clothes } from "../../constants/clothes"
 import AddToCartButton from "../components/Buttons"
 import ProductCard from "../components/ProductCard"
+import { clothes } from "../constants/clothes"
 import { formatCurrency } from "../utils/money"
 
 function PopularItems() {

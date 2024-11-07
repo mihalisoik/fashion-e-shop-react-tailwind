@@ -1,6 +1,6 @@
 import { useState } from "react"
-import { reviews } from "../../constants/reviews"
 import ReviewCard from "../components/ReviewCard"
+import { reviews } from "../constants/reviews"
 
 function CustomerReviews() {
 
