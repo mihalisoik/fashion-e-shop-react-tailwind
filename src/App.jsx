@@ -21,7 +21,7 @@ export default function App() {
     <div>
       <Navbar renderTooltip={renderTooltip}/>
       <Hero />
-      <PopularItems />
+      <PopularItems animatedTooltip={animatedTooltip}/>
       <CustomerReviews />
       <Newsletter />
       <Footer />
