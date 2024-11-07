@@ -2,3 +2,4 @@ na valw keywords
 na psaksw an exei erwthmatika o kwdikas mou
 na psaksw an exei consolelogs o kwdikas mou
 na psaksw an exei imports pou den xrhsimopoiw ston kwdika mou
+na valw sto chat gpt na mou to kanei prettier
