@@ -12,9 +12,9 @@ export default function App() {
 
   function animatedTooltip() {
     setRenderTooltip(true)
-    setTimeout(()=>{
-      setRenderTooltip(false)
-    },2500)
+    setTimeout(() => {
+      setRenderTooltip(false);
+    }, 2500)
   }
 
   return (

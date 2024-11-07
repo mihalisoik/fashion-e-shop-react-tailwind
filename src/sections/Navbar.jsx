@@ -1,3 +1,5 @@
+import { totalQuantity } from "../constants/cart"
+
 function Navbar({renderTooltip}) {
 
   return (
@@ -15,12 +17,14 @@ function Navbar({renderTooltip}) {
        <p className='text-slate-50 text-sm font-primary max-sm:w-40'>
         Free shipping for purchases of €50 and above
         </p>
-       <div className="flex gap-0.5 relative">
-          <p>Your Cart: </p>
+       <div className="flex gap-2 relative bg-accent border-2 p-2 group hover:shadow-md hover:bg-light-accent active:bg-extra-light-accent cursor-pointer">
+          <p className="text-slate-50">
+            Your Cart
+          </p>
           <img src="src/assets/icons/cart.svg" alt="cart" />
-          {renderTooltip && <div className="absolute top-7 right-0 whitespace-nowrap bg-gray-300/60 text-sm py-1 px-3 rounded-md goupstyle">
-           Added to Cart
-          </div>}
+          <div className="absolute top-12 right-5 whitespace-nowrap bg-gray-800/60 text-sm text-white py-1 px-3 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+          {`${totalQuantity} items`}
+          </div>
        </div>
       </div>
     </nav>
