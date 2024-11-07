@@ -1,7 +1,7 @@
 import ProductCard from "../components/ProductCard"
 import { clothes } from "../constants/clothes"
 
-function PopularItems({animatedTooltip}) {
+function PopularItems({refreshProductsInTooltip}) {
   const popularClothes = clothes.filter(clothe => clothe.rating >= 4.3)
 
   const popularItemsElements = popularClothes.map(clothe=>(
@@ -12,7 +12,7 @@ function PopularItems({animatedTooltip}) {
       name={clothe.name}
       rating={clothe.rating}
       priceCents={clothe.priceCents}
-      animatedTooltip={animatedTooltip}
+      refreshProductsInTooltip={refreshProductsInTooltip}
     />
   ))
 

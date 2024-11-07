@@ -1,6 +1,6 @@
 import { totalQuantity } from "../constants/cart"
 
-function Navbar({renderTooltip}) {
+function Navbar() {
 
   return (
     <nav className="px-5 max-sm:px-1 bg-accent fixed left-0 right-0 top-0 h-16 z-10 grid grid-cols-[auto,1fr] items-center">

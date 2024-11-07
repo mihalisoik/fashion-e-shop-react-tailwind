@@ -10,18 +10,15 @@ export default function App() {
 
   const [renderTooltip,setRenderTooltip] = useState(false)
 
-  function animatedTooltip() {
-    setRenderTooltip(true)
-    setTimeout(() => {
-      setRenderTooltip(false);
-    }, 2500)
+  function refreshProductsInTooltip() {
+    setRenderTooltip(oldValue => !oldValue)
   }
 
   return (
     <div>
-      <Navbar renderTooltip={renderTooltip}/>
+      <Navbar />
       <Hero />
-      <PopularItems animatedTooltip={animatedTooltip}/>
+      <PopularItems refreshProductsInTooltip={refreshProductsInTooltip}/>
       <CustomerReviews />
       <Newsletter />
       <Footer />
