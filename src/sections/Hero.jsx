@@ -1,5 +1,3 @@
-import heroImage from '../../public/hero-image.jpg';
-
 function Hero() {
   return (
     <section 

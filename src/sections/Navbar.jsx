@@ -1,6 +1,5 @@
 function Navbar({renderTooltip}) {
 
-
   return (
     <nav className="px-5 max-sm:px-1 bg-accent fixed left-0 right-0 top-0 h-16 z-10 grid grid-cols-[auto,1fr] items-center">
       <img src="src/assets/icons/menu.svg" alt="menu-icon"/>

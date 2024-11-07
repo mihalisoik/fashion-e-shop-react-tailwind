@@ -17,8 +17,6 @@ function Newsletter() {
 
   function submitEmail(event) {
 
-      //event.preventDefault();
-
       const validEmails = [
       "@gmail.com",
       "@yahoo.com",
