@@ -13,7 +13,7 @@ function ProductCard({id,image,name,rating,priceCents,refreshProductsInTooltip})
   }
 
    let productQuantity; 
-   cart.forEach(item => {
+   cart.forEach((item,index) => {
     if (item.id === id) {
       productQuantity = item.quantity
     }
