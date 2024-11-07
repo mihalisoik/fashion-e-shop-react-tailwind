@@ -14,7 +14,7 @@ function Hero() {
           <p className='font-secondary w-96 sm:w-full md:w-[40rem] leading-5 tracking-widest text-slate-700 bg-background p-4 rounded-xl'>
             Discover a collection curated for trendsetters and timeless fashion lovers alike. From statement pieces to everyday essentials, our e-shop brings you quality, comfort, and style all in one place. With new arrivals every week, you’re bound to find something that fits just right. Step up your wardrobe and shop the looks you’ll love!
           </p>
-          <button className='font-primary bg-accent py-4 px-10 rounded-full text-slate-100 shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 hover:bg-light-accent active:bg-extra-light-accent'>
+          <button className='main-button'>
             Shop now
           </button>
           </div>

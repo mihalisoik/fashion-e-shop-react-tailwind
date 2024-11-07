@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="md:mt-24 mt-10 bg-black">
+    <footer className="bg-black">
       <div className="max-container text-white py-10 max-sm:px-5 sm:px-10 flex flex-col lg:flex-row gap-4">
         <div>
           logo here
@@ -21,7 +21,7 @@ function Footer() {
         <div className="text-3xl lg:px-10">
           Get in touch
           <div className="text-base mt-3 hover:text-gray-500 cursor-pointer">
-            example@example.com
+            mihalisoik@gmail.com
           </div>
           <div className="text-base mt-1 hover:text-gray-500 cursor-pointer">
             +30 1234567891

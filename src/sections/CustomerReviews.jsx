@@ -4,13 +4,13 @@ import ReviewCard from "../components/ReviewCard"
 
 function CustomerReviews() {
 
-  const [renderedReviews,setRenderedReviews] = useState(4) 
+  const [renderedReviews,setRenderedReviews] = useState(2) 
 
   function renderMoreReviews() {
-    if (renderedReviews + 4 > reviews.length) {
+    if (renderedReviews + 2 > reviews.length) {
       setRenderedReviews(reviews.length)
     } else {
-      setRenderedReviews(oldCount => oldCount + 4)
+      setRenderedReviews(oldCount => oldCount + 2)
     }
   }
 
