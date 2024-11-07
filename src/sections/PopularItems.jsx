@@ -7,6 +7,7 @@ function PopularItems({animatedTooltip}) {
   const popularItemsElements = popularClothes.map(clothe=>(
     <ProductCard 
       key={clothe.id}
+      id={clothe.id}
       image={clothe.image}
       name={clothe.name}
       rating={clothe.rating}
