@@ -1,11 +1,12 @@
+import MenuBar from "../components/MenuBar"
 import { totalQuantity } from "../constants/cart"
 
 function Navbar() {
 
   return (
     <nav className="">
-      <div className="absolute top-0 bottom-0 left-0 right-0 backdrop-blur-md bg-white/30 z-20">
-        yoyoyo
+      <div className="fixed w-full top-0 bottom-0 backdrop-blur-md bg-white/30 z-20 lg:w-96">
+        <MenuBar />
       </div>
       <div className="bg-accent fixed left-0 right-0 top-0 h-16 z-10 grid grid-cols-[auto,1fr] items-center px-5 max-sm:px-1">
         <button>
