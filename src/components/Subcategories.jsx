@@ -11,7 +11,7 @@ function Subcategories({ gender }) {
           key={item.category}
           className="w-full text-md mb-6 font-primary px-3 py-1 rounded-sm  hover:bg-white cursor-pointer"
         >
-          {item.category}
+          <a href="/order">{item.category}</a>
         </li>
       );
     }

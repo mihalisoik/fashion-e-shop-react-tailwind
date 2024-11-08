@@ -1,26 +1,14 @@
-import { useState } from "react";
-import CustomerReviews from "./sections/CustomerReviews";
-import Footer from "./sections/Footer";
-import Hero from "./sections/Hero";
-import Navbar from "./sections/Navbar";
-import Newsletter from "./sections/Newsletter";
-import PopularItems from "./sections/PopularProducts";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import OrderPage from "./pages/OrderPage";
 
 export default function App() {
-  const [renderTooltip, setRenderTooltip] = useState(false);
-
-  function refreshProductsInTooltip() {
-    setRenderTooltip((oldValue) => !oldValue);
-  }
-
   return (
-    <div>
-      <Navbar />
-      <Hero />
-      <PopularItems refreshProductsInTooltip={refreshProductsInTooltip} />
-      <CustomerReviews />
-      <Newsletter />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/order" element={<OrderPage />} />
+      </Routes>
+    </Router>
   );
 }

@@ -2,27 +2,29 @@ import { useState } from "react";
 import MenuBar from "../components/MenuBar";
 import { totalQuantity } from "../constants/cart";
 
-function Navbar() {
+function Navbar({ isHomepage }) {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <nav>
+    <nav className="h-16 bg-accent px-5 max-sm:px-1 items-center z-10 left-0 right-0 top-0 fixed">
       {openMenu && (
-        <div className="fixed w-full backdrop-blur-md bg-white/30 z-20 lg:w-96 inset-y-0 overflow-y-auto">
+        <div className="fixed w-full -left-1 backdrop-blur-md bg-white/30 z-100 lg:w-96 inset-y-0 overflow-y-auto">
           <MenuBar setOpenMenu={setOpenMenu} />
         </div>
       )}
-      <div className="bg-accent fixed left-0 right-0 top-0 h-16 z-10 grid grid-cols-[auto,1fr] items-center px-5 max-sm:px-1">
-        <button
-          onClick={() => {
-            setOpenMenu((oldValue) => !oldValue);
-            document.body.style.overflow = "hidden";
-          }}
-        >
-          <img src="src/assets/icons/menu.svg" alt="Open Menu" />
-        </button>
+      <div className={`  ${isHomepage && "grid grid-cols-[auto,1fr]"}`}>
+        {isHomepage && (
+          <button
+            onClick={() => {
+              setOpenMenu((oldValue) => !oldValue);
+              document.body.style.overflow = "hidden";
+            }}
+          >
+            <img src="src/assets/icons/menu.svg" alt="Open Menu" />
+          </button>
+        )}
         <div className="flex items-center justify-between sm:ml-3">
-          <a href="index.html" className="flex items-center">
+          <a href="/" className="flex items-center">
             <img
               src="src/assets/logo.png"
               alt="Company Logo"
