@@ -9,9 +9,12 @@ function ColorFilter() {
 
   const uniqueColorArray = [...new Set(flattenedColorArray)];
 
-  const colorElements = uniqueColorArray.map((color) => {
+  console.log(uniqueColorArray);
+
+  const colorElements = uniqueColorArray.map((color, index) => {
     return (
       <div
+        key={index}
         style={{ backgroundColor: color }}
         className="border-[1px] border-white outline outline-2 outline-gray-200 p-1 w-12 h-12 cursor-pointer"
       ></div>

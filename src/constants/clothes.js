@@ -90,7 +90,7 @@ export const clothes = [
     priceCents: 5499,
     gender: "female",
     category: "Dresses",
-    color: ["floral", "pink"],
+    color: "pink",
     stock: 12,
     description: "A casual dress available in floral pattern and solid pink.",
     isNew: false,

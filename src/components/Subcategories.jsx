@@ -3,7 +3,7 @@ import { clothes } from "../constants/clothes";
 function Subcategories({ gender }) {
   const categoryArray = [];
 
-  const CategoryElements = clothes.map((item) => {
+  const categoryElements = clothes.map((item) => {
     if (item.gender === gender && !categoryArray.includes(item.category)) {
       categoryArray.push(item.category);
       return (
@@ -17,7 +17,7 @@ function Subcategories({ gender }) {
     }
   });
 
-  return <ul>{CategoryElements}</ul>;
+  return <ul>{categoryElements}</ul>;
 }
 
 export default Subcategories;
