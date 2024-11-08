@@ -7,7 +7,7 @@ function MenuBar({ setOpenMenu }) {
   const [renderUnisexCategories, setRenderUnisexCategories] = useState(false);
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center font-primary">
       <button
         className="ml-auto mr-4 mt-3"
         onClick={() => {

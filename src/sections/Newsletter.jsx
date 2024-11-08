@@ -55,7 +55,10 @@ function Newsletter() {
             onChange={changeEmail}
             onKeyDown={checkIfUserPressedEnter}
           />
-          <button className="main-button py-3.5" onClick={submitEmail}>
+          <button
+            className="main-button main-button-hover py-3.5"
+            onClick={submitEmail}
+          >
             Submit
           </button>
         </form>

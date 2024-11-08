@@ -9,7 +9,7 @@ function Subcategories({ gender }) {
       return (
         <li
           key={item.category}
-          className="w-full text-md mb-6 font-primary px-3 py-1 rounded-sm  hover:bg-white cursor-pointer"
+          className="w-full text-md mb-6 px-3 py-1 rounded-sm  hover:bg-white cursor-pointer"
         >
           <a href="/order">{item.category}</a>
         </li>

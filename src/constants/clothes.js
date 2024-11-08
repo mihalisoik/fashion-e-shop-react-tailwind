@@ -12,7 +12,7 @@ export const clothes = [
     stock: 50,
     description:
       "A comfortable classic t-shirt available in red and black for everyday wear.",
-    isNew: true,
+    isNew: false,
     rating: 4.1,
   },
   {
@@ -40,7 +40,7 @@ export const clothes = [
     stock: 15,
     description:
       "A chic blouse available in white and pink for a polished look.",
-    isNew: true,
+    isNew: false,
     rating: 4.5,
   },
   {
@@ -67,7 +67,7 @@ export const clothes = [
     stock: 30,
     description:
       "Lightweight running sneakers for optimal performance, available in black and white.",
-    isNew: true,
+    isNew: false,
     rating: 5.0,
   },
   {
@@ -90,7 +90,7 @@ export const clothes = [
     priceCents: 5499,
     gender: "female",
     category: "Dresses",
-    color: ["floral", "solid pink"],
+    color: ["floral", "pink"],
     stock: 12,
     description: "A casual dress available in floral pattern and solid pink.",
     isNew: false,
@@ -107,7 +107,7 @@ export const clothes = [
     stock: 40,
     description:
       "Comfortable sports shorts available in grey and black for all your activities.",
-    isNew: true,
+    isNew: false,
     rating: 4.6,
   },
   {
@@ -145,9 +145,9 @@ export const clothes = [
     gender: "female",
     category: "Shoes",
     color: "pink",
-    stock: 35,
+    stock: 0,
     description: "Comfortable sandals perfect for summer days.",
-    isNew: true,
+    isNew: false,
     rating: 2.8,
   },
   {
@@ -171,7 +171,7 @@ export const clothes = [
     gender: "unisex",
     category: "Pants",
     color: "blue",
-    stock: 40,
+    stock: 0,
     description: "Classic blue jeans for casual wear.",
     isNew: false,
     rating: 4.5,
@@ -201,7 +201,7 @@ export const clothes = [
     stock: 25,
     description:
       "Comfortable sweatpants available in black and grey for lounging or workouts.",
-    isNew: true,
+    isNew: false,
     rating: 4.8,
   },
   {
@@ -211,7 +211,7 @@ export const clothes = [
     priceCents: 2499,
     gender: "female",
     category: "Cover-ups",
-    color: "light blue",
+    color: "cyan",
     stock: 15,
     description: "Light and breezy cover-up for beach days.",
     isNew: false,
@@ -255,7 +255,7 @@ export const clothes = [
     stock: 20,
     description:
       "Perfect for transitional weather, this jacket is lightweight and stylish.",
-    isNew: true,
+    isNew: false,
     rating: 4.7,
   },
   {
@@ -305,9 +305,9 @@ export const clothes = [
     gender: "male",
     category: "Swimwear",
     color: "blue",
-    stock: 30,
+    stock: 0,
     description: "Quick-dry swim trunks for pool or beach.",
-    isNew: true,
+    isNew: false,
     rating: 3.8,
   },
   {
@@ -317,7 +317,7 @@ export const clothes = [
     priceCents: 3499,
     gender: "unisex",
     category: "T-shirts",
-    color: ["black", "dark grey"],
+    color: ["black", "grey"],
     stock: 22,
     description:
       "A warm thermal top for cold weather, available in black and dark grey.",
@@ -331,7 +331,7 @@ export const clothes = [
     priceCents: 3999,
     gender: "male",
     category: "Shirts",
-    color: ["red plaid", "blue plaid"],
+    color: ["red", "blue"],
     stock: 18,
     description:
       "A comfortable flannel shirt available in red and blue plaid for casual wear.",
@@ -345,7 +345,7 @@ export const clothes = [
     priceCents: 3999,
     gender: "female",
     category: "Pants",
-    color: ["black", "dark blue"],
+    color: ["black", "blue"],
     stock: 25,
     description:
       "High-performance leggings available in black and dark blue for your workouts.",
@@ -390,7 +390,7 @@ export const clothes = [
     color: "white",
     stock: 10,
     description: "Insulated ski jacket to keep you warm on the slopes.",
-    isNew: true,
+    isNew: false,
     rating: 4.9,
   },
   {
@@ -430,7 +430,7 @@ export const clothes = [
     color: "beige",
     stock: 30,
     description: "A stylish sun hat for sunny days.",
-    isNew: true,
+    isNew: false,
     rating: 4.0,
   },
   {
@@ -456,7 +456,7 @@ export const clothes = [
     color: "navy",
     stock: 30,
     description: "Comfortable track pants for lounging and casual outings.",
-    isNew: true,
+    isNew: false,
     rating: 4.3,
   },
   {
@@ -469,7 +469,7 @@ export const clothes = [
     color: "purple",
     stock: 40,
     description: "A high-quality yoga mat for all your fitness routines.",
-    isNew: true,
+    isNew: false,
     rating: 4.6,
   },
   {
@@ -495,7 +495,7 @@ export const clothes = [
     color: "white",
     stock: 15,
     description: "A breathable linen shirt for summer days.",
-    isNew: true,
+    isNew: false,
     rating: 4.4,
   },
   {
@@ -505,8 +505,8 @@ export const clothes = [
     priceCents: 7999,
     gender: "female",
     category: "Coats",
-    color: "camel",
-    stock: 18,
+    color: "beige",
+    stock: 0,
     description: "A classic trench coat for all seasons.",
     isNew: false,
     rating: 4.8,
@@ -534,17 +534,17 @@ export const clothes = [
     color: "black",
     stock: 12,
     description: "A bold biker jacket for an edgy look.",
-    isNew: true,
+    isNew: false,
     rating: 4.5,
   },
   {
     id: nanoid(),
-    name: "Floral Skirt",
+    name: "Pink Skirt",
     image: "src/assets/logo.png",
     priceCents: 3599,
     gender: "female",
     category: "Skirts",
-    color: "floral",
+    color: "pink",
     stock: 20,
     description: "A beautiful floral skirt for a fresh look.",
     isNew: false,
@@ -560,7 +560,7 @@ export const clothes = [
     color: "black",
     stock: 10,
     description: "Sturdy boots designed for heavy-duty work environments.",
-    isNew: false,
+    isNew: true,
     rating: 4.6,
   },
   {
@@ -583,7 +583,7 @@ export const clothes = [
     priceCents: 4599,
     gender: "female",
     category: "Sweaters",
-    color: "light blue",
+    color: "cyan",
     stock: 22,
     description: "A cozy pullover sweater for colder days.",
     isNew: false,
@@ -599,7 +599,7 @@ export const clothes = [
     color: "khaki",
     stock: 40,
     description: "Comfortable chinos for a smart-casual look.",
-    isNew: true,
+    isNew: false,
     rating: 4.4,
   },
   {
@@ -609,10 +609,10 @@ export const clothes = [
     priceCents: 4999,
     gender: "unisex",
     category: "Jackets",
-    color: "gray",
+    color: "grey",
     stock: 20,
     description: "A cozy fleece jacket for outdoor activities.",
-    isNew: false,
+    isNew: true,
     rating: 4.2,
   },
   {
@@ -651,7 +651,7 @@ export const clothes = [
     color: "black",
     stock: 30,
     description: "Elegant ballet flats for a chic look.",
-    isNew: true,
+    isNew: false,
     rating: 4.0,
   },
   {
@@ -675,7 +675,7 @@ export const clothes = [
     gender: "unisex",
     category: "Accessories",
     color: "grey",
-    stock: 50,
+    stock: 0,
     description: "A cozy knit beanie for winter warmth.",
     isNew: true,
     rating: 4.2,
@@ -703,7 +703,7 @@ export const clothes = [
     color: "black",
     stock: 18,
     description: "A warm puffer jacket for cold weather protection.",
-    isNew: true,
+    isNew: false,
     rating: 4.9,
   },
   {
@@ -714,7 +714,7 @@ export const clothes = [
     gender: "unisex",
     category: "Coats",
     color: "yellow",
-    stock: 20,
+    stock: 0,
     description: "A stylish raincoat for rainy days.",
     isNew: false,
     rating: 4.0,
@@ -755,7 +755,7 @@ export const clothes = [
     color: "white",
     stock: 35,
     description: "A light and airy summer dress.",
-    isNew: true,
+    isNew: false,
     rating: 4.5,
   },
 ];

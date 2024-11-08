@@ -13,7 +13,7 @@ function Hero() {
             new arrivals every week, you’re bound to find something that fits
             just right. Step up your wardrobe and shop the looks you’ll love!
           </p>
-          <button className="main-button">Shop now</button>
+          <button className="main-button main-button-hover">Shop now</button>
         </div>
       </div>
     </section>
