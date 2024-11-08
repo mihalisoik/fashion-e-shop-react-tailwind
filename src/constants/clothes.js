@@ -1,4 +1,4 @@
-import { nanoid } from 'nanoid';
+import { nanoid } from "nanoid";
 
 export const clothes = [
   {
@@ -7,12 +7,13 @@ export const clothes = [
     image: "src/assets/logo.png",
     priceCents: 1999,
     gender: "unisex",
-    category: "t-shirt",
+    category: "T-shirt",
     color: ["red", "black"],
     stock: 50,
-    description: "A comfortable classic t-shirt available in red and black for everyday wear.",
+    description:
+      "A comfortable classic t-shirt available in red and black for everyday wear.",
     isNew: true,
-    rating: 4.1
+    rating: 4.1,
   },
   {
     id: nanoid(),
@@ -20,12 +21,13 @@ export const clothes = [
     image: "src/assets/logo.png",
     priceCents: 4999,
     gender: "male",
-    category: "jacket",
+    category: "Jacket",
     color: ["blue", "black"],
     stock: 20,
-    description: "A stylish denim jacket perfect for layering, available in blue and black.",
+    description:
+      "A stylish denim jacket perfect for layering, available in blue and black.",
     isNew: false,
-    rating: 3.9
+    rating: 3.9,
   },
   {
     id: nanoid(),
@@ -33,12 +35,13 @@ export const clothes = [
     image: "src/assets/logo.png",
     priceCents: 2999,
     gender: "female",
-    category: "blouse",
+    category: "Blouse",
     color: ["white", "pink"],
     stock: 15,
-    description: "A chic blouse available in white and pink for a polished look.",
+    description:
+      "A chic blouse available in white and pink for a polished look.",
     isNew: true,
-    rating: 4.5
+    rating: 4.5,
   },
   {
     id: nanoid(),
@@ -46,12 +49,12 @@ export const clothes = [
     image: "src/assets/logo.png",
     priceCents: 3999,
     gender: "unisex",
-    category: "pants",
+    category: "Pants",
     color: "green",
     stock: 25,
     description: "Durable cargo pants with multiple pockets.",
     isNew: false,
-    rating: 3.4
+    rating: 3.4,
   },
   {
     id: nanoid(),
@@ -59,12 +62,13 @@ export const clothes = [
     image: "src/assets/logo.png",
     priceCents: 6999,
     gender: "unisex",
-    category: "footwear",
+    category: "Shoes",
     color: ["black", "white"],
     stock: 30,
-    description: "Lightweight running sneakers for optimal performance, available in black and white.",
+    description:
+      "Lightweight running sneakers for optimal performance, available in black and white.",
     isNew: true,
-    rating: 5.0
+    rating: 5.0,
   },
   {
     id: nanoid(),
@@ -72,12 +76,12 @@ export const clothes = [
     image: "src/assets/logo.png",
     priceCents: 8999,
     gender: "female",
-    category: "footwear",
+    category: "Shoes",
     color: "brown",
     stock: 10,
     description: "Stylish leather boots for any occasion.",
     isNew: false,
-    rating: 4.0
+    rating: 4.0,
   },
   {
     id: nanoid(),
@@ -85,12 +89,12 @@ export const clothes = [
     image: "src/assets/logo.png",
     priceCents: 5499,
     gender: "female",
-    category: "dress",
+    category: "Dress",
     color: ["floral", "solid pink"],
     stock: 12,
     description: "A casual dress available in floral pattern and solid pink.",
     isNew: false,
-    rating: 3.7
+    rating: 3.7,
   },
   {
     id: nanoid(),
@@ -98,12 +102,13 @@ export const clothes = [
     image: "src/assets/logo.png",
     priceCents: 2499,
     gender: "unisex",
-    category: "shorts",
+    category: "Shorts",
     color: ["grey", "black"],
     stock: 40,
-    description: "Comfortable sports shorts available in grey and black for all your activities.",
+    description:
+      "Comfortable sports shorts available in grey and black for all your activities.",
     isNew: true,
-    rating: 4.6
+    rating: 4.6,
   },
   {
     id: nanoid(),
@@ -111,12 +116,12 @@ export const clothes = [
     image: "src/assets/logo.png",
     priceCents: 5999,
     gender: "male",
-    category: "sweater",
+    category: "Sweater",
     color: "navy",
     stock: 18,
     description: "A cozy wool sweater to keep you warm.",
     isNew: false,
-    rating: 3.8
+    rating: 3.8,
   },
   {
     id: nanoid(),
@@ -124,12 +129,13 @@ export const clothes = [
     image: "src/assets/logo.png",
     priceCents: 3999,
     gender: "male",
-    category: "shirt",
+    category: "Shirt",
     color: ["white", "blue"],
     stock: 22,
-    description: "A crisp formal shirt available in white and blue for special occasions.",
+    description:
+      "A crisp formal shirt available in white and blue for special occasions.",
     isNew: false,
-    rating: 4.0
+    rating: 4.0,
   },
   {
     id: nanoid(),
@@ -137,12 +143,12 @@ export const clothes = [
     image: "src/assets/logo.png",
     priceCents: 2999,
     gender: "female",
-    category: "footwear",
+    category: "Shoes",
     color: "pink",
     stock: 35,
     description: "Comfortable sandals perfect for summer days.",
     isNew: true,
-    rating: 2.8
+    rating: 2.8,
   },
   {
     id: nanoid(),
@@ -150,12 +156,12 @@ export const clothes = [
     image: "src/assets/logo.png",
     priceCents: 4499,
     gender: "unisex",
-    category: "jacket",
+    category: "Jacket",
     color: "black",
     stock: 15,
     description: "A stylish track jacket for sports and leisure.",
     isNew: false,
-    rating: 4.1
+    rating: 4.1,
   },
   {
     id: nanoid(),
@@ -163,12 +169,12 @@ export const clothes = [
     image: "src/assets/logo.png",
     priceCents: 4999,
     gender: "unisex",
-    category: "pants",
+    category: "Pants",
     color: "blue",
     stock: 40,
     description: "Classic blue jeans for casual wear.",
     isNew: false,
-    rating: 4.5
+    rating: 4.5,
   },
   {
     id: nanoid(),
@@ -176,12 +182,13 @@ export const clothes = [
     image: "src/assets/logo.png",
     priceCents: 3999,
     gender: "unisex",
-    category: "hoodie",
+    category: "Hoodie",
     color: ["grey", "navy"],
     stock: 30,
-    description: "A cozy hoodie with a fun graphic design, available in grey and navy.",
+    description:
+      "A cozy hoodie with a fun graphic design, available in grey and navy.",
     isNew: false,
-    rating: 3.1
+    rating: 3.1,
   },
   {
     id: nanoid(),
@@ -189,12 +196,13 @@ export const clothes = [
     image: "src/assets/logo.png",
     priceCents: 3499,
     gender: "unisex",
-    category: "pants",
+    category: "Pants",
     color: ["black", "grey"],
     stock: 25,
-    description: "Comfortable sweatpants available in black and grey for lounging or workouts.",
+    description:
+      "Comfortable sweatpants available in black and grey for lounging or workouts.",
     isNew: true,
-    rating: 4.8
+    rating: 4.8,
   },
   {
     id: nanoid(),
@@ -202,12 +210,12 @@ export const clothes = [
     image: "src/assets/logo.png",
     priceCents: 2499,
     gender: "female",
-    category: "cover-up",
+    category: "Cover-up",
     color: "light blue",
     stock: 15,
     description: "Light and breezy cover-up for beach days.",
     isNew: false,
-    rating: 2.9
+    rating: 2.9,
   },
   {
     id: nanoid(),
@@ -215,12 +223,13 @@ export const clothes = [
     image: "src/assets/logo.png",
     priceCents: 2999,
     gender: "male",
-    category: "shirt",
+    category: "Shirt",
     color: ["green", "navy"],
     stock: 20,
-    description: "A classic polo shirt available in green and navy for smart casual looks.",
+    description:
+      "A classic polo shirt available in green and navy for smart casual looks.",
     isNew: false,
-    rating: 3.7
+    rating: 3.7,
   },
   {
     id: nanoid(),
@@ -228,12 +237,12 @@ export const clothes = [
     image: "src/assets/logo.png",
     priceCents: 3999,
     gender: "female",
-    category: "skirt",
+    category: "Skirt",
     color: "purple",
     stock: 12,
     description: "Flowy maxi skirt for a feminine touch.",
     isNew: false,
-    rating: 4.1
+    rating: 4.1,
   },
   {
     id: nanoid(),
@@ -241,12 +250,13 @@ export const clothes = [
     image: "src/assets/logo.png",
     priceCents: 5999,
     gender: "unisex",
-    category: "jacket",
+    category: "Jacket",
     color: "olive",
     stock: 20,
-    description: "Perfect for transitional weather, this jacket is lightweight and stylish.",
+    description:
+      "Perfect for transitional weather, this jacket is lightweight and stylish.",
     isNew: true,
-    rating: 4.7
+    rating: 4.7,
   },
   {
     id: nanoid(),
@@ -254,12 +264,12 @@ export const clothes = [
     image: "src/assets/logo.png",
     priceCents: 3999,
     gender: "female",
-    category: "swimwear",
+    category: "Swimwear",
     color: "red",
     stock: 18,
     description: "A stylish bikini set for beach outings.",
     isNew: false,
-    rating: 3.2
+    rating: 3.2,
   },
   {
     id: nanoid(),
@@ -267,12 +277,12 @@ export const clothes = [
     image: "src/assets/logo.png",
     priceCents: 6999,
     gender: "unisex",
-    category: "vest",
+    category: "Vest",
     color: "black",
     stock: 10,
     description: "A warm puffer vest for chilly days.",
     isNew: false,
-    rating: 3.8
+    rating: 3.8,
   },
   {
     id: nanoid(),
@@ -280,12 +290,12 @@ export const clothes = [
     image: "src/assets/logo.png",
     priceCents: 4999,
     gender: "female",
-    category: "sweater",
+    category: "Sweater",
     color: "beige",
     stock: 14,
     description: "A cozy cardigan to layer up your outfit.",
     isNew: false,
-    rating: 4.0
+    rating: 4.0,
   },
   {
     id: nanoid(),
@@ -293,12 +303,12 @@ export const clothes = [
     image: "src/assets/logo.png",
     priceCents: 2999,
     gender: "male",
-    category: "swimwear",
+    category: "Swimwear",
     color: "blue",
     stock: 30,
     description: "Quick-dry swim trunks for pool or beach.",
     isNew: true,
-    rating: 3.8
+    rating: 3.8,
   },
   {
     id: nanoid(),
@@ -306,12 +316,13 @@ export const clothes = [
     image: "src/assets/logo.png",
     priceCents: 3499,
     gender: "unisex",
-    category: "top",
+    category: "T-shirt",
     color: ["black", "dark grey"],
     stock: 22,
-    description: "A warm thermal top for cold weather, available in black and dark grey.",
+    description:
+      "A warm thermal top for cold weather, available in black and dark grey.",
     isNew: false,
-    rating: 4.3
+    rating: 4.3,
   },
   {
     id: nanoid(),
@@ -319,12 +330,13 @@ export const clothes = [
     image: "src/assets/logo.png",
     priceCents: 3999,
     gender: "male",
-    category: "shirt",
+    category: "Shirt",
     color: ["red plaid", "blue plaid"],
     stock: 18,
-    description: "A comfortable flannel shirt available in red and blue plaid for casual wear.",
+    description:
+      "A comfortable flannel shirt available in red and blue plaid for casual wear.",
     isNew: false,
-    rating: 3.7
+    rating: 3.7,
   },
   {
     id: nanoid(),
@@ -332,12 +344,13 @@ export const clothes = [
     image: "src/assets/logo.png",
     priceCents: 3999,
     gender: "female",
-    category: "pants",
+    category: "Pants",
     color: ["black", "dark blue"],
     stock: 25,
-    description: "High-performance leggings available in black and dark blue for your workouts.",
+    description:
+      "High-performance leggings available in black and dark blue for your workouts.",
     isNew: false,
-    rating: 4.1
+    rating: 4.1,
   },
   {
     id: nanoid(),
@@ -345,12 +358,13 @@ export const clothes = [
     image: "src/assets/logo.png",
     priceCents: 12999,
     gender: "unisex",
-    category: "coat",
+    category: "Coat",
     color: ["black", "navy"],
     stock: 8,
-    description: "A heavy-duty winter coat for extreme weather, available in black and navy.",
+    description:
+      "A heavy-duty winter coat for extreme weather, available in black and navy.",
     isNew: false,
-    rating: 5.0
+    rating: 5.0,
   },
   {
     id: nanoid(),
@@ -358,11 +372,12 @@ export const clothes = [
     image: "src/assets/logo.png",
     priceCents: 4999,
     gender: "unisex",
-    category: "accessories",
+    category: "Accessories",
     color: ["red", "blue"],
     stock: 20,
-    description: "A spacious backpack available in red and blue for gym and daily use.",
+    description:
+      "A spacious backpack available in red and blue for gym and daily use.",
     isNew: false,
-    rating: 4.1
-  }
+    rating: 4.1,
+  },
 ];

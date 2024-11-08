@@ -7,21 +7,20 @@ import Newsletter from "./sections/Newsletter";
 import PopularItems from "./sections/PopularItems";
 
 export default function App() {
-
-  const [renderTooltip,setRenderTooltip] = useState(false)
+  const [renderTooltip, setRenderTooltip] = useState(false);
 
   function refreshProductsInTooltip() {
-    setRenderTooltip(oldValue => !oldValue)
+    setRenderTooltip((oldValue) => !oldValue);
   }
 
   return (
     <div>
       <Navbar />
       <Hero />
-      <PopularItems refreshProductsInTooltip={refreshProductsInTooltip}/>
+      <PopularItems refreshProductsInTooltip={refreshProductsInTooltip} />
       <CustomerReviews />
       <Newsletter />
       <Footer />
     </div>
-  )
+  );
 }
