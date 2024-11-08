@@ -15,16 +15,19 @@ function MenuBar({ setOpenMenu }) {
           document.body.style.overflow = "auto";
         }}
       >
-        <img src="src/assets/icons/cancel-icon.svg" alt="cancel-icon" />
+        <img src="src/assets/icons/cancel-icon.svg" alt="Close Menu" />
       </button>
       <div className="mt-12 lg:mr-auto lg:ml-4">
-        <ul onClick={() => setRenderMaleCategories((oldValue) => !oldValue)}>
-          <li className="category-container">
+        <ul>
+          <li
+            className="category-container"
+            onClick={() => setRenderMaleCategories((oldValue) => !oldValue)}
+          >
             Men
             <button>
               <img
                 src="src/assets/icons/arrow-expand.svg"
-                alt="arrow"
+                alt="Expand"
                 className={
                   renderMaleCategories &&
                   "-rotate-90 transition-transform duration-200"
@@ -34,17 +37,20 @@ function MenuBar({ setOpenMenu }) {
           </li>
           {renderMaleCategories && (
             <div>
-              <Subcategories key={"male"} gender={"male"} />
+              <Subcategories gender={"male"} />
             </div>
           )}
         </ul>
-        <ul onClick={() => setRenderFemaleCategories((oldValue) => !oldValue)}>
-          <li className="category-container">
+        <ul>
+          <li
+            className="category-container"
+            onClick={() => setRenderFemaleCategories((oldValue) => !oldValue)}
+          >
             Women
             <button>
               <img
                 src="src/assets/icons/arrow-expand.svg"
-                alt="arrow"
+                alt="Expand"
                 className={
                   renderFemaleCategories &&
                   "-rotate-90 transition-transform duration-200"
@@ -54,17 +60,20 @@ function MenuBar({ setOpenMenu }) {
           </li>
           {renderFemaleCategories && (
             <div>
-              <Subcategories key={"female"} gender={"female"} />
+              <Subcategories gender={"female"} />
             </div>
           )}
         </ul>
-        <ul onClick={() => setRenderUnisexCategories((oldValue) => !oldValue)}>
-          <li className="category-container">
+        <ul>
+          <li
+            className="category-container"
+            onClick={() => setRenderUnisexCategories((oldValue) => !oldValue)}
+          >
             Unisex
             <button>
               <img
                 src="src/assets/icons/arrow-expand.svg"
-                alt="arrow"
+                alt="Expand"
                 className={
                   renderUnisexCategories &&
                   "-rotate-90 transition-transform duration-200"
@@ -74,7 +83,7 @@ function MenuBar({ setOpenMenu }) {
           </li>
           {renderUnisexCategories && (
             <div>
-              <Subcategories key={"unisex"} gender={"unisex"} />
+              <Subcategories gender={"unisex"} />
             </div>
           )}
         </ul>

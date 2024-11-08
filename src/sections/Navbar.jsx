@@ -6,7 +6,7 @@ function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <nav className="">
+    <nav>
       {openMenu && (
         <div className="fixed w-full backdrop-blur-md bg-white/30 z-20 lg:w-96 inset-y-0 overflow-y-auto">
           <MenuBar setOpenMenu={setOpenMenu} />
@@ -19,13 +19,13 @@ function Navbar() {
             document.body.style.overflow = "hidden";
           }}
         >
-          <img src="src/assets/icons/menu.svg" alt="menu-icon" />
+          <img src="src/assets/icons/menu.svg" alt="Open Menu" />
         </button>
         <div className="flex items-center justify-between sm:ml-3">
           <a href="index.html" className="flex items-center">
             <img
               src="src/assets/logo.png"
-              alt="logo"
+              alt="Company Logo"
               width={60}
               className="cursor-pointer mr-auto"
             />
@@ -34,7 +34,7 @@ function Navbar() {
             Free shipping for purchases of €50 and above
           </p>
           <div className="flex gap-2 relative bg-accent border-2 p-2 group hover:shadow-md hover:bg-light-accent active:bg-extra-light-accent cursor-pointer">
-            <img src="src/assets/icons/cart.svg" alt="cart" />
+            <img src="src/assets/icons/cart.svg" alt="Shopping Bag" />
             <p className="text-slate-50 font-primary">
               Shopping Bag ({`${totalQuantity}`})
             </p>

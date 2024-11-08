@@ -14,17 +14,17 @@ function Footer() {
         <div className="flex flex-row justify-between max-lg:max-w-60 lg:ml-auto lg:flex-col lg:gap-5">
           <img
             src="src/assets/icons/facebook.svg"
-            alt="facebook"
+            alt="Facebook"
             className="bg-white w-10 h-10 rounded-full p-1 cursor-pointer"
           />
           <img
             src="src/assets/icons/instagram.svg"
-            alt="instagram"
+            alt="Instagram"
             className="bg-white w-10 h-10 rounded-full p-1 cursor-pointer"
           />
           <img
             src="src/assets/icons/twitter.svg"
-            alt="twitter"
+            alt="Twitter"
             className="bg-white w-10 h-10 rounded-full p-1 cursor-pointer"
           />
         </div>

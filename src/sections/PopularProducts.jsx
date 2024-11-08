@@ -2,7 +2,7 @@ import ProductCard from "../components/ProductCard";
 import { clothes } from "../constants/clothes";
 
 function PopularItems({ refreshProductsInTooltip }) {
-  const popularClothes = clothes.filter((clothe) => clothe.rating >= 4.3);
+  const popularClothes = clothes.filter((clothe) => clothe.rating >= 4.7);
 
   const popularItemsElements = popularClothes.map((clothe) => {
     return (
@@ -23,7 +23,7 @@ function PopularItems({ refreshProductsInTooltip }) {
       id="popular-products"
       className="bg-white py-20 mt-10 w-full shadow-lg"
     >
-      <div className="max-container mt-10 w-full py-4 px-10 rounded-lg flex flex-1 flex-col justify-center items-start gap-6 font-primary">
+      <div className="max-container mt-10 w-full py-4 px-10 flex flex-1 flex-col justify-center items-start gap-6 font-primary">
         <div className="text-3xl tracking-wide">
           Our{" "}
           <span className="text-accent font-semibold tracking-wider">

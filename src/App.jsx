@@ -4,7 +4,7 @@ import Footer from "./sections/Footer";
 import Hero from "./sections/Hero";
 import Navbar from "./sections/Navbar";
 import Newsletter from "./sections/Newsletter";
-import PopularItems from "./sections/PopularItems";
+import PopularItems from "./sections/PopularProducts";
 
 export default function App() {
   const [renderTooltip, setRenderTooltip] = useState(false);

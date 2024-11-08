@@ -31,7 +31,7 @@ function ProductCard({
   });
 
   return (
-    <div className="bg-slate-100 p-5 font-secondary flex flex-col gap-1 justify-center items-start rounded-md shadow-lg flex-shrink-0">
+    <div className="bg-slate-100 p-5 font-secondary flex flex-col gap-1 justify-center items-start rounded-md shadow-lg  flex-shrink-0">
       <img src={image} alt={name} width={150} />
       <div className="flex gap-0.5 font-secondary">
         {(rating * 10) % 10 === 0 ? (
@@ -54,7 +54,7 @@ function ProductCard({
             }}
           >
             Add to Cart
-            <img src="src/assets/icons/add-to-cart.svg" alt="add-to-cart" />
+            <img src="src/assets/icons/add-to-cart.svg" alt="Add to Cart" />
           </button>
         ) : (
           <div className="flex w-36 h-10 text-[#666666] text-base px-3 py-2 bg-slate-50 rounded-3xl justify-between items-center shadow-md">

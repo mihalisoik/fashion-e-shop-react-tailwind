@@ -4,7 +4,7 @@ function ReviewCard({ comment, name }) {
       <div>
         <img
           src="src/assets/icons/profile-pic.svg"
-          alt="profile-pic"
+          alt="Profile Picture"
           className="w-32"
         />
       </div>
