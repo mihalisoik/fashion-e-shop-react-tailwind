@@ -1,10 +1,15 @@
-import { clothes } from "../constants/clothes";
-import Subcategories from "./Subcategories";
+import { menCategoryArray } from "../utils/categories";
 
 function CategoryFilter() {
+  function GenderCategoryElements(gender) {
+    if (gender === "male") {
+      return menCategoryArray.map((category) => <div>{category}</div>);
+    }
+  }
+
   return (
     <div>
-      <div>men</div>
+      <div>Men</div>
       <div></div>
     </div>
   );
