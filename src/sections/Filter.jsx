@@ -13,9 +13,9 @@ function FilterSection() {
       <CategoryFilter gender={"unisex"} />
       <PriceFilter />
       <ColorFilter />
-      <div className="flex flex-col lg:flex-row max-md:mr-4 gap-3 mt-4 justify-evenly">
+      <div className="flex flex-col lg:flex-row max-md:mr-4 gap-3 mt-4 justify-evenly mb-5">
         <button className="main-button main-button-hover">Apply</button>
-        <button className="main-button text-accent bg-slate-50 hover:scale-105 hover:shadow-xl hover:bg-white mb-3">
+        <button className="main-button text-accent bg-slate-50 hover:scale-105 hover:shadow-xl hover:bg-white">
           Reset
         </button>
       </div>

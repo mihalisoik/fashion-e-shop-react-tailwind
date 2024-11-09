@@ -1,4 +1,5 @@
-import FilterSection from "../sections/FilterSection";
+import AllProducts from "../sections/AllProducts";
+import FilterSection from "../sections/Filter";
 import Navbar from "../sections/Navbar";
 
 function OrderPage() {
@@ -6,6 +7,7 @@ function OrderPage() {
     <div>
       <Navbar isHomepage={false} />
       <FilterSection />
+      <AllProducts />
     </div>
   );
 }
