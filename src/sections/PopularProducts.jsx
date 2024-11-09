@@ -12,6 +12,7 @@ function PopularItems({ refreshProductsInTooltip }) {
         image={clothe.image}
         name={clothe.name}
         rating={clothe.rating}
+        isFavorite={clothe.isFavorite}
         priceCents={clothe.priceCents}
         refreshProductsInTooltip={refreshProductsInTooltip}
       />

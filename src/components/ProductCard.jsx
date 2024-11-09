@@ -6,12 +6,14 @@ import {
   removeFromCart,
 } from "../constants/cart";
 import { formatCurrency } from "../utils/money";
+import { clothes } from "../constants/clothes";
 
 function ProductCard({
   id,
   image,
   name,
   rating,
+  isFavorite,
   priceCents,
   refreshProductsInTooltip,
 }) {
@@ -24,14 +26,40 @@ function ProductCard({
   }
 
   let productQuantity;
-  cart.forEach((item, index) => {
+  cart.forEach((item) => {
     if (item.id === id) {
       productQuantity = item.quantity;
     }
   });
 
+  const [favorited, setFavorited] = useState(isFavorite);
+
+  function changeIsFavorite() {
+    clothes.forEach((clothe) => {
+      if (clothe.id === id) {
+        clothe.isFavorite = !clothe.isFavorite;
+        setFavorited(clothe.isFavorite);
+      }
+    });
+  }
+
   return (
     <div className="bg-slate-100 p-5 font-secondary flex flex-col gap-1 justify-center items-start rounded-md shadow-lg  flex-shrink-0">
+      <button className="ml-auto bg-white p-1 rounded-full shadow-md">
+        {favorited ? (
+          <img
+            src="src/assets/icons/favorite.svg"
+            alt="favorite"
+            onClick={changeIsFavorite}
+          />
+        ) : (
+          <img
+            src="src/assets/icons/non-favorite.svg"
+            alt="non-favorite"
+            onClick={changeIsFavorite}
+          />
+        )}
+      </button>
       <img src={image} alt={name} width={150} />
       <div className="flex gap-0.5 font-secondary">
         {(rating * 10) % 10 === 0 ? (
