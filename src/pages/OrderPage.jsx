@@ -20,11 +20,8 @@ function OrderPage() {
   return (
     <div>
       <Navbar isHomepage={false} />
-      <Filter refreshRenderFilters={refreshRenderFilters} />
-      <AllProducts
-        refreshProductsInTooltip={refreshProductsInTooltip}
-        renderFilters={renderFilters}
-      />
+      <Filter />
+      <AllProducts refreshProductsInTooltip={refreshProductsInTooltip} />
     </div>
   );
 }
