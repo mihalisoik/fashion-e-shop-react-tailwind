@@ -6,37 +6,37 @@ function PriceFilter() {
         <input
           type="radio"
           name="price"
-          value="0-20"
+          value="0-40"
           className="mr-2 text-blue-500"
         />
-        Up to €20
+        Up to €40
       </label>
       <label className="flex items-center">
         <input
           type="radio"
           name="price"
-          value="20-50"
+          value="40-80"
           className="mr-2 text-blue-500"
         />
-        €20 - €50
+        €40 - €80
       </label>
       <label className="flex items-center">
         <input
           type="radio"
           name="price"
-          value="50-100"
+          value="80-150"
           class="mr-2 text-blue-500"
         />
-        €50 - €100
+        €80 - €150
       </label>
       <label className="flex items-center">
         <input
           type="radio"
           name="price"
-          value="100+"
+          value="150+"
           className="mr-2 text-blue-500"
         />
-        €100 and above
+        €150 and above
       </label>
     </div>
   );

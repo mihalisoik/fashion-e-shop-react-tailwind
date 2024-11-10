@@ -44,7 +44,7 @@ function ProductCard({
   }
 
   return (
-    <div className="bg-slate-100 p-5 font-secondary flex flex-col gap-1 justify-center items-start rounded-md shadow-lg  flex-shrink-0">
+    <div className="bg-slate-100 p-5 font-secondary flex flex-col gap-1 justify-center items-start rounded-md shadow-lg  flex-shrink-0 w-52">
       <button className="ml-auto bg-white p-1 rounded-full shadow-md">
         {favorited ? (
           <img
@@ -74,7 +74,7 @@ function ProductCard({
       <div className="mt-2">
         {!cartButton ? (
           <button
-            className="flex w-36 h-10 gap-2 text-[#666666] text-sm px-3 py-2 bg-slate-50 rounded-3xl justify-center items-center font-semibold shadow-md hover:bg-slate-100 active:scale-95"
+            className="flex w-40 h-10 gap-2 text-[#666666] text-sm px-3 py-2 bg-slate-50 rounded-3xl justify-center items-center font-semibold shadow-md hover:bg-slate-100 active:scale-95"
             onClick={() => {
               refreshProductsInTooltip();
               importProductToCart(id);
@@ -85,7 +85,7 @@ function ProductCard({
             <img src="src/assets/icons/add-to-cart.svg" alt="Add to Cart" />
           </button>
         ) : (
-          <div className="flex w-36 h-10 text-[#666666] text-base px-3 py-2 bg-slate-50 rounded-3xl justify-between items-center shadow-md">
+          <div className="flex w-40 h-10 text-[#666666] text-base px-3 py-2 bg-slate-50 rounded-3xl justify-between items-center shadow-md">
             <button
               className="border border-[#666666] rounded-full hover:bg-slate-100 active:scale-95"
               onClick={() => {

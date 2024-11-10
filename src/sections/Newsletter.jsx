@@ -40,7 +40,7 @@ function Newsletter() {
 
   return (
     <section id="newsletter" className="py-20">
-      <div className="max-container flex flex-col justify-center items-center gap-10 text-center max-lg:px-5 lg:flex-row lg:justify-around">
+      <div className="max-container flex flex-col justify-center items-center gap-10 text-center max-lg:px-5 lg:flex-row lg:justify-around md:p-3">
         <h2 className="text-3xl font-primary font-semibold">
           Don’t Miss a Beat – Join Our{" "}
           <span className="font-bold text-accent">Newsletter</span> for
@@ -51,7 +51,7 @@ function Newsletter() {
           <input
             type="email"
             placeholder="youremail@example.com"
-            className="w-96 px-5 py-1.5 rounded-md shadow-lg"
+            className="w-80 md:w-96 px-5 py-1.5 rounded-md shadow-lg"
             onChange={changeEmail}
             onKeyDown={checkIfUserPressedEnter}
           />
