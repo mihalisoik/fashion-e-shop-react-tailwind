@@ -4,21 +4,36 @@ import {
   womenCategoryArray,
 } from "../constants/categories";
 
-function CategoryFilter({ gender }) {
+function CategoryFilter({ gender, controlFilters }) {
   const menCategoryElements = menCategoryArray.map((category) => (
-    <button className="hover:bg-gray-400 p-1 border border-black rounded-full text-center">
+    <button
+      className="hover:bg-gray-400 p-1 border border-black rounded-full text-center"
+      onClick={(event) => {
+        controlFilters(`Men ${event.target.innerText}`);
+      }}
+    >
       {category}
     </button>
   ));
 
   const womenCategoryElements = womenCategoryArray.map((category) => (
-    <button className="hover:bg-gray-400 p-1 border border-black rounded-full text-center">
+    <button
+      className="hover:bg-gray-400 p-1 border border-black rounded-full text-center"
+      onClick={(event) => {
+        controlFilters(`Women ${event.target.innerText}`);
+      }}
+    >
       {category}
     </button>
   ));
 
   const unisexCategoryElements = unisexCategoryArray.map((category) => (
-    <button className="hover:bg-gray-400 p-1 border border-black rounded-full text-center">
+    <button
+      className="hover:bg-gray-400 p-1 border border-black rounded-full text-center"
+      onClick={(event) => {
+        controlFilters(`Unisex ${event.target.innerText}`);
+      }}
+    >
       {category}
     </button>
   ));

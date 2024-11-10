@@ -2,7 +2,6 @@ import { useState } from "react";
 import AllProducts from "../sections/AllProducts";
 import Filter from "../sections/Filter";
 import Navbar from "../sections/Navbar";
-import { filters } from "../constants/filters";
 
 function OrderPage() {
   const [renderTooltip, setRenderTooltip] = useState(false);
@@ -11,19 +10,27 @@ function OrderPage() {
     setRenderTooltip((oldValue) => !oldValue);
   }
 
-  const [renderFilters, setRenderFilters] = useState(filters);
+  const [filters, setFilters] = useState([]);
 
-  function refreshRenderFilters() {
-    setRenderFilters(filters);
+  function controlFilters(filter) {
+    if (!filters.includes(filter)) {
+      setFilters([...filters, filter]);
+    } else {
+      setFilters(filters.filter((f) => f !== filter));
+    }
+  }
+
+  function refreshFilters() {
+    setFilters([]);
   }
 
   return (
     <div>
       <Navbar isHomepage={false} />
-      <Filter refreshRenderFilters={refreshRenderFilters} />
+      <Filter controlFilters={controlFilters} refreshFilters={refreshFilters} />
       <AllProducts
         refreshProductsInTooltip={refreshProductsInTooltip}
-        renderFilters={renderFilters}
+        filters={filters}
       />
     </div>
   );
