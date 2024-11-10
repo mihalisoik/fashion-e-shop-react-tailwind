@@ -1,5 +1,5 @@
 import { useState } from "react";
-import MenuBar from "../components/MenuBar";
+import MenuBar from "./MenuBar";
 import { totalQuantity } from "../constants/cart";
 
 function Navbar({ isHomepage }) {

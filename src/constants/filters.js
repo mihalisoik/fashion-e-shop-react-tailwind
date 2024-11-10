@@ -1,5 +1,12 @@
-export let filters = ["male", "red"];
+export let filters = ["Men"];
 
-function addFilter() {}
+export function addFilter(filter) {
+  filters.unshift(filter);
+  console.log(filters);
+}
 
-function removeFilter() {}
+export function removeFilter(filter) {
+  const index = filters.indexOf(filter);
+  filters.splice(index, 1);
+  console.log(filters);
+}

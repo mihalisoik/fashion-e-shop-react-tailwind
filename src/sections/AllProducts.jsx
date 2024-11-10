@@ -2,7 +2,7 @@ import ProductCard from "../components/ProductCard";
 import { clothes } from "../constants/clothes";
 import { filters } from "../constants/filters";
 
-function AllProducts({ refreshProductsInTooltip }) {
+function AllProducts({ refreshProductsInTooltip, renderFilters }) {
   const productElements = clothes.map((clothe) => {
     return (
       <div className="p-5">
@@ -20,7 +20,7 @@ function AllProducts({ refreshProductsInTooltip }) {
     );
   });
 
-  const filtersOfUser = filters.map((filter) => (
+  const filtersOfUserElements = renderFilters.map((filter) => (
     <div className="bg-accent px-5 py-1 rounded-full w-24 text-center">
       {filter}
     </div>
@@ -29,7 +29,7 @@ function AllProducts({ refreshProductsInTooltip }) {
   return (
     <div className="bg-white mt-20 ml-3 mr-72 md:lg:ml-10 lg:ml-20 rounded-md shadow-md w-fit">
       {filters.length > 0 && (
-        <div className="ml-5 flex gap-3 p-5">{filtersOfUser}</div>
+        <div className="ml-5 flex gap-3 p-5">{filtersOfUserElements}</div>
       )}
       <div className="flex flex-grow flex-wrap gap-3">{productElements}</div>
     </div>

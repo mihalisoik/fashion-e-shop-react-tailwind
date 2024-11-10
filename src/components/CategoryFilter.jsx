@@ -2,7 +2,7 @@ import {
   menCategoryArray,
   unisexCategoryArray,
   womenCategoryArray,
-} from "../utils/categories";
+} from "../constants/categories";
 
 function CategoryFilter({ gender }) {
   const menCategoryElements = menCategoryArray.map((category) => (
@@ -25,17 +25,17 @@ function CategoryFilter({ gender }) {
 
   return (
     <div>
-      {gender === "male" && (
+      {gender === "Men" && (
         <div className="font-secondary grid grid-cols-2 gap-1 text-sm lg:grid-cols-3">
           {menCategoryElements}
         </div>
       )}
-      {gender === "female" && (
+      {gender === "Women" && (
         <div className="font-secondary grid grid-cols-2 gap-1 text-sm lg:grid-cols-3">
           {womenCategoryElements}
         </div>
       )}
-      {gender === "unisex" && (
+      {gender === "Unisex" && (
         <div className="font-secondary grid grid-cols-2 gap-1 text-sm lg:grid-cols-3">
           {unisexCategoryElements}
         </div>

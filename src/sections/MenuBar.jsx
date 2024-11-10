@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Subcategories from "./Subcategories";
+import Subcategories from "../components/Subcategories";
 
 function MenuBar({ setOpenMenu }) {
   const [renderMaleCategories, setRenderMaleCategories] = useState(false);
@@ -37,7 +37,7 @@ function MenuBar({ setOpenMenu }) {
           </li>
           {renderMaleCategories && (
             <div>
-              <Subcategories gender={"male"} />
+              <Subcategories gender={"Men"} />
             </div>
           )}
         </ul>
@@ -60,7 +60,7 @@ function MenuBar({ setOpenMenu }) {
           </li>
           {renderFemaleCategories && (
             <div>
-              <Subcategories gender={"female"} />
+              <Subcategories gender={"Women"} />
             </div>
           )}
         </ul>
@@ -83,7 +83,7 @@ function MenuBar({ setOpenMenu }) {
           </li>
           {renderUnisexCategories && (
             <div>
-              <Subcategories gender={"unisex"} />
+              <Subcategories gender={"Unisex"} />
             </div>
           )}
         </ul>

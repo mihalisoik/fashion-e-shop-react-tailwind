@@ -1,16 +1,42 @@
 import PriceFilter from "../components/PriceFilter";
 import ColorFilter from "../components/ColorFilter";
 import CategoryFilter from "../components/CategoryFilter";
+import { addFilter } from "../constants/filters";
 
-function FilterSection() {
+function Filter({ refreshRenderFilters }) {
   return (
     <div className="mt-30 h-[100vh] w-60 fixed top-0 right-0 lg:w-96 border-l-[1px] border-black bg-white flex flex-col pt-24 gap-5 pl-5 overflow-y-auto">
-      <h3 className="text-center font-primary font-bold underline">Men</h3>
-      <CategoryFilter gender={"male"} />
-      <h3 className="text-center font-primary font-bold underline">Women</h3>
-      <CategoryFilter gender={"female"} />
-      <h3 className="text-center font-primary font-bold underline">Unisex</h3>
-      <CategoryFilter gender={"unisex"} />
+      <h3
+        className="text-center font-primary font-bold border border-black rounded-sm hover:bg-gray-400 cursor-pointer"
+        onClick={() => {
+          addFilter("Men");
+          refreshRenderFilters();
+        }}
+      >
+        Men
+      </h3>
+      <CategoryFilter gender={"Men"} />
+
+      <h3
+        className="text-center font-primary font-bold border border-black rounded-sm hover:bg-gray-400 cursor-pointer"
+        onClick={() => {
+          addFilter("Women");
+        }}
+      >
+        Women
+      </h3>
+      <CategoryFilter gender={"Women"} />
+
+      <h3
+        className="text-center font-primary font-bold border border-black rounded-sm hover:bg-gray-400 cursor-pointer"
+        onClick={() => {
+          addFilter("Unisex");
+        }}
+      >
+        Unisex
+      </h3>
+      <CategoryFilter gender={"Unisex"} />
+
       <PriceFilter />
       <ColorFilter />
       <div className="flex flex-col lg:flex-row max-md:mr-4 gap-3 mt-4 justify-evenly mb-5">
@@ -23,4 +49,4 @@ function FilterSection() {
   );
 }
 
-export default FilterSection;
+export default Filter;
