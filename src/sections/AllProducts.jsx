@@ -2,7 +2,7 @@ import ProductCard from "../components/ProductCard";
 import { clothes } from "../constants/clothes";
 import { filters } from "../constants/filters";
 
-function AllProducts({ refreshProductsInTooltip }) {
+function AllProducts({ refreshProductsInTooltip, renderFilters }) {
   const productElements = clothes.map((clothe) => {
     return (
       <div className="p-5">
@@ -20,7 +20,7 @@ function AllProducts({ refreshProductsInTooltip }) {
     );
   });
 
-  const filtersOfUserElements = filters.map((filter) => (
+  const filtersOfUserElements = renderFilters.map((filter) => (
     <div className="bg-accent px-5 py-1 rounded-full w-24 text-center">
       {filter}
     </div>

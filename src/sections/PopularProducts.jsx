@@ -2,7 +2,7 @@ import ProductCard from "../components/ProductCard";
 import { clothes } from "../constants/clothes";
 
 function PopularItems({ refreshProductsInTooltip }) {
-  const popularClothes = clothes.filter((clothe) => clothe.rating >= 4.7);
+  const popularClothes = clothes.filter((clothe) => clothe.rating >= 4);
 
   const popularItemsElements = popularClothes.map((clothe) => {
     return (
