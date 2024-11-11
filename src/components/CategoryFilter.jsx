@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   menCategoryArray,
   unisexCategoryArray,
@@ -5,11 +6,13 @@ import {
 } from "../constants/categories";
 
 function CategoryFilter({ gender, controlFilters }) {
-  const menCategoryElements = menCategoryArray.map((category) => (
+  const menCategoryElements = menCategoryArray.map((category, index) => (
     <button
-      className="hover:bg-gray-400 p-1 border border-black rounded-full text-center"
+      className="hover:bg-gray-400 p-1 border border-gray-400 text-text-color rounded-full text-center font-semibold"
       onClick={(event) => {
-        controlFilters(`Men ${event.target.innerText}`);
+        const button = event.target;
+        controlFilters(`Men ${button.textContent}`);
+        button.classList.toggle("filters-toggle");
       }}
     >
       {category}
@@ -18,9 +21,9 @@ function CategoryFilter({ gender, controlFilters }) {
 
   const womenCategoryElements = womenCategoryArray.map((category) => (
     <button
-      className="hover:bg-gray-400 p-1 border border-black rounded-full text-center"
+      className="hover:bg-gray-400 p-1 border border-gray-400 text-text-color rounded-full text-center font-semibold"
       onClick={(event) => {
-        controlFilters(`Women ${event.target.innerText}`);
+        controlFilters(`Women ${event.target.textContent}`);
       }}
     >
       {category}
@@ -29,9 +32,9 @@ function CategoryFilter({ gender, controlFilters }) {
 
   const unisexCategoryElements = unisexCategoryArray.map((category) => (
     <button
-      className="hover:bg-gray-400 p-1 border border-black rounded-full text-center"
+      className="hover:bg-gray-400 p-1 border border-gray-400 text-text-color rounded-full text-center font-semibold"
       onClick={(event) => {
-        controlFilters(`Unisex ${event.target.innerText}`);
+        controlFilters(`Unisex ${event.target.textContent}`);
       }}
     >
       {category}

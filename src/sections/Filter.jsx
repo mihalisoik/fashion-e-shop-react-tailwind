@@ -5,33 +5,18 @@ import CategoryFilter from "../components/CategoryFilter";
 
 function Filter({ controlFilters, refreshFilters }) {
   return (
-    <div className="mt-30 h-[100vh] w-60 fixed top-0 right-0 lg:w-96 border-l-[1px] border-black bg-white flex flex-col pt-24 gap-5 pl-5 overflow-y-auto">
-      <h3
-        className="text-center font-primary font-bold border border-black rounded-sm hover:bg-gray-400 cursor-pointer"
-        onClick={() => {
-          controlFilters("Men");
-        }}
-      >
+    <div className="mt-30 h-[100vh] w-60 fixed top-0 right-0 lg:w-96 border-l-[1px] border-gray-400 bg-slate-50 flex flex-col pt-24 gap-5 pl-5 overflow-y-auto">
+      <h3 className="text-center font-primary font-bold border border-gray-500 rounded-sm cursor-pointer shadow-md text-white bg-accent">
         Men
       </h3>
       <CategoryFilter gender={"Men"} controlFilters={controlFilters} />
 
-      <h3
-        className="text-center font-primary font-bold border border-black rounded-sm hover:bg-gray-400 cursor-pointer"
-        onClick={() => {
-          controlFilters("Women");
-        }}
-      >
+      <h3 className="text-center font-primary font-bold border border-gray-500 rounded-sm cursor-pointer shadow-md text-white bg-accent">
         Women
       </h3>
       <CategoryFilter gender={"Women"} controlFilters={controlFilters} />
 
-      <h3
-        className="text-center font-primary font-bold border border-black rounded-sm hover:bg-gray-400 cursor-pointer"
-        onClick={() => {
-          controlFilters("Unisex");
-        }}
-      >
+      <h3 className="text-center font-primary font-bold border border-gray-500 rounded-sm cursor-pointer shadow-md text-white bg-accent">
         Unisex
       </h3>
       <CategoryFilter gender={"Unisex"} controlFilters={controlFilters} />

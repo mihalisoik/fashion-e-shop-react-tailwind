@@ -24,6 +24,11 @@ body {
     margin: 0 auto;
   }
 
+  .filters-toggle {
+    background-color: #9ca3af;
+    scale: 1.03;
+  }
+
   .main-button {
     @apply font-primary bg-accent py-4 px-10 rounded-full text-slate-100 shadow-lg;
   }

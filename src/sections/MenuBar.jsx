@@ -15,7 +15,7 @@ function MenuBar({ setOpenMenu }) {
           document.body.style.overflow = "auto";
         }}
       >
-        <img src="src/assets/icons/cancel-icon.svg" alt="Close Menu" />
+        <img src="src/assets/icons/grey-cancel-icon.svg" alt="Close Menu" />
       </button>
       <div className="mt-12 lg:mr-auto lg:ml-4">
         <ul>

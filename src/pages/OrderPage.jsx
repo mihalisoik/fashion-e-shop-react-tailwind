@@ -18,6 +18,7 @@ function OrderPage() {
     } else {
       setFilters(filters.filter((f) => f !== filter));
     }
+    console.log(filters);
   }
 
   function refreshFilters() {
@@ -31,6 +32,7 @@ function OrderPage() {
       <AllProducts
         refreshProductsInTooltip={refreshProductsInTooltip}
         filters={filters}
+        controlFilters={controlFilters}
       />
     </div>
   );

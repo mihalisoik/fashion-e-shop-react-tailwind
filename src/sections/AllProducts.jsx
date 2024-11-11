@@ -2,7 +2,7 @@ import ProductCard from "../components/ProductCard";
 import { clothes } from "../constants/clothes";
 // import { filters } from "../constants/filters";
 
-function AllProducts({ refreshProductsInTooltip, filters }) {
+function AllProducts({ refreshProductsInTooltip, filters, controlFilters }) {
   const productElements = clothes.map((clothe) => {
     return (
       <div className="p-5">
@@ -23,9 +23,18 @@ function AllProducts({ refreshProductsInTooltip, filters }) {
   const filtersOfUserElements = filters.map((filter) => (
     <div
       key={filter}
-      className="bg-accent px-5 py-1 rounded-full w-fit text-center whitespace-nowrap"
+      className="bg-accent px-5 py-1 rounded-full w-fit text-center whitespace-nowrap relative font-secondary"
     >
       {filter}
+      <button
+        className="bg-slate-50 p-0.5 w-6 rounded-full shadow-md absolute -top-3 -right-2"
+        onClick={(event) => {
+          const button = event.target.parentElement;
+          controlFilters(button.parentElement.textContent);
+        }}
+      >
+        <img src="src/assets/icons/accent-cancel-icon.svg" alt="cancel-icon" />
+      </button>
     </div>
   ));
 

@@ -5,3 +5,4 @@ na psaksw an exei imports pou den xrhsimopoiw ston kwdika mou
 na valw sto chat gpt na mou to kanei prettier
 allagh glwssas
 na dw an mporw na kounhsw to hero image apo ton public sto src/assets/images
+ta alt sta img na einai me kefalaia
