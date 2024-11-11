@@ -2,7 +2,7 @@ na valw keywords
 na psaksw an exei erwthmatika o kwdikas mou
 na psaksw an exei consolelogs o kwdikas mou
 na psaksw an exei imports pou den xrhsimopoiw ston kwdika mou
-na valw sto chat gpt na mou to kanei prettier
+na dw an exei comments
 allagh glwssas
 na dw an mporw na kounhsw to hero image apo ton public sto src/assets/images
 ta alt sta img na einai me kefalaia

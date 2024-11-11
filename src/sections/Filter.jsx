@@ -21,7 +21,7 @@ function Filter({ controlFilters, refreshFilters }) {
       </h3>
       <CategoryFilter gender={"Unisex"} controlFilters={controlFilters} />
 
-      <PriceFilter />
+      <PriceFilter controlFilters={controlFilters} />
       <ColorFilter />
       <div className="flex flex-col lg:flex-row max-md:mr-4 gap-3 mt-4 justify-evenly mb-5">
         <button className="main-button main-button-hover">Apply</button>

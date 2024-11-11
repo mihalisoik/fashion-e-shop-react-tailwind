@@ -10,9 +10,7 @@ function CategoryFilter({ gender, controlFilters }) {
     <button
       className="hover:bg-gray-400 p-1 border border-gray-400 text-text-color rounded-full text-center font-semibold"
       onClick={(event) => {
-        const button = event.target;
-        controlFilters(`Men ${button.textContent}`);
-        button.classList.toggle("filters-toggle");
+        controlFilters(`Men ${event.target.textContent}`);
       }}
     >
       {category}
