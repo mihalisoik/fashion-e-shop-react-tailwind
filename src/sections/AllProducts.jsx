@@ -2,7 +2,7 @@ import ProductCard from "../components/ProductCard";
 import { clothes } from "../constants/clothes";
 // import { filters } from "../constants/filters";
 
-function AllProducts({ refreshProductsInTooltip, filters, controlFilters }) {
+function AllProducts({ refreshProductsInTooltip }) {
   const productElements = clothes.map((clothe) => {
     return (
       <div className="p-5">
@@ -20,7 +20,7 @@ function AllProducts({ refreshProductsInTooltip, filters, controlFilters }) {
     );
   });
 
-  const filtersOfUserElements = filters.map((filter) => (
+  /* const filtersOfUserElements = filters.map((filter) => (
     <div
       key={filter}
       className="bg-accent px-5 py-1 rounded-full w-fit text-center whitespace-nowrap relative font-secondary"
@@ -37,13 +37,19 @@ function AllProducts({ refreshProductsInTooltip, filters, controlFilters }) {
         />
       </button>
     </div>
-  ));
+  )); 
+
+
+
+{filters.length > 0 && (
+        <div className="ml-5 flex gap-3 p-5">{filtersOfUserElements}</div>
+      )}
+
+
+  */
 
   return (
     <div className="bg-white mt-20 ml-3 mr-72 md:lg:ml-10 lg:ml-20 rounded-md shadow-md w-fit">
-      {filters.length > 0 && (
-        <div className="ml-5 flex gap-3 p-5">{filtersOfUserElements}</div>
-      )}
       <div className="flex flex-grow flex-wrap gap-3">{productElements}</div>
     </div>
   );

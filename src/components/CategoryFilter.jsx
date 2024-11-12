@@ -1,61 +1,39 @@
-import { useState } from "react";
+import React from "react";
 import {
   menCategoryArray,
   unisexCategoryArray,
   womenCategoryArray,
 } from "../constants/categories";
 
-function CategoryFilter({ gender, controlFilters }) {
-  const menCategoryElements = menCategoryArray.map((category, index) => (
-    <button
-      className="hover:bg-gray-400 p-1 border border-gray-400 text-text-color rounded-full text-center font-semibold"
-      onClick={(event) => {
-        controlFilters(`Men ${event.target.textContent}`);
-      }}
-    >
-      {category}
-    </button>
-  ));
+function CategoryFilter({ gender, addFilter, removeFilter }) {
+  const categoryMap = {
+    Men: menCategoryArray,
+    Women: womenCategoryArray,
+    Unisex: unisexCategoryArray,
+  };
 
-  const womenCategoryElements = womenCategoryArray.map((category) => (
-    <button
-      className="hover:bg-gray-400 p-1 border border-gray-400 text-text-color rounded-full text-center font-semibold"
-      onClick={(event) => {
-        controlFilters(`Women ${event.target.textContent}`);
-      }}
-    >
-      {category}
-    </button>
-  ));
-
-  const unisexCategoryElements = unisexCategoryArray.map((category) => (
-    <button
-      className="hover:bg-gray-400 p-1 border border-gray-400 text-text-color rounded-full text-center font-semibold"
-      onClick={(event) => {
-        controlFilters(`Unisex ${event.target.textContent}`);
-      }}
-    >
-      {category}
-    </button>
-  ));
+  const controlFilter = (event) => {
+    const button = event.target.closest("button");
+    const filterText = `${button.textContent} for ${gender}`;
+    if (button.classList.contains("filters-toggle")) {
+      removeFilter(filterText);
+    } else {
+      addFilter(filterText);
+    }
+    button.classList.toggle("filters-toggle");
+  };
 
   return (
-    <div>
-      {gender === "Men" && (
-        <div className="font-secondary grid grid-cols-2 gap-1 text-sm lg:grid-cols-3">
-          {menCategoryElements}
-        </div>
-      )}
-      {gender === "Women" && (
-        <div className="font-secondary grid grid-cols-2 gap-1 text-sm lg:grid-cols-3">
-          {womenCategoryElements}
-        </div>
-      )}
-      {gender === "Unisex" && (
-        <div className="font-secondary grid grid-cols-2 gap-1 text-sm lg:grid-cols-3">
-          {unisexCategoryElements}
-        </div>
-      )}
+    <div className="font-secondary gap-1 flex flex-col items-start rounded-sm text-sm py-3 px-1">
+      {categoryMap[gender].map((category) => (
+        <button
+          key={category}
+          className="hover:bg-gray-300 border border-white text-white font-semibold w-full py-1 text-start"
+          onClick={controlFilter}
+        >
+          <p className="ml-2">{category}</p>
+        </button>
+      ))}
     </div>
   );
 }

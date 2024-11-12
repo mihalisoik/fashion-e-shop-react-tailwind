@@ -12,12 +12,15 @@ function OrderPage() {
 
   const [filters, setFilters] = useState([]);
 
-  function controlFilters(filter) {
+  function addFilter(filter) {
     if (!filters.includes(filter)) {
       setFilters([...filters, filter]);
-    } else {
-      setFilters(filters.filter((f) => f !== filter));
+      console.log(filters);
     }
+  }
+
+  function removeFilter(filter) {
+    setFilters(filters.filter((f) => f !== filter));
     console.log(filters);
   }
 
@@ -28,12 +31,12 @@ function OrderPage() {
   return (
     <div>
       <Navbar isHomepage={false} />
-      <Filter controlFilters={controlFilters} refreshFilters={refreshFilters} />
-      <AllProducts
-        refreshProductsInTooltip={refreshProductsInTooltip}
-        filters={filters}
-        controlFilters={controlFilters}
+      <Filter
+        addFilter={addFilter}
+        removeFilter={removeFilter}
+        refreshFilters={refreshFilters}
       />
+      <AllProducts refreshProductsInTooltip={refreshProductsInTooltip} />
     </div>
   );
 }
