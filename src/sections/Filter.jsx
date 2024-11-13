@@ -4,7 +4,7 @@ import CategoryFilter from "../components/CategoryFilter";
 import { useState } from "react";
 // import { addFilter } from "../constants/filters";
 
-function Filter({ addFilter, removeFilter, refreshFilters }) {
+function Filter({ addFilter, removeFilter, refreshFilters, filters }) {
   const [hoveredGender, setHoveredGender] = useState("");
 
   function handleMouseEnter(gender) {
@@ -36,6 +36,7 @@ function Filter({ addFilter, removeFilter, refreshFilters }) {
                   gender={gender}
                   addFilter={addFilter}
                   removeFilter={removeFilter}
+                  filters={filters}
                 />
               </div>
             )}

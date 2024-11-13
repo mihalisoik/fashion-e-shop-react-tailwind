@@ -35,6 +35,7 @@ function OrderPage() {
         addFilter={addFilter}
         removeFilter={removeFilter}
         refreshFilters={refreshFilters}
+        filters={filters}
       />
       <AllProducts refreshProductsInTooltip={refreshProductsInTooltip} />
     </div>
