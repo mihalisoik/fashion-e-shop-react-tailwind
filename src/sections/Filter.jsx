@@ -4,7 +4,13 @@ import CategoryFilter from "../components/CategoryFilter";
 import { useState } from "react";
 // import { addFilter } from "../constants/filters";
 
-function Filter({ addFilter, removeFilter, refreshFilters, filters }) {
+function Filter({
+  addFilter,
+  removeFilter,
+  refreshFilters,
+  filters,
+  setFilters,
+}) {
   const [hoveredGender, setHoveredGender] = useState("");
 
   function handleMouseEnter(gender) {
@@ -34,9 +40,9 @@ function Filter({ addFilter, removeFilter, refreshFilters, filters }) {
               <div className="transition-opacity duration-200 absolute top-0 -left-80 bg-gray-400/80 rounded-sm shadow-md z-10 w-80 px-5 py-1">
                 <CategoryFilter
                   gender={gender}
-                  addFilter={addFilter}
                   removeFilter={removeFilter}
                   filters={filters}
+                  setFilters={setFilters}
                 />
               </div>
             )}

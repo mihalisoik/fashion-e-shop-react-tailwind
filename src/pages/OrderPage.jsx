@@ -24,18 +24,14 @@ function OrderPage() {
     console.log(filters);
   }
 
-  function refreshFilters() {
-    setFilters([]);
-  }
-
   return (
     <div>
       <Navbar isHomepage={false} />
       <Filter
         addFilter={addFilter}
         removeFilter={removeFilter}
-        refreshFilters={refreshFilters}
         filters={filters}
+        setFilters={setFilters}
       />
       <AllProducts refreshProductsInTooltip={refreshProductsInTooltip} />
     </div>

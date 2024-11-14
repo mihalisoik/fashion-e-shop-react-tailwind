@@ -5,34 +5,33 @@ import {
   womenCategoryArray,
 } from "../constants/categories";
 
-function CategoryFilter({ gender, addFilter, removeFilter, filters }) {
+function CategoryFilter({ gender, removeFilter, filters, setFilters }) {
   const categoryMap = {
     Men: menCategoryArray,
     Women: womenCategoryArray,
     Unisex: unisexCategoryArray,
   };
 
-  function deleteAllOtherCategoryFilters() {
-    const filtersToDelete = filters.filter(
+  function deleteAllOtherCategoryFilters(filterText) {
+    const filtersToKeep = filters.filter(
       (filter) =>
-        filter.endsWith("Men") ||
-        filter.endsWith("Women") ||
-        filter.endsWith("Unisex")
+        !(
+          filter.endsWith("Men") ||
+          filter.endsWith("Women") ||
+          filter.endsWith("Unisex")
+        )
     );
 
-    filtersToDelete.forEach((filter) => {
-      removeFilter(filter);
-    });
+    setFilters([...filtersToKeep, filterText]);
   }
 
   function controlFilter(event) {
-    const button = event.target.closest("button");
+    const button = event.target;
     const filterText = `${button.textContent} for ${gender}`;
     if (filters.includes(filterText)) {
       removeFilter(filterText);
     } else {
-      deleteAllOtherCategoryFilters(); //na ftiaksw auto
-      addFilter(filterText);
+      deleteAllOtherCategoryFilters(filterText);
     }
   }
 
@@ -45,7 +44,7 @@ function CategoryFilter({ gender, addFilter, removeFilter, filters }) {
           <button
             key={category}
             className={`hover:bg-gray-300 border border-white text-white font-semibold w-full py-1 text-start ${
-              isSelected && "bg-gray-500"
+              isSelected && "scale-105 bg-accent hover:bg-accent"
             }`}
             onClick={(event) => {
               controlFilter(event);
