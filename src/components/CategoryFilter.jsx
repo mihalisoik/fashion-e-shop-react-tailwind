@@ -5,14 +5,14 @@ import {
   womenCategoryArray,
 } from "../constants/categories";
 
-function CategoryFilter({ gender, removeFilter, filters, setFilters }) {
+function CategoryFilter({ gender, filters, setFilters, removeFilter }) {
   const categoryMap = {
     Men: menCategoryArray,
     Women: womenCategoryArray,
     Unisex: unisexCategoryArray,
   };
 
-  function deleteAllOtherCategoryFilters(filterText) {
+  function keepOnlyOneCategoryFilter(filterText) {
     const filtersToKeep = filters.filter(
       (filter) =>
         !(
@@ -31,7 +31,7 @@ function CategoryFilter({ gender, removeFilter, filters, setFilters }) {
     if (filters.includes(filterText)) {
       removeFilter(filterText);
     } else {
-      deleteAllOtherCategoryFilters(filterText);
+      keepOnlyOneCategoryFilter(filterText);
     }
   }
 
@@ -44,7 +44,7 @@ function CategoryFilter({ gender, removeFilter, filters, setFilters }) {
           <button
             key={category}
             className={`hover:bg-gray-300 border border-white text-white font-semibold w-full py-1 text-start ${
-              isSelected && "scale-105 bg-accent hover:bg-accent"
+              isSelected && "scale-105 hover:bg-gray-500 bg-gray-500"
             }`}
             onClick={(event) => {
               controlFilter(event);

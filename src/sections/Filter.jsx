@@ -4,13 +4,7 @@ import CategoryFilter from "../components/CategoryFilter";
 import { useState } from "react";
 // import { addFilter } from "../constants/filters";
 
-function Filter({
-  addFilter,
-  removeFilter,
-  refreshFilters,
-  filters,
-  setFilters,
-}) {
+function Filter({ addFilter, removeFilter, filters, setFilters }) {
   const [hoveredGender, setHoveredGender] = useState("");
 
   function handleMouseEnter(gender) {
@@ -40,9 +34,9 @@ function Filter({
               <div className="transition-opacity duration-200 absolute top-0 -left-80 bg-gray-400/80 rounded-sm shadow-md z-10 w-80 px-5 py-1">
                 <CategoryFilter
                   gender={gender}
-                  removeFilter={removeFilter}
                   filters={filters}
                   setFilters={setFilters}
+                  removeFilter={removeFilter}
                 />
               </div>
             )}
@@ -50,11 +44,20 @@ function Filter({
         </div>
       ))}
 
-      <PriceFilter addFilter={addFilter} removeFilter={removeFilter} />
-      <ColorFilter />
+      <PriceFilter filters={filters} setFilters={setFilters} />
+      <ColorFilter
+        filters={filters}
+        addFilter={addFilter}
+        removeFilter={removeFilter}
+      />
       <div className="flex flex-col lg:flex-row max-md:mr-4 gap-3 mt-4 justify-evenly mb-5">
         <button className="main-button main-button-hover">Apply</button>
-        <button className="main-button text-accent bg-slate-50 hover:scale-105 hover:shadow-xl hover:bg-white">
+        <button
+          className="main-button text-accent bg-slate-50 hover:scale-105 hover:shadow-xl hover:bg-white"
+          onClick={() => {
+            setFilters([]);
+          }}
+        >
           Reset
         </button>
       </div>

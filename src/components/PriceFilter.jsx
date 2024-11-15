@@ -1,17 +1,8 @@
-import { useState } from "react";
-
-function PriceFilter({ controlFilters, filters, setFilters }) {
-  const [selectedPrice, setSelectedPrice] = useState("");
-
+function PriceFilter({ filters, setFilters }) {
   function handlePriceChange(event) {
-    const value = event.target.value;
-    setFilters((prevFilters) => {
-      if (prevFilters.includes(value)) {
-        return prevFilters.filter((f) => !value);
-      } else {
-        return [...prevFilters, value];
-      }
-    });
+    const selectedRangePrice = event.target.value;
+    const filtersToKeep = filters.filter((f) => !f.includes("€"));
+    setFilters([...filtersToKeep, selectedRangePrice]);
   }
 
   return (
@@ -24,8 +15,9 @@ function PriceFilter({ controlFilters, filters, setFilters }) {
           value="0-40€"
           className="mr-2"
           onChange={handlePriceChange}
+          checked={filters.includes("0-40€")}
         />
-        Up to €40
+        €0 - €40
       </label>
       <label className="flex items-center">
         <input
@@ -34,6 +26,7 @@ function PriceFilter({ controlFilters, filters, setFilters }) {
           value="€40-80€"
           className="mr-2"
           onChange={handlePriceChange}
+          checked={filters.includes("€40-80€")}
         />
         €40 - €80
       </label>
@@ -44,6 +37,7 @@ function PriceFilter({ controlFilters, filters, setFilters }) {
           value="€80-€150"
           class="mr-2"
           onChange={handlePriceChange}
+          checked={filters.includes("€80-€150")}
         />
         €80 - €150
       </label>
@@ -54,6 +48,7 @@ function PriceFilter({ controlFilters, filters, setFilters }) {
           value="€150+"
           className="mr-2"
           onChange={handlePriceChange}
+          checked={filters.includes("€150+")}
         />
         €150 and above
       </label>

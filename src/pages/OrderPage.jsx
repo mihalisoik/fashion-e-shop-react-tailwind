@@ -33,7 +33,10 @@ function OrderPage() {
         filters={filters}
         setFilters={setFilters}
       />
-      <AllProducts refreshProductsInTooltip={refreshProductsInTooltip} />
+      <AllProducts
+        refreshProductsInTooltip={refreshProductsInTooltip}
+        filters={filters}
+      />
     </div>
   );
 }
