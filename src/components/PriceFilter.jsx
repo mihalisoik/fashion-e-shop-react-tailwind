@@ -23,7 +23,7 @@ function PriceFilter({ filters, setFilters }) {
         <input
           type="radio"
           name="price"
-          value="€40-80€"
+          value="€40-€80"
           className="mr-2"
           onChange={handlePriceChange}
           checked={filters.includes("€40-80€")}

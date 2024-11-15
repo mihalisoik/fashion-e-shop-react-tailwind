@@ -8,7 +8,7 @@ function Navbar({ isHomepage }) {
   return (
     <nav className="h-16 bg-accent px-5 max-sm:px-1 items-center z-10 left-0 right-0 top-0 fixed">
       {openMenu && (
-        <div className="fixed w-full -left-1 backdrop-blur-md bg-white/30 z-100 lg:w-96 inset-y-0 overflow-y-auto">
+        <div className="p-2 fixed w-full -left-1 backdrop-blur-md bg-white/30 z-20 lg:w-96 inset-y-0 overflow-y-auto">
           <MenuBar setOpenMenu={setOpenMenu} />
         </div>
       )}
@@ -35,7 +35,7 @@ function Navbar({ isHomepage }) {
           <p className="text-slate-50 text-sm font-primary max-sm:w-40">
             Free shipping for purchases of €50 and above
           </p>
-          <div className="flex gap-2 relative bg-accent border-2 p-2 group hover:shadow-md hover:bg-light-accent active:bg-extra-light-accent cursor-pointer">
+          <div className="flex gap-2 relative bg-accent border-2 p-2 group hover:shadow-md hover:bg-light-accent active:bg-extra-light-accent cursor-pointer whitespace-nowrap">
             <img src="src/assets/icons/cart.svg" alt="Shopping Bag" />
             <p className="text-slate-50 font-primary">
               Shopping Bag ({`${totalQuantity}`})

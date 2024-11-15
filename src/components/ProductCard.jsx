@@ -70,7 +70,10 @@ function ProductCard({
         {rating.toFixed(1)}
       </div>
       <h3 className="font-secondary font-semibold">{name}</h3>
-      <div className="font-secondary">€{formatCurrency(priceCents)}</div>
+      <div className="font-secondary">
+        <span className="text-sm">€</span>
+        {formatCurrency(priceCents)}
+      </div>
       <div className="mt-2">
         {!cartButton ? (
           <button
