@@ -6,7 +6,7 @@ function PriceFilter({ filters, setFilters }) {
   }
 
   return (
-    <div>
+    <div className="flex flex-col ">
       <h3 className="mb-2 font-bold">Price</h3>
       <label className="flex items-center">
         <input
@@ -26,7 +26,7 @@ function PriceFilter({ filters, setFilters }) {
           value="€40-€80"
           className="mr-2"
           onChange={handlePriceChange}
-          checked={filters.includes("€40-80€")}
+          checked={filters.includes("€40-€80")}
         />
         €40 - €80
       </label>

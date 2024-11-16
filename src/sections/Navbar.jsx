@@ -6,7 +6,7 @@ function Navbar({ isHomepage }) {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <nav className="h-16 bg-accent px-5 max-sm:px-1 items-center z-10 left-0 right-0 top-0 fixed">
+    <nav className="h-16 bg-accent px-5 max-sm:px-1 items-center z-30 left-0 right-0 top-0 fixed">
       {openMenu && (
         <div className="p-2 fixed w-full -left-1 backdrop-blur-md bg-white/30 z-20 lg:w-96 inset-y-0 overflow-y-auto">
           <MenuBar setOpenMenu={setOpenMenu} />

@@ -21,8 +21,8 @@ function ColorFilter({ filters, addFilter, removeFilter }) {
       <div
         key={index}
         style={{ backgroundColor: color }}
-        className={`border-[1px] border-white outline outline-2 outline-gray-200 p-1 w-12 h-12 cursor-pointer ${
-          filters.includes(color) && "outline-black"
+        className={`border-2 border-gray-200 p-1 w-12 h-12 cursor-pointer ${
+          filters.includes(color) && "outline outline-2 outline-black"
         }`}
         onClick={() => controlFilters(color)}
       ></div>
@@ -32,7 +32,7 @@ function ColorFilter({ filters, addFilter, removeFilter }) {
   return (
     <div>
       <h3 className="font-bold">Color</h3>
-      <div className="grid grid-cols-3 gap-2 lg:grid-cols-4">
+      <div className="grid grid-cols-6 md:grid-cols-4 gap-2 max-md:mt-5">
         {colorElements}
       </div>
     </div>

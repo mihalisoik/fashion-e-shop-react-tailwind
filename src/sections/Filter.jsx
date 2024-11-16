@@ -20,7 +20,7 @@ function Filter({ addFilter, removeFilter, filters, setFilters }) {
   }
 
   return (
-    <div className="mt-30 h-[100vh] w-60 fixed top-0 right-0 lg:w-96 border-l-[1px] border-gray-400 bg-slate-50 flex flex-col pt-24 gap-5 pl-5 overflow-visible">
+    <div className="mt-30 h-[100vh] fixed top-0 right-0 md:w-80 border-l-[1px] border-gray-400 bg-slate-50 flex flex-col pt-24 gap-5 pl-5 md:overflow-visible overflow-y-auto max-md:w-full z-20">
       {["Men", "Women", "Unisex"].map((gender) => (
         <div className="flex flex-col items-center">
           <div
@@ -31,7 +31,7 @@ function Filter({ addFilter, removeFilter, filters, setFilters }) {
           >
             <h3 className="text-lg">{gender}</h3>
             {isTooltipVisible(gender) && (
-              <div className="transition-opacity duration-200 absolute top-0 -left-80 bg-gray-400/80 rounded-sm shadow-md z-10 w-80 px-5 py-1">
+              <div className="transition-opacity duration-200 absolute md:top-0 md:-left-80 top-10 -left-16 bg-gray-400/80 rounded-sm shadow-md z-10 w-80 px-5 py-1">
                 <CategoryFilter
                   gender={gender}
                   filters={filters}
@@ -50,10 +50,12 @@ function Filter({ addFilter, removeFilter, filters, setFilters }) {
         addFilter={addFilter}
         removeFilter={removeFilter}
       />
-      <div className="flex flex-col lg:flex-row max-md:mr-4 gap-3 mt-4 justify-evenly mb-5">
-        <button className="main-button main-button-hover">Apply</button>
+      <div className="flex flex-col items-center max-md:mr-4 gap-3 mt-4 justify-evenly mb-5">
+        <button className="main-button main-button-hover w-fit px-20">
+          Apply
+        </button>
         <button
-          className="main-button text-accent bg-slate-50 hover:scale-105 hover:shadow-xl hover:bg-white"
+          className="main-button text-accent bg-slate-50 hover:scale-105 hover:shadow-xl hover:bg-white w-fit px-20"
           onClick={() => {
             setFilters([]);
           }}
