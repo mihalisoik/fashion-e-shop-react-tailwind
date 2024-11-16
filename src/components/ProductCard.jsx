@@ -44,7 +44,7 @@ function ProductCard({
   }
 
   return (
-    <div className="bg-slate-100 p-5 font-secondary flex flex-col gap-1 justify-center items-start rounded-md shadow-lg  flex-shrink-0 w-52">
+    <div className="bg-slate-100 p-5 font-secondary flex flex-col gap-1 justify-center items-start rounded-md shadow-lg  flex-shrink-0 w-52 text-sm">
       <button className="ml-auto bg-white p-1 rounded-full shadow-md">
         {favorited ? (
           <img
@@ -71,7 +71,7 @@ function ProductCard({
       </div>
       <h3 className="font-secondary font-semibold">{name}</h3>
       <div className="font-secondary">
-        <span className="text-sm">€</span>
+        <span className="text-[0.6rem]">€</span>
         {formatCurrency(priceCents)}
       </div>
       <div className="mt-2">

@@ -24,6 +24,8 @@ function OrderPage() {
     console.log(filters);
   }
 
+  const [renderFilterSection, setRenderFilterSection] = useState(false);
+
   return (
     <div>
       <Navbar isHomepage={false} />
@@ -32,12 +34,15 @@ function OrderPage() {
         removeFilter={removeFilter}
         filters={filters}
         setFilters={setFilters}
+        renderFilterSection={renderFilterSection}
+        setRenderFilterSection={setRenderFilterSection}
       />
       <AllProducts
         refreshProductsInTooltip={refreshProductsInTooltip}
         filters={filters}
         removeFilter={removeFilter}
         setFilters={setFilters}
+        setRenderFilterSection={setRenderFilterSection}
       />
     </div>
   );

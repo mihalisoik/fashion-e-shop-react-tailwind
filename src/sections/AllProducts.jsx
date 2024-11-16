@@ -7,6 +7,7 @@ function AllProducts({
   filters,
   removeFilter,
   setFilters,
+  setRenderFilterSection,
 }) {
   const productElements = clothes.map((clothe) => {
     return (
@@ -45,7 +46,19 @@ function AllProducts({
   ));
 
   return (
-    <div className="bg-white mt-20 ml-3 mr-72 md:lg:ml-10 lg:ml-20 rounded-md shadow-md w-[60%]">
+    <div className="bg-white mt-20 ml-3 mr-72 md:lg:ml-10 lg:ml-20 rounded-md shadow-md md:w-[60%] w-full relative overflow-hidden">
+      <div className="flex md:hidden mb-14">
+        <div className="absolute top-5 right-5">
+          <button
+            className="bg-accent p-1 rounded-md"
+            onClick={() => {
+              setRenderFilterSection((oldValue) => !oldValue);
+            }}
+          >
+            <img src="src/assets/icons/open-filter.svg" alt="Open Filter" />
+          </button>
+        </div>
+      </div>
       {filters.length > 0 && (
         <div className="ml-5 flex overflow-x-auto md:flex-wrap gap-3 p-5 w-[95%]">
           {filtersOfUserElements}
@@ -56,11 +69,7 @@ function AllProducts({
                 setFilters([]);
               }}
             >
-              <img
-                src="src/assets/icons/delete.svg"
-                alt="Delete Icon"
-                className=""
-              />
+              <img src="src/assets/icons/delete.svg" alt="Delete Icon" />
               Clear all
             </button>
           )}
