@@ -1,7 +1,11 @@
 import ProductCard from "../components/ProductCard";
 import { clothes } from "../constants/clothes";
 
-function PopularItems({ refreshProductsInTooltip }) {
+function PopularItems({
+  animatedAddedTooltip,
+  setRenderTotalQuantity,
+  animatedRemovedTooltip,
+}) {
   const popularClothes = clothes.filter((clothe) => clothe.rating >= 4);
 
   const popularItemsElements = popularClothes.map((clothe) => {
@@ -15,7 +19,9 @@ function PopularItems({ refreshProductsInTooltip }) {
         rating={clothe.rating}
         isFavorite={clothe.isFavorite}
         priceCents={clothe.priceCents}
-        refreshProductsInTooltip={refreshProductsInTooltip}
+        setRenderTotalQuantity={setRenderTotalQuantity}
+        animatedAddedTooltip={animatedAddedTooltip}
+        animatedRemovedTooltip={animatedRemovedTooltip}
       />
     );
   });

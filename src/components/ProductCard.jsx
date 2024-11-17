@@ -15,7 +15,9 @@ function ProductCard({
   rating,
   isFavorite,
   priceCents,
-  refreshProductsInTooltip,
+  setRenderTotalQuantity,
+  animatedAddedTooltip,
+  animatedRemovedTooltip,
 }) {
   const existingItem = cart.some((item) => item.id === id);
 
@@ -79,7 +81,8 @@ function ProductCard({
           <button
             className="flex w-40 h-10 gap-2 text-[#666666] text-sm px-3 py-2 bg-slate-50 rounded-3xl justify-center items-center font-semibold shadow-md hover:bg-slate-100 active:scale-95"
             onClick={() => {
-              refreshProductsInTooltip();
+              animatedAddedTooltip();
+              setRenderTotalQuantity((oldValue) => oldValue + 1);
               importProductToCart(id);
               changeCartButton();
             }}
@@ -92,7 +95,8 @@ function ProductCard({
             <button
               className="border border-[#666666] rounded-full hover:bg-slate-100 active:scale-95"
               onClick={() => {
-                refreshProductsInTooltip();
+                animatedRemovedTooltip();
+                setRenderTotalQuantity((oldValue) => oldValue - 1);
                 removeFromCart(id);
                 if (productQuantity === 1) {
                   setCartButton(false);
@@ -105,7 +109,8 @@ function ProductCard({
             <button
               className="border border-[#666666] rounded-full hover:bg-slate-100 active:scale-95"
               onClick={() => {
-                refreshProductsInTooltip();
+                animatedAddedTooltip();
+                setRenderTotalQuantity((oldValue) => oldValue + 1);
                 addToCart(id);
               }}
             >
