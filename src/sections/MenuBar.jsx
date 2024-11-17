@@ -37,7 +37,7 @@ function MenuBar({ setOpenMenu }) {
           </li>
           {renderMaleCategories && (
             <div>
-              <Subcategories gender={"Men"} />
+              <Subcategories gender={"Male"} />
             </div>
           )}
         </ul>
@@ -60,7 +60,7 @@ function MenuBar({ setOpenMenu }) {
           </li>
           {renderFemaleCategories && (
             <div>
-              <Subcategories gender={"Women"} />
+              <Subcategories gender={"Female"} />
             </div>
           )}
         </ul>

@@ -16,9 +16,9 @@ function CategoryFilter({ gender, filters, setFilters, removeFilter }) {
     const filtersToKeep = filters.filter(
       (filter) =>
         !(
-          filter.endsWith("Men") ||
-          filter.endsWith("Women") ||
-          filter.endsWith("Unisex")
+          filter.startsWith("Men") ||
+          filter.startsWith("Women") ||
+          filter.startsWith("Unisex")
         )
     );
 
@@ -27,7 +27,7 @@ function CategoryFilter({ gender, filters, setFilters, removeFilter }) {
 
   function controlFilter(event) {
     const button = event.target;
-    const filterText = `${button.textContent} for ${gender}`;
+    const filterText = `${gender} ${button.textContent}`;
     if (filters.includes(filterText)) {
       removeFilter(filterText);
     } else {
@@ -38,7 +38,7 @@ function CategoryFilter({ gender, filters, setFilters, removeFilter }) {
   return (
     <div className="font-secondary gap-1 flex flex-col items-start rounded-sm text-sm py-3 px-1">
       {categoryMap[gender].map((category) => {
-        const isSelected = filters.includes(`${category} for ${gender}`);
+        const isSelected = filters.includes(`${gender} ${category}`);
 
         return (
           <button
