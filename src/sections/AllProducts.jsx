@@ -1,12 +1,10 @@
 import ProductCard from "../components/ProductCard";
 import { clothes } from "../constants/clothes";
-// import { filters } from "../constants/filters";
 
 function AllProducts({
   refreshProductsInTooltip,
   filters,
   removeFilter,
-  setFilters,
   setRenderFilterSection,
 }) {
   const productElements = clothes.map((clothe) => {
@@ -62,17 +60,6 @@ function AllProducts({
       {filters.length > 0 && (
         <div className="ml-5 flex overflow-x-auto md:flex-wrap gap-3 p-5 w-[95%]">
           {filtersOfUserElements}
-          {filters.length >= 2 && (
-            <button
-              className="bg-accent py-1 px-4 rounded-full w-fit text-center whitespace-nowrap relative font-secondary text-white flex flex-between max-md:pr-10"
-              onClick={() => {
-                setFilters([]);
-              }}
-            >
-              <img src="src/assets/icons/delete.svg" alt="Delete Icon" />
-              Clear all
-            </button>
-          )}
         </div>
       )}
 

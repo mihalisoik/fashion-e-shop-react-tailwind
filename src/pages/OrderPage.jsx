@@ -41,7 +41,6 @@ function OrderPage() {
         refreshProductsInTooltip={refreshProductsInTooltip}
         filters={filters}
         removeFilter={removeFilter}
-        setFilters={setFilters}
         setRenderFilterSection={setRenderFilterSection}
       />
     </div>
