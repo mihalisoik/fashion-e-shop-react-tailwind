@@ -15,13 +15,11 @@ function OrderPage() {
   function addFilter(filter) {
     if (!filters.includes(filter)) {
       setFilters([...filters, filter]);
-      console.log(filters);
     }
   }
 
   function removeFilter(filter) {
     setFilters(filters.filter((f) => f !== filter));
-    console.log(filters);
   }
 
   const [renderFilterSection, setRenderFilterSection] = useState(false);

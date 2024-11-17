@@ -9,10 +9,10 @@ function ColorFilter({ filters, addFilter, removeFilter }) {
   const uniqueColorArray = [...new Set(flattenedColorArray)];
 
   function controlFilters(color) {
-    if (filters.includes(color)) {
-      removeFilter(color);
+    if (filters.includes(`Color: ${color}`)) {
+      removeFilter(`Color: ${color}`);
     } else {
-      addFilter(color);
+      addFilter(`Color: ${color}`);
     }
   }
 
@@ -22,7 +22,8 @@ function ColorFilter({ filters, addFilter, removeFilter }) {
         key={index}
         style={{ backgroundColor: color }}
         className={`border-2 border-gray-200 p-1 w-12 h-12 cursor-pointer ${
-          filters.includes(color) && "outline outline-2 outline-black"
+          filters.includes(`Color: ${color}`) &&
+          "outline outline-2 outline-black"
         }`}
         onClick={() => controlFilters(color)}
       ></div>

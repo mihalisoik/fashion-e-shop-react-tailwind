@@ -7,7 +7,52 @@ function AllProducts({
   removeFilter,
   setRenderFilterSection,
 }) {
-  const productElements = clothes.map((clothe) => {
+  let filteredArray = filters.some((filter) => filter.startsWith("Color:"))
+    ? []
+    : [...clothes];
+
+  if (filters.length > 0) {
+    filters.forEach((filter) => {
+      if (filter.startsWith("Color:")) {
+        const selectedColor = filter.split(":")[1].trim();
+        clothes.forEach((clothe) => {
+          if (clothe.color.includes(selectedColor)) {
+            filteredArray.push(clothe);
+          }
+        });
+      }
+    });
+
+    filters.forEach((filter) => {
+      if (
+        filter.startsWith("Men") ||
+        filter.startsWith("Women") ||
+        filter.startsWith("Unisex")
+      ) {
+        const [gender, category] = filter.split(" ");
+        filteredArray = filteredArray.filter(
+          (clothe) => clothe.gender === gender && clothe.category === category
+        );
+      }
+    });
+    filters.forEach((filter) => {
+      if (filter.includes("€")) {
+        filteredArray = filteredArray.filter((clothe) => {
+          if (filter === "0-40€") {
+            return clothe.priceCents <= 4000;
+          } else if (filter === "€40-€80") {
+            return clothe.priceCents > 4000 && clothe.priceCents <= 8000;
+          } else if (filter === "€80-€150") {
+            return clothe.priceCents > 8000 && clothe.priceCents <= 15000;
+          } else if (filter === "€150+") {
+            return clothe.priceCents > 15000;
+          }
+        });
+      }
+    });
+  }
+
+  const productElements = filteredArray.map((clothe) => {
     return (
       <div className="p-5">
         <ProductCard
@@ -57,15 +102,24 @@ function AllProducts({
           </button>
         </div>
       </div>
+      <p className="text-xs ml-4 mt-4 tracking-tighter text-gray-600 bg-slate-100 py-2 px-4 inline-block rounded-full">
+        <span className="font-bold">{filteredArray.length}</span> results
+      </p>
       {filters.length > 0 && (
         <div className="ml-5 flex overflow-x-auto md:flex-wrap gap-3 p-5 w-[95%]">
           {filtersOfUserElements}
         </div>
       )}
 
-      <div className="flex flex-wrap gap-3 justify-center">
-        {productElements}
-      </div>
+      {filteredArray.length > 0 ? (
+        <div className="flex flex-wrap gap-3 justify-center">
+          {productElements}
+        </div>
+      ) : (
+        <p className="text-center text-gray-700">
+          Apologies, but no products match your selected filters.
+        </p>
+      )}
     </div>
   );
 }

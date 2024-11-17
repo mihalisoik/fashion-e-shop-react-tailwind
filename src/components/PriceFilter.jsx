@@ -17,7 +17,7 @@ function PriceFilter({ filters, setFilters }) {
           onChange={handlePriceChange}
           checked={filters.includes("0-40€")}
         />
-        €0 - €40
+        0 - €40
       </label>
       <label className="flex items-center">
         <input
