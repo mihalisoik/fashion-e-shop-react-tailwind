@@ -7,6 +7,18 @@ function AllProducts({
   removeFilter,
   setRenderFilterSection,
 }) {
+  function removeDuplicates(clothesArray) {
+    const seenIds = new Set();
+    return clothesArray.filter((item) => {
+      if (seenIds.has(item.id)) {
+        return false;
+      } else {
+        seenIds.add(item.id);
+        return true;
+      }
+    });
+  }
+
   let filteredArray = filters.some((filter) => filter.startsWith("Color:"))
     ? []
     : [...clothes];
@@ -50,6 +62,8 @@ function AllProducts({
         });
       }
     });
+
+    filteredArray = removeDuplicates(filteredArray);
   }
 
   const productElements = filteredArray.map((clothe) => {
