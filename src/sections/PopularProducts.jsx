@@ -15,7 +15,6 @@ function PopularItems({
         id={clothe.id}
         image={clothe.image}
         name={clothe.name}
-        gender={clothe.gender}
         rating={clothe.rating}
         isFavorite={clothe.isFavorite}
         priceCents={clothe.priceCents}

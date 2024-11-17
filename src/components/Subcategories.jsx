@@ -7,12 +7,14 @@ function Subcategories({ gender }) {
     if (item.gender === gender && !categoryArray.includes(item.category)) {
       categoryArray.push(item.category);
       return (
-        <li
-          key={item.category}
-          className="w-full text-md mb-6 px-3 py-1 rounded-sm  hover:bg-white cursor-pointer"
-        >
-          <a href="/order">{item.category}</a>
-        </li>
+        <a href="/order">
+          <li
+            key={item.category}
+            className="w-full text-md mb-6 px-3 py-1 rounded-sm  hover:bg-white cursor-pointer"
+          >
+            {item.category}
+          </li>
+        </a>
       );
     }
   });

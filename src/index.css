@@ -24,9 +24,34 @@ body {
     margin: 0 auto;
   }
 
-  .filters-toggle {
-    background-color: #9ca3af;
-    scale: 1.03;
+  .go-up {
+    animation-name: transform1;
+    animation-duration: 1.8s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+  }
+
+  .go-down {
+    animation-name: transform2;
+    animation-duration: 1.8s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes transform1 {
+    100% {
+      transform: translate(0px, -60px);
+    }
+  }
+
+  @keyframes transform2 {
+    100% {
+      transform: translate(0px, 60px);
+    }
   }
 
   .main-button {

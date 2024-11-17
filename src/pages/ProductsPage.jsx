@@ -2,13 +2,47 @@ import { useState } from "react";
 import AllProducts from "../sections/AllProducts";
 import Filter from "../sections/Filter";
 import Navbar from "../sections/Navbar";
+import { totalQuantity } from "../constants/cart";
 
 function OrderPage() {
-  const [renderTooltip, setRenderTooltip] = useState(false);
+  const [renderAddedTooltip, setRenderAddedTooltip] = useState(false);
+  const [renderRemovedTooltip, setRenderRemovedTooltip] = useState(false);
 
-  function refreshProductsInTooltip() {
-    setRenderTooltip((oldValue) => !oldValue);
+  let timeoutAddedId;
+
+  function animatedAddedTooltip() {
+    if (timeoutAddedId) {
+      clearTimeout(timeoutAddedId);
+    }
+
+    setRenderAddedTooltip(false);
+
+    setTimeout(() => {
+      setRenderAddedTooltip(true);
+      timeoutAddedId = setTimeout(() => {
+        setRenderAddedTooltip(false);
+      }, 2100);
+    }, 0);
   }
+
+  let timeoutRemovedId;
+
+  function animatedRemovedTooltip() {
+    if (timeoutRemovedId) {
+      clearTimeout(timeoutRemovedId);
+    }
+
+    setRenderRemovedTooltip(false);
+
+    setTimeout(() => {
+      setRenderRemovedTooltip(true);
+      timeoutRemovedId = setTimeout(() => {
+        setRenderRemovedTooltip(false);
+      }, 2100);
+    }, 0);
+  }
+
+  const [renderTotalQuantity, setRenderTotalQuantity] = useState(totalQuantity);
 
   const [filters, setFilters] = useState([]);
 
@@ -26,7 +60,12 @@ function OrderPage() {
 
   return (
     <div>
-      <Navbar isHomepage={false} />
+      <Navbar
+        isHomepage={false}
+        renderAddedTooltip={renderAddedTooltip}
+        renderRemovedTooltip={renderRemovedTooltip}
+        renderTotalQuantity={renderTotalQuantity}
+      />
       <Filter
         addFilter={addFilter}
         removeFilter={removeFilter}
@@ -36,7 +75,9 @@ function OrderPage() {
         setRenderFilterSection={setRenderFilterSection}
       />
       <AllProducts
-        refreshProductsInTooltip={refreshProductsInTooltip}
+        animatedAddedTooltip={animatedAddedTooltip}
+        animatedRemovedTooltip={animatedRemovedTooltip}
+        setRenderTotalQuantity={setRenderTotalQuantity}
         filters={filters}
         removeFilter={removeFilter}
         setRenderFilterSection={setRenderFilterSection}

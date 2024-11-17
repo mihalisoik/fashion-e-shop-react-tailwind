@@ -24,7 +24,7 @@ function HomePage() {
       setRenderAddedTooltip(true);
       timeoutAddedId = setTimeout(() => {
         setRenderAddedTooltip(false);
-      }, 1500);
+      }, 2100);
     }, 0);
   }
 
@@ -41,7 +41,7 @@ function HomePage() {
       setRenderRemovedTooltip(true);
       timeoutRemovedId = setTimeout(() => {
         setRenderRemovedTooltip(false);
-      }, 1500);
+      }, 2100);
     }, 0);
   }
 

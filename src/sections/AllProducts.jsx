@@ -2,7 +2,9 @@ import ProductCard from "../components/ProductCard";
 import { clothes } from "../constants/clothes";
 
 function AllProducts({
-  refreshProductsInTooltip,
+  animatedAddedTooltip,
+  animatedRemovedTooltip,
+  setRenderTotalQuantity,
   filters,
   removeFilter,
   setRenderFilterSection,
@@ -77,7 +79,9 @@ function AllProducts({
           rating={clothe.rating}
           isFavorite={clothe.isFavorite}
           priceCents={clothe.priceCents}
-          refreshProductsInTooltip={refreshProductsInTooltip}
+          setRenderTotalQuantity={setRenderTotalQuantity}
+          animatedAddedTooltip={animatedAddedTooltip}
+          animatedRemovedTooltip={animatedRemovedTooltip}
         />
       </div>
     );
