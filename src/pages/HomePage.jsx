@@ -1,13 +1,13 @@
 import Navbar from "../sections/Navbar";
 import Hero from "../sections/Hero";
-import PopularItems from "../sections/PopularProducts";
+import PopularProducts from "../sections/PopularProducts";
 import CustomerReviews from "../sections/CustomerReviews";
 import Newsletter from "../sections/Newsletter";
 import Footer from "../sections/Footer";
 import { useState } from "react";
 import { totalQuantity } from "../constants/cart";
 
-function HomePage() {
+function HomePage({ setFilters }) {
   const [renderAddedTooltip, setRenderAddedTooltip] = useState(false);
   const [renderRemovedTooltip, setRenderRemovedTooltip] = useState(false);
 
@@ -56,7 +56,7 @@ function HomePage() {
         renderTotalQuantity={renderTotalQuantity}
       />
       <Hero />
-      <PopularItems
+      <PopularProducts
         animatedAddedTooltip={animatedAddedTooltip}
         animatedRemovedTooltip={animatedRemovedTooltip}
         setRenderTotalQuantity={setRenderTotalQuantity}

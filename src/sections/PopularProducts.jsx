@@ -1,7 +1,7 @@
 import ProductCard from "../components/ProductCard";
 import { clothes } from "../constants/clothes";
 
-function PopularItems({
+function PopularProducts({
   animatedAddedTooltip,
   setRenderTotalQuantity,
   animatedRemovedTooltip,
@@ -46,4 +46,4 @@ function PopularItems({
   );
 }
 
-export default PopularItems;
+export default PopularProducts;

@@ -13,7 +13,16 @@ function Hero() {
             new arrivals every week, you’re bound to find something that fits
             just right. Step up your wardrobe and shop the looks you’ll love!
           </p>
-          <button className="main-button main-button-hover">Shop now</button>
+          <a href="/products">
+            <button className="main-button main-button-hover flex gap-3 pr-6">
+              <p>Shop Now</p>
+              <img
+                src="src/assets/icons/arrow-forward.svg"
+                alt="Arrow Forward"
+                className=""
+              />
+            </button>
+          </a>
         </div>
       </div>
     </section>

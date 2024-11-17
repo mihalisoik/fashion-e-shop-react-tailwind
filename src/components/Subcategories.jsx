@@ -7,7 +7,7 @@ function Subcategories({ gender }) {
     if (item.gender === gender && !categoryArray.includes(item.category)) {
       categoryArray.push(item.category);
       return (
-        <a href="/order">
+        <a href="/products">
           <li
             key={item.category}
             className="w-full text-md mb-6 px-3 py-1 rounded-sm  hover:bg-white cursor-pointer"
