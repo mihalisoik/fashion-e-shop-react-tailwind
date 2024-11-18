@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AllProducts from "../sections/AllProducts";
 import Filter from "../sections/Filter";
 import Navbar from "../sections/Navbar";
 import { totalQuantity } from "../constants/cart";
+import { useLocation } from "react-router-dom";
 
-function OrderPage() {
+function ProductsPage() {
   const [renderAddedTooltip, setRenderAddedTooltip] = useState(false);
   const [renderRemovedTooltip, setRenderRemovedTooltip] = useState(false);
 
@@ -44,7 +45,18 @@ function OrderPage() {
 
   const [renderTotalQuantity, setRenderTotalQuantity] = useState(totalQuantity);
 
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const subcategory = queryParams.get("subcategory");
+  const gender = queryParams.get("gender");
+
   const [filters, setFilters] = useState([]);
+
+  useEffect(() => {
+    if (subcategory && gender) {
+      setFilters([`${gender} ${subcategory}`]);
+    }
+  }, [subcategory, gender]);
 
   function addFilter(filter) {
     if (!filters.includes(filter)) {
@@ -86,4 +98,4 @@ function OrderPage() {
   );
 }
 
-export default OrderPage;
+export default ProductsPage;

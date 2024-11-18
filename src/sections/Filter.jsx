@@ -46,7 +46,7 @@ function Filter({
         <div className="flex flex-col items-center">
           <div
             key={gender}
-            className="group text-center font-primary font-bold border border-gray-100 rounded-lg cursor-pointer shadow-md text-white bg-slate-900 relative w-48 py-1"
+            className="group text-center font-primary font-bold border border-gray-100 rounded-lg cursor-pointer shadow-md text-white bg-accent relative w-48 py-1"
             onMouseEnter={() => handleMouseEnter(gender)}
             onMouseLeave={handleMouseLeave}
           >

@@ -1,4 +1,5 @@
 import { clothes } from "../constants/clothes";
+import { Link } from "react-router-dom";
 
 function Subcategories({ gender }) {
   const categoryArray = [];
@@ -7,14 +8,16 @@ function Subcategories({ gender }) {
     if (item.gender === gender && !categoryArray.includes(item.category)) {
       categoryArray.push(item.category);
       return (
-        <a href="/products">
-          <li
-            key={item.category}
-            className="w-full text-md mb-6 px-3 py-1 rounded-sm  hover:bg-white cursor-pointer"
-          >
+        <Link
+          to={`/products?subcategory=${encodeURIComponent(
+            item.category
+          )}&gender=${encodeURIComponent(gender)}`}
+          key={item.category}
+        >
+          <li className="w-full text-md mb-6 px-3 py-1 rounded-sm hover:bg-white cursor-pointer">
             {item.category}
           </li>
-        </a>
+        </Link>
       );
     }
   });
