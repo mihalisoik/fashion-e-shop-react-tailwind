@@ -2,7 +2,7 @@ import { nanoid } from "nanoid";
 
 export let clothes = [
   {
-    id: nanoid(),
+    id: "1", // changed to string
     name: "Classic T-Shirt",
     image: "src/assets/logo.png",
     priceCents: 1999,
@@ -13,10 +13,10 @@ export let clothes = [
     description:
       "A comfortable classic t-shirt available in red and black for everyday wear.",
     isFavorite: false,
-    rating: 4.1,
+    rating: { stars: 4.1, reviews: 278 },
   },
   {
-    id: nanoid(),
+    id: "2", // changed to string
     name: "Denim Jacket",
     image: "src/assets/logo.png",
     priceCents: 4999,
@@ -27,10 +27,10 @@ export let clothes = [
     description:
       "A stylish denim jacket perfect for layering, available in blue and black.",
     isFavorite: false,
-    rating: 3.9,
+    rating: { stars: 3.9, reviews: 136 },
   },
   {
-    id: nanoid(),
+    id: "3", // changed to string
     name: "Chic Blouse",
     image: "src/assets/logo.png",
     priceCents: 2999,
@@ -41,10 +41,10 @@ export let clothes = [
     description:
       "A chic blouse available in white and pink for a polished look.",
     isFavorite: false,
-    rating: 4.5,
+    rating: { stars: 4.5, reviews: 412 },
   },
   {
-    id: nanoid(),
+    id: "4", // changed to string
     name: "Cargo Pants",
     image: "src/assets/logo.png",
     priceCents: 3999,
@@ -54,10 +54,10 @@ export let clothes = [
     stock: 25,
     description: "Durable cargo pants with multiple pockets.",
     isFavorite: false,
-    rating: 3.4,
+    rating: { stars: 3.4, reviews: 89 },
   },
   {
-    id: nanoid(),
+    id: "5", // changed to string
     name: "Running Sneakers",
     image: "src/assets/logo.png",
     priceCents: 10999,
@@ -68,10 +68,10 @@ export let clothes = [
     description:
       "Lightweight running sneakers for optimal performance, available in black and white.",
     isFavorite: false,
-    rating: 5.0,
+    rating: { stars: 5.0, reviews: 952 },
   },
   {
-    id: nanoid(),
+    id: "6", // changed to string
     name: "Leather Boots",
     image: "src/assets/logo.png",
     priceCents: 8999,
@@ -81,10 +81,10 @@ export let clothes = [
     stock: 10,
     description: "Stylish leather boots for any occasion.",
     isFavorite: false,
-    rating: 4.0,
+    rating: { stars: 4.0, reviews: 220 },
   },
   {
-    id: nanoid(),
+    id: "7", // changed to string
     name: "Casual Dress",
     image: "src/assets/logo.png",
     priceCents: 5499,
@@ -94,10 +94,10 @@ export let clothes = [
     stock: 12,
     description: "A casual dress available in floral pattern and solid pink.",
     isFavorite: false,
-    rating: 3.7,
+    rating: { stars: 3.7, reviews: 134 },
   },
   {
-    id: nanoid(),
+    id: "8", // changed to string
     name: "Sports Shorts",
     image: "src/assets/logo.png",
     priceCents: 2499,
@@ -108,10 +108,10 @@ export let clothes = [
     description:
       "Comfortable sports shorts available in grey and black for all your activities.",
     isFavorite: false,
-    rating: 4.6,
+    rating: { stars: 4.6, reviews: 303 },
   },
   {
-    id: nanoid(),
+    id: "9", // changed to string
     name: "Wool Sweater",
     image: "src/assets/logo.png",
     priceCents: 5999,
@@ -121,10 +121,10 @@ export let clothes = [
     stock: 18,
     description: "A cozy wool sweater to keep you warm.",
     isFavorite: false,
-    rating: 3.8,
+    rating: { stars: 3.8, reviews: 98 },
   },
   {
-    id: nanoid(),
+    id: "10", // changed to string
     name: "Formal Shirt",
     image: "src/assets/logo.png",
     priceCents: 3999,
@@ -135,10 +135,10 @@ export let clothes = [
     description:
       "A crisp formal shirt available in white and blue for special occasions.",
     isFavorite: false,
-    rating: 4.0,
+    rating: { stars: 4.0, reviews: 179 },
   },
   {
-    id: nanoid(),
+    id: "11", // changed to string
     name: "Summer Sandals",
     image: "src/assets/logo.png",
     priceCents: 2999,
@@ -148,10 +148,10 @@ export let clothes = [
     stock: 0,
     description: "Comfortable sandals perfect for summer days.",
     isFavorite: false,
-    rating: 2.8,
+    rating: { stars: 2.8, reviews: 65 },
   },
   {
-    id: nanoid(),
+    id: "12", // changed to string
     name: "Track Jacket",
     image: "src/assets/logo.png",
     priceCents: 4499,
@@ -161,10 +161,10 @@ export let clothes = [
     stock: 15,
     description: "A stylish track jacket for sports and leisure.",
     isFavorite: false,
-    rating: 4.1,
+    rating: { stars: 4.1, reviews: 312 },
   },
   {
-    id: nanoid(),
+    id: "13", // changed to string
     name: "Jeans",
     image: "src/assets/logo.png",
     priceCents: 4999,
@@ -174,10 +174,10 @@ export let clothes = [
     stock: 0,
     description: "Classic blue jeans for casual wear.",
     isFavorite: false,
-    rating: 4.5,
+    rating: { stars: 4.5, reviews: 438 },
   },
   {
-    id: nanoid(),
+    id: "14", // changed to string
     name: "Graphic Hoodie",
     image: "src/assets/logo.png",
     priceCents: 3999,
@@ -188,10 +188,10 @@ export let clothes = [
     description:
       "A cozy hoodie with a fun graphic design, available in grey and navy.",
     isFavorite: false,
-    rating: 3.1,
+    rating: { stars: 3.1, reviews: 87 },
   },
   {
-    id: nanoid(),
+    id: "15", // changed to string
     name: "Sweatpants",
     image: "src/assets/logo.png",
     priceCents: 3499,
@@ -202,10 +202,10 @@ export let clothes = [
     description:
       "Comfortable sweatpants available in black and grey for lounging or workouts.",
     isFavorite: false,
-    rating: 4.8,
+    rating: { stars: 4.8, reviews: 362 },
   },
   {
-    id: nanoid(),
+    id: "16", // changed to string
     name: "Beach Cover-Up",
     image: "src/assets/logo.png",
     priceCents: 2499,
@@ -215,10 +215,10 @@ export let clothes = [
     stock: 15,
     description: "Light and breezy cover-up for beach days.",
     isFavorite: false,
-    rating: 2.9,
+    rating: { stars: 2.9, reviews: 52 },
   },
   {
-    id: nanoid(),
+    id: "17", // changed to string
     name: "Polo Shirt",
     image: "src/assets/logo.png",
     priceCents: 2999,
@@ -229,10 +229,10 @@ export let clothes = [
     description:
       "A classic polo shirt available in green and navy for smart casual looks.",
     isFavorite: false,
-    rating: 3.7,
+    rating: { stars: 3.7, reviews: 144 },
   },
   {
-    id: nanoid(),
+    id: "18", // changed to string
     name: "Maxi Skirt",
     image: "src/assets/logo.png",
     priceCents: 3999,
@@ -242,10 +242,10 @@ export let clothes = [
     stock: 12,
     description: "Flowy maxi skirt for a feminine touch.",
     isFavorite: false,
-    rating: 4.1,
+    rating: { stars: 4.1, reviews: 209 },
   },
   {
-    id: nanoid(),
+    id: "19", // changed to string
     name: "Lightweight Jacket",
     image: "src/assets/logo.png",
     priceCents: 5999,
@@ -256,10 +256,10 @@ export let clothes = [
     description:
       "Perfect for transitional weather, this jacket is lightweight and stylish.",
     isFavorite: false,
-    rating: 4.7,
+    rating: { stars: 4.7, reviews: 391 },
   },
   {
-    id: nanoid(),
+    id: "20", // changed to string
     name: "Bikini Set",
     image: "src/assets/logo.png",
     priceCents: 3999,
@@ -269,7 +269,7 @@ export let clothes = [
     stock: 18,
     description: "A stylish bikini set for beach outings.",
     isFavorite: false,
-    rating: 3.2,
+    rating: { stars: 3.2, reviews: 123 },
   },
 ];
 

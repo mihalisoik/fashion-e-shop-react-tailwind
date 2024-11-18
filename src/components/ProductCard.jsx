@@ -65,7 +65,7 @@ function ProductCard({
         <img src={image} alt={name} width={150} />
         <div className="flex w-full font-secondary justify-between items-center">
           <div className="flex items-center gap-0.5">
-            {(rating * 10) % 10 === 0 ? (
+            {(rating.stars * 10) % 10 === 0 ? (
               <img src="src/assets/icons/star.svg" alt="star-rating" />
             ) : (
               <img
@@ -73,7 +73,7 @@ function ProductCard({
                 alt="half-star-rating"
               />
             )}
-            <p>{rating.toFixed(1)}</p>
+            <p>{rating.stars.toFixed(1)}</p>
           </div>
           <div className="flex gap-1">
             <button

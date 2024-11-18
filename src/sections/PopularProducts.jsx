@@ -6,7 +6,7 @@ function PopularProducts({
   setRenderTotalQuantity,
   animatedRemovedTooltip,
 }) {
-  const popularClothes = clothes.filter((clothe) => clothe.rating >= 4);
+  const popularClothes = clothes.filter((clothe) => clothe.rating.stars >= 4);
 
   const popularItemsElements = popularClothes.map((clothe) => {
     return (
