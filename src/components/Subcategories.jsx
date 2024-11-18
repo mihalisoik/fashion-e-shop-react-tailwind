@@ -14,7 +14,12 @@ function Subcategories({ gender }) {
           )}&gender=${encodeURIComponent(gender)}`}
           key={item.category}
         >
-          <li className="w-full text-md mb-6 px-3 py-1 rounded-sm hover:bg-white cursor-pointer">
+          <li
+            className="w-full text-md mb-6 px-3 py-1 rounded-md hover:bg-white hover:border hover:border-gray-300 hover:px-[11px] hover:py-[3px] cursor-pointer"
+            onClick={() => {
+              document.body.style.overflow = "auto";
+            }}
+          >
             {item.category}
           </li>
         </Link>

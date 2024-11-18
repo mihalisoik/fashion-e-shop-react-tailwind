@@ -17,7 +17,7 @@ function MenuBar({ setOpenMenu }) {
       >
         <img src="src/assets/icons/grey-cancel-icon.svg" alt="Close Menu" />
       </button>
-      <div className="mt-12 lg:mr-auto lg:ml-4">
+      <div className="mt-12">
         <ul>
           <li
             className="category-container"

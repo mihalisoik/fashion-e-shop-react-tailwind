@@ -108,7 +108,7 @@ function AllProducts({
   ));
 
   return (
-    <div className="bg-white mt-20 ml-3 mr-72 md:lg:ml-10 lg:ml-20 rounded-md shadow-md md:w-[60%] w-full relative overflow-hidden">
+    <div className="bg-white mt-20 ml-3 mr-72 md:lg:ml-10 lg:ml-20 rounded-md shadow-md md:w-[60%] w-[95%] relative overflow-hidden">
       <div className="flex md:hidden mb-14">
         <div className="absolute top-5 right-5">
           <button
