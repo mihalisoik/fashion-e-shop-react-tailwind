@@ -62,7 +62,7 @@ function ProductCard({
           />
         )}
       </button>
-      <img src={image} alt={name} width={150} />
+      <img src={image[0]} alt={name} width={150} />
       <div className="flex gap-0.5 font-secondary">
         {(rating * 10) % 10 === 0 ? (
           <img src="src/assets/icons/star.svg" alt="star-rating" />

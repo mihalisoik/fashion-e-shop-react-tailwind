@@ -12,45 +12,45 @@ function PriceFilter({ filters, setFilters }) {
         <input
           type="radio"
           name="price"
-          value="0-40€"
+          value="0-30€"
           className="mr-2"
           onChange={handlePriceChange}
-          checked={filters.includes("0-40€")}
+          checked={filters.includes("0-30€")}
         />
-        0 - €40
+        0 - €30
       </label>
       <label className="flex items-center">
         <input
           type="radio"
           name="price"
-          value="€40-€80"
+          value="€30-€60"
           className="mr-2"
           onChange={handlePriceChange}
-          checked={filters.includes("€40-€80")}
+          checked={filters.includes("€30-€60")}
         />
-        €40 - €80
+        €30 - €60
       </label>
       <label className="flex items-center">
         <input
           type="radio"
           name="price"
-          value="€80-€150"
+          value="€60-€100"
           class="mr-2"
           onChange={handlePriceChange}
-          checked={filters.includes("€80-€150")}
+          checked={filters.includes("€60-€100")}
         />
-        €80 - €150
+        €60 - €100
       </label>
       <label className="flex items-center">
         <input
           type="radio"
           name="price"
-          value="€150+"
+          value="€100+"
           className="mr-2"
           onChange={handlePriceChange}
-          checked={filters.includes("€150+")}
+          checked={filters.includes("€100+")}
         />
-        €150 and above
+        €100 and above
       </label>
     </div>
   );

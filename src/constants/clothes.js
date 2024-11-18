@@ -4,7 +4,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Classic T-Shirt",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 1999,
     gender: "Unisex",
     category: "T-shirts",
@@ -18,7 +18,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Denim Jacket",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 4999,
     gender: "Men",
     category: "Jackets",
@@ -32,7 +32,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Chic Blouse",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 2999,
     gender: "Women",
     category: "Blouses",
@@ -46,7 +46,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Cargo Pants",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 3999,
     gender: "Unisex",
     category: "Pants",
@@ -59,8 +59,8 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Running Sneakers",
-    image: "src/assets/logo.png",
-    priceCents: 6999,
+    image: ["src/assets/logo.png"],
+    priceCents: 10999,
     gender: "Unisex",
     category: "Shoes",
     color: ["Black", "White"],
@@ -73,7 +73,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Leather Boots",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 8999,
     gender: "Women",
     category: "Shoes",
@@ -86,7 +86,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Casual Dress",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 5499,
     gender: "Women",
     category: "Dresses",
@@ -99,7 +99,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Sports Shorts",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 2499,
     gender: "Unisex",
     category: "Shorts",
@@ -113,7 +113,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Wool Sweater",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 5999,
     gender: "Men",
     category: "Sweaters",
@@ -126,7 +126,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Formal Shirt",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 3999,
     gender: "Men",
     category: "Shirts",
@@ -140,7 +140,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Summer Sandals",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 2999,
     gender: "Women",
     category: "Shoes",
@@ -153,7 +153,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Track Jacket",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 4499,
     gender: "Unisex",
     category: "Jackets",
@@ -166,7 +166,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Jeans",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 4999,
     gender: "Unisex",
     category: "Pants",
@@ -179,7 +179,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Graphic Hoodie",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 3999,
     gender: "Unisex",
     category: "Hoodies",
@@ -193,7 +193,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Sweatpants",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 3499,
     gender: "Unisex",
     category: "Pants",
@@ -207,7 +207,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Beach Cover-Up",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 2499,
     gender: "Women",
     category: "Cover-ups",
@@ -220,7 +220,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Polo Shirt",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 2999,
     gender: "Men",
     category: "Shirts",
@@ -234,7 +234,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Maxi Skirt",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 3999,
     gender: "Women",
     category: "Skirts",
@@ -247,7 +247,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Lightweight Jacket",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 5999,
     gender: "Unisex",
     category: "Jackets",
@@ -261,7 +261,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Bikini Set",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 3999,
     gender: "Women",
     category: "Swimwear",
@@ -274,7 +274,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Puffer Vest",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 6999,
     gender: "Unisex",
     category: "Vests",
@@ -287,7 +287,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Cardigan",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 4999,
     gender: "Women",
     category: "Sweaters",
@@ -300,7 +300,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Linen Pants",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 3499,
     gender: "Unisex",
     category: "Pants",
@@ -313,7 +313,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Tank Top",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 1999,
     gender: "Unisex",
     category: "Tops",
@@ -326,7 +326,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Plaid Shirt",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 3599,
     gender: "Men",
     category: "Shirts",
@@ -339,7 +339,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Fleece Jacket",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 4999,
     gender: "Unisex",
     category: "Jackets",
@@ -353,7 +353,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Cargo Shorts",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 2999,
     gender: "Unisex",
     category: "Shorts",
@@ -366,7 +366,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Graphic Tee",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 2499,
     gender: "Unisex",
     category: "T-shirts",
@@ -379,7 +379,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Ankle Boots",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 5999,
     gender: "Women",
     category: "Shoes",
@@ -392,7 +392,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Jogger Pants",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 3499,
     gender: "Unisex",
     category: "Pants",
@@ -405,7 +405,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Sweater Dress",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 4999,
     gender: "Women",
     category: "Dresses",
@@ -418,7 +418,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "High-Waisted Jeans",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 3999,
     gender: "Women",
     category: "Jeans",
@@ -431,8 +431,8 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Trench Coat",
-    image: "src/assets/logo.png",
-    priceCents: 7999,
+    image: ["src/assets/logo.png"],
+    priceCents: 13499,
     gender: "Women",
     category: "Coats",
     color: ["Beige"],
@@ -444,7 +444,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Striped Skirt",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 2999,
     gender: "Women",
     category: "Skirts",
@@ -457,7 +457,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Mesh Tank Top",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 1999,
     gender: "Unisex",
     category: "Tops",
@@ -470,7 +470,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Baseball Cap",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 1999,
     gender: "Unisex",
     category: "Accessories",
@@ -483,7 +483,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Polo Dress",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 3499,
     gender: "Women",
     category: "Dresses",
@@ -496,7 +496,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Overalls",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 4299,
     gender: "Unisex",
     category: "Pants",
@@ -509,7 +509,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Biker Jacket",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 7999,
     gender: "Men",
     category: "Jackets",
@@ -522,7 +522,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Knit Scarf",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 1999,
     gender: "Unisex",
     category: "Accessories",
@@ -535,7 +535,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Bootcut Jeans",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 4599,
     gender: "Women",
     category: "Jeans",
@@ -548,7 +548,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Chinos",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 3999,
     gender: "Men",
     category: "Pants",
@@ -561,7 +561,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Windbreaker",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 5999,
     gender: "Unisex",
     category: "Jackets",
@@ -574,7 +574,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "V-Neck Sweater",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 4999,
     gender: "Women",
     category: "Sweaters",
@@ -587,7 +587,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Peacoat",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 8999,
     gender: "Men",
     category: "Coats",
@@ -600,7 +600,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Flannel Shirt",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 3299,
     gender: "Men",
     category: "Shirts",
@@ -613,7 +613,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Cotton Shorts",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 2499,
     gender: "Unisex",
     category: "Shorts",
@@ -626,7 +626,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Luxe Pajama Set",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 5999,
     gender: "Women",
     category: "Sleepwear",
@@ -640,7 +640,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Sport Bra",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 1999,
     gender: "Women",
     category: "Activewear",
@@ -653,7 +653,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Tennis Skirt",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 2899,
     gender: "Women",
     category: "Activewear",
@@ -666,7 +666,7 @@ export let clothes = [
   {
     id: nanoid(),
     name: "Yoga Pants",
-    image: "src/assets/logo.png",
+    image: ["src/assets/logo.png"],
     priceCents: 3499,
     gender: "Unisex",
     category: "Activewear",

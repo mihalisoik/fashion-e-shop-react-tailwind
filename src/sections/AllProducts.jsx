@@ -52,14 +52,14 @@ function AllProducts({
     filters.forEach((filter) => {
       if (filter.includes("€")) {
         filteredArray = filteredArray.filter((clothe) => {
-          if (filter === "0-40€") {
-            return clothe.priceCents <= 4000;
-          } else if (filter === "€40-€80") {
-            return clothe.priceCents > 4000 && clothe.priceCents <= 8000;
-          } else if (filter === "€80-€150") {
-            return clothe.priceCents > 8000 && clothe.priceCents <= 15000;
-          } else if (filter === "€150+") {
-            return clothe.priceCents > 15000;
+          if (filter === "0-30€") {
+            return clothe.priceCents <= 3000;
+          } else if (filter === "€30-€60") {
+            return clothe.priceCents > 3000 && clothe.priceCents <= 6000;
+          } else if (filter === "€60-€100") {
+            return clothe.priceCents > 6000 && clothe.priceCents <= 10000;
+          } else if (filter === "€100+") {
+            return clothe.priceCents > 10000;
           }
         });
       }
