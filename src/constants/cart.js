@@ -30,17 +30,20 @@ export function addToCart(id) {
     if (item.id === id) {
       item.quantity++;
       addingToTotalQuantity();
-      console.log(item);
+      console.log(cart);
     }
   });
 }
 
 export function removeFromCart(id) {
-  cart.forEach((item) => {
+  cart.forEach((item, index) => {
     if (item.id === id) {
       item.quantity--;
       subtractingToTotalQuantity();
-      console.log(item);
+      if (item.quantity === 0) {
+        cart.splice(index, 1);
+      }
+      console.log(cart);
     }
   });
 }

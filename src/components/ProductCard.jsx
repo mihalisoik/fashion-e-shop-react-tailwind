@@ -15,6 +15,7 @@ function ProductCard({
   rating,
   isFavorite,
   priceCents,
+  color,
   setRenderTotalQuantity,
   animatedAddedTooltip,
   animatedRemovedTooltip,
@@ -62,14 +63,22 @@ function ProductCard({
           />
         )}
       </button>
-      <img src={image[0]} alt={name} width={150} />
-      <div className="flex gap-0.5 font-secondary">
-        {(rating * 10) % 10 === 0 ? (
-          <img src="src/assets/icons/star.svg" alt="star-rating" />
-        ) : (
-          <img src="src/assets/icons/star-half.svg" alt="half-star-rating" />
-        )}
-        {rating.toFixed(1)}
+      <img src={image} alt={name} width={150} />
+      <div className="flex w-full font-secondary justify-between items-center">
+        <div className="flex items-center gap-0.5">
+          {(rating * 10) % 10 === 0 ? (
+            <img src="src/assets/icons/star.svg" alt="star-rating" />
+          ) : (
+            <img src="src/assets/icons/star-half.svg" alt="half-star-rating" />
+          )}
+          <p>{rating.toFixed(1)}</p>
+        </div>
+        <div className="flex gap-1">
+          <button
+            style={{ backgroundColor: color }}
+            className="w-4 h-4 rounded-full shadow-lg border border-1 border-accent"
+          ></button>
+        </div>
       </div>
       <h3 className="font-secondary font-semibold">{name}</h3>
       <div className="font-secondary">
