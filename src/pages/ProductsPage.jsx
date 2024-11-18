@@ -2,49 +2,16 @@ import { useEffect, useState } from "react";
 import AllProducts from "../sections/AllProducts";
 import Filter from "../sections/Filter";
 import Navbar from "../sections/Navbar";
-import { totalQuantity } from "../constants/cart";
 import { useLocation } from "react-router-dom";
 
-function ProductsPage() {
-  const [renderAddedTooltip, setRenderAddedTooltip] = useState(false);
-  const [renderRemovedTooltip, setRenderRemovedTooltip] = useState(false);
-
-  let timeoutAddedId;
-
-  function animatedAddedTooltip() {
-    if (timeoutAddedId) {
-      clearTimeout(timeoutAddedId);
-    }
-
-    setRenderAddedTooltip(false);
-
-    setTimeout(() => {
-      setRenderAddedTooltip(true);
-      timeoutAddedId = setTimeout(() => {
-        setRenderAddedTooltip(false);
-      }, 2100);
-    }, 0);
-  }
-
-  let timeoutRemovedId;
-
-  function animatedRemovedTooltip() {
-    if (timeoutRemovedId) {
-      clearTimeout(timeoutRemovedId);
-    }
-
-    setRenderRemovedTooltip(false);
-
-    setTimeout(() => {
-      setRenderRemovedTooltip(true);
-      timeoutRemovedId = setTimeout(() => {
-        setRenderRemovedTooltip(false);
-      }, 2100);
-    }, 0);
-  }
-
-  const [renderTotalQuantity, setRenderTotalQuantity] = useState(totalQuantity);
-
+function ProductsPage({
+  renderAddedTooltip,
+  renderRemovedTooltip,
+  renderTotalQuantity,
+  animatedAddedTooltip,
+  animatedRemovedTooltip,
+  setRenderTotalQuantity,
+}) {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const subcategory = queryParams.get("subcategory");
@@ -86,14 +53,16 @@ function ProductsPage() {
         renderFilterSection={renderFilterSection}
         setRenderFilterSection={setRenderFilterSection}
       />
-      <AllProducts
-        animatedAddedTooltip={animatedAddedTooltip}
-        animatedRemovedTooltip={animatedRemovedTooltip}
-        setRenderTotalQuantity={setRenderTotalQuantity}
-        filters={filters}
-        removeFilter={removeFilter}
-        setRenderFilterSection={setRenderFilterSection}
-      />
+      <div className="max-container">
+        <AllProducts
+          animatedAddedTooltip={animatedAddedTooltip}
+          animatedRemovedTooltip={animatedRemovedTooltip}
+          setRenderTotalQuantity={setRenderTotalQuantity}
+          filters={filters}
+          removeFilter={removeFilter}
+          setRenderFilterSection={setRenderFilterSection}
+        />
+      </div>
     </div>
   );
 }

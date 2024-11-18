@@ -17,12 +17,10 @@ export function importProductToCart(id) {
 
 function addingToTotalQuantity() {
   totalQuantity++;
-  console.log(totalQuantity);
 }
 
 function subtractingToTotalQuantity() {
   totalQuantity--;
-  console.log(totalQuantity);
 }
 
 export function addToCart(id) {
@@ -30,7 +28,6 @@ export function addToCart(id) {
     if (item.id === id) {
       item.quantity++;
       addingToTotalQuantity();
-      console.log(cart);
     }
   });
 }
@@ -43,7 +40,6 @@ export function removeFromCart(id) {
       if (item.quantity === 0) {
         cart.splice(index, 1);
       }
-      console.log(cart);
     }
   });
 }
