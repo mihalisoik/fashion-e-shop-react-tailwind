@@ -55,7 +55,7 @@ body {
   }
 
   .main-button {
-    @apply font-primary bg-accent py-4 px-10 rounded-full text-slate-100 shadow-lg;
+    @apply font-primary font-bold bg-accent py-4 px-10 rounded-full text-slate-100 shadow-lg;
   }
 
   .main-button-hover {

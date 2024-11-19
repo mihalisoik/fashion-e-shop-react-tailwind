@@ -1,8 +1,10 @@
 na valw keywords
-na psaksw an exei erwthmatika o kwdikas mou
 na psaksw an exei consolelogs o kwdikas mou
 na psaksw an exei imports pou den xrhsimopoiw ston kwdika mou
 na dw an exei comments
 allagh glwssas
 na dw an mporw na kounhsw to hero image apo ton public sto src/assets/images
 ta alt sta img na einai me kefalaia
+na allaksw to filter kai na ta valw sto url 
+na valw kai megethi 
+na valw kai xrwmata
