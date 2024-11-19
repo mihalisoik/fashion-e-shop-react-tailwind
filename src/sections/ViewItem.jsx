@@ -4,9 +4,9 @@ import RelatedProducts from "./RelatedProducts";
 
 function ViewItem({
   id,
-  setRenderTotalQuantity,
   animatedAddedTooltip,
   animatedRemovedTooltip,
+  setRenderTotalQuantity,
 }) {
   console.log(typeof id);
   const chosenItem = clothes.find((item) => item.id === id);
@@ -84,8 +84,14 @@ function ViewItem({
               <h3 className="text-gray-700">Description:</h3>
               <p className="text-gray-600 italic">{chosenItem.description}</p>
             </div>
-            <div className="flex flex-col md:ml-16 lg:ml-0  w-48 lg:w-full gap-5 justify-between">
-              <button className="main-button main-button-hover mt-7">
+            <div className="flex flex-col md:ml-16 lg:ml-0  w-48 lg:w-56 gap-5 justify-between">
+              <button
+                className="main-button main-button-hover mt-7"
+                onClick={() => {
+                  animatedAddedTooltip();
+                  setRenderTotalQuantity((oldValue) => oldValue + 1);
+                }}
+              >
                 Add to Cart
               </button>
               <button className="font-primary font-bold bg-slate-100 py-4 px-10 rounded-full text-accent shadow-lg hover:bg-slate-50 hover:scale-105 hover:shadow-xl transition-transform transform">
@@ -97,9 +103,9 @@ function ViewItem({
       </div>
       <div>
         <RelatedProducts
-          setRenderTotalQuantity={setRenderTotalQuantity}
           animatedAddedTooltip={animatedAddedTooltip}
           animatedRemovedTooltip={animatedRemovedTooltip}
+          setRenderTotalQuantity={setRenderTotalQuantity}
         />
       </div>
     </div>

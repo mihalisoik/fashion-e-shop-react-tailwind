@@ -2,9 +2,9 @@ import ProductCard from "../components/ProductCard";
 import { clothes } from "../constants/clothes";
 
 function RelatedProducts({
-  setRenderTotalQuantity,
   animatedAddedTooltip,
   animatedRemovedTooltip,
+  setRenderTotalQuantity,
 }) {
   const relatedProductsElements = clothes.map((clothe, index) => {
     if (index < 10) {

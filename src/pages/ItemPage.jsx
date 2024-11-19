@@ -6,9 +6,9 @@ function ItemPage({
   renderAddedTooltip,
   renderRemovedTooltip,
   renderTotalQuantity,
-  setRenderTotalQuantity,
   animatedAddedTooltip,
   animatedRemovedTooltip,
+  setRenderTotalQuantity,
 }) {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
@@ -25,9 +25,9 @@ function ItemPage({
       <div className="max-container p-3">
         <ViewItem
           id={id}
-          setRenderTotalQuantity={setRenderTotalQuantity}
           animatedAddedTooltip={animatedAddedTooltip}
           animatedRemovedTooltip={animatedRemovedTooltip}
+          setRenderTotalQuantity={setRenderTotalQuantity}
         />
       </div>
     </div>
