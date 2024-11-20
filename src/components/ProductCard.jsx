@@ -16,7 +16,8 @@ function ProductCard({
   rating,
   isFavorite,
   priceCents,
-  color,
+  isOneSize,
+  stock,
   setRenderTotalQuantity,
   animatedAddedTooltip,
   animatedRemovedTooltip,
@@ -47,6 +48,28 @@ function ProductCard({
     });
   }
 
+  const optionElements = isOneSize ? (
+    <select>
+      <option value="One Size" data-quantity={stock}>
+        One Size
+      </option>
+    </select>
+  ) : (
+    <select>
+      {Object.entries(stock).map(([size, quantity]) => (
+        <option key={size} value={size} data-quantity={quantity}>
+          {size}
+        </option>
+      ))}
+    </select>
+  );
+  // (<option selected value="1">
+  //  1
+  //</option>
+  //<option value="2">2</option>
+  //<option value="3">3</option>
+  //<option value="4">4</option>)
+
   return (
     <div className="bg-slate-100 p-5 font-secondary flex flex-col gap-1 justify-center items-start rounded-md shadow-lg  flex-shrink-0 w-52 text-sm">
       <button
@@ -61,33 +84,25 @@ function ProductCard({
           <img src="src/assets/icons/non-favorite.svg" alt="non-favorite" />
         )}
       </button>
-      <Link to={`/item?id=${encodeURIComponent(id)}`} key={id}>
-        <img src={image} alt={name} width={150} />
-        <div className="flex w-full font-secondary justify-between items-center">
-          <div className="flex items-center gap-0.5">
-            {(rating.stars * 10) % 10 === 0 ? (
-              <img src="src/assets/icons/star.svg" alt="star-rating" />
-            ) : (
-              <img
-                src="src/assets/icons/star-half.svg"
-                alt="half-star-rating"
-              />
-            )}
-            <p>{rating.stars.toFixed(1)}</p>
-          </div>
-          <div className="flex gap-1">
-            <button
-              style={{ backgroundColor: color }}
-              className="w-4 h-4 rounded-full shadow-lg border border-1 border-accent"
-            ></button>
-          </div>
+      Link to={`/item?id=${encodeURIComponent(id)}`} key={id}
+      <img src={image} alt={name} width={150} />
+      <div className="flex w-full font-secondary justify-between items-center">
+        <div className="flex items-center gap-0.5">
+          {(rating.stars * 10) % 10 === 0 ? (
+            <img src="src/assets/icons/star.svg" alt="star-rating" />
+          ) : (
+            <img src="src/assets/icons/star-half.svg" alt="half-star-rating" />
+          )}
+          <p>{rating.stars.toFixed(1)}</p>
         </div>
-        <h3 className="font-secondary font-semibold">{name}</h3>
-        <div className="font-secondary">
-          <span className="text-[0.6rem]">€</span>
-          {formatCurrency(priceCents)}
-        </div>
-      </Link>
+        <div className="flex gap-1">{optionElements}</div>
+      </div>
+      <h3 className="font-secondary font-semibold">{name}</h3>
+      <div className="font-secondary">
+        <span className="text-[0.6rem]">€</span>
+        {formatCurrency(priceCents)}
+      </div>
+      Link
       <div className="mt-2">
         {!cartButton ? (
           <button

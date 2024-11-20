@@ -13,7 +13,8 @@ export let clothes = [
       "A comfortable classic t-shirt available in red and black for everyday wear.",
     isFavorite: false,
     rating: { stars: 4.1, reviews: 278 },
-    sizeStock: {
+    isOneSize: false,
+    stock: {
       S: 50,
       M: 40,
       L: 30,
@@ -32,7 +33,8 @@ export let clothes = [
       "A stylish denim jacket perfect for layering, available in blue and black.",
     isFavorite: false,
     rating: { stars: 3.9, reviews: 136 },
-    sizeStock: {
+    isOneSize: false,
+    stock: {
       S: 15,
       M: 20,
       L: 25,
@@ -51,7 +53,8 @@ export let clothes = [
       "A chic blouse available in white and pink for a polished look.",
     isFavorite: false,
     rating: { stars: 4.5, reviews: 412 },
-    sizeStock: {
+    isOneSize: false,
+    stock: {
       S: 10,
       M: 15,
       L: 5,
@@ -69,7 +72,8 @@ export let clothes = [
     description: "Durable cargo pants with multiple pockets.",
     isFavorite: false,
     rating: { stars: 3.4, reviews: 89 },
-    sizeStock: {
+    isOneSize: false,
+    stock: {
       S: 10,
       M: 10,
       L: 5,
@@ -81,14 +85,21 @@ export let clothes = [
     name: "Running Sneakers",
     image: "src/assets/logo.png",
     priceCents: 10999,
-    gender: "Unisex",
+    gender: "Men",
     category: "Shoes",
     color: "Black",
     description:
       "Lightweight running sneakers for optimal performance, available in black and white.",
     isFavorite: false,
     rating: { stars: 5.0, reviews: 952 },
-    stock: 30, // One size
+    isOneSize: false,
+    stock: {
+      32: 5,
+      34: 10,
+      36: 8,
+      38: 7,
+      40: 0,
+    },
   },
   {
     id: "6",
@@ -101,7 +112,14 @@ export let clothes = [
     description: "Stylish leather boots for any occasion.",
     isFavorite: false,
     rating: { stars: 4.0, reviews: 220 },
-    stock: 10, // One size
+    isOneSize: false,
+    stock: {
+      32: 3,
+      34: 5,
+      36: 2,
+      38: 0,
+      40: 5,
+    },
   },
   {
     id: "7",
@@ -114,7 +132,8 @@ export let clothes = [
     description: "A casual dress available in floral pattern and solid pink.",
     isFavorite: false,
     rating: { stars: 3.7, reviews: 134 },
-    sizeStock: {
+    isOneSize: false,
+    stock: {
       S: 5,
       M: 4,
       L: 2,
@@ -133,7 +152,8 @@ export let clothes = [
       "Comfortable sports shorts available in grey and black for all your activities.",
     isFavorite: false,
     rating: { stars: 4.6, reviews: 303 },
-    sizeStock: {
+    isOneSize: false,
+    stock: {
       S: 10,
       M: 15,
       L: 10,
@@ -151,7 +171,8 @@ export let clothes = [
     description: "A cozy wool sweater to keep you warm.",
     isFavorite: false,
     rating: { stars: 3.8, reviews: 98 },
-    sizeStock: {
+    isOneSize: false,
+    stock: {
       S: 5,
       M: 8,
       L: 5,
@@ -170,7 +191,8 @@ export let clothes = [
       "A crisp formal shirt available in white and blue for special occasions.",
     isFavorite: false,
     rating: { stars: 4.0, reviews: 179 },
-    sizeStock: {
+    isOneSize: false,
+    stock: {
       S: 10,
       M: 8,
       L: 4,
@@ -188,7 +210,14 @@ export let clothes = [
     description: "Comfortable sandals perfect for summer days.",
     isFavorite: false,
     rating: { stars: 2.8, reviews: 65 },
-    stock: 0, // One size
+    isOneSize: false,
+    stock: {
+      32: 0,
+      34: 0,
+      36: 0,
+      38: 0,
+      40: 0,
+    },
   },
   {
     id: "12",
@@ -201,7 +230,8 @@ export let clothes = [
     description: "A stylish track jacket for sports and leisure.",
     isFavorite: false,
     rating: { stars: 4.1, reviews: 312 },
-    sizeStock: {
+    isOneSize: false,
+    stock: {
       S: 5,
       M: 5,
       L: 3,
@@ -219,7 +249,8 @@ export let clothes = [
     description: "Classic blue jeans for casual wear.",
     isFavorite: false,
     rating: { stars: 4.5, reviews: 438 },
-    sizeStock: {
+    isOneSize: false,
+    stock: {
       S: 0,
       M: 10,
       L: 8,
@@ -238,7 +269,8 @@ export let clothes = [
       "A cozy hoodie with a fun graphic design, available in grey and navy.",
     isFavorite: false,
     rating: { stars: 3.1, reviews: 87 },
-    sizeStock: {
+    isOneSize: false,
+    stock: {
       S: 10,
       M: 10,
       L: 5,
@@ -257,7 +289,8 @@ export let clothes = [
       "Comfortable sweatpants available in black and grey for lounging or workouts.",
     isFavorite: false,
     rating: { stars: 4.8, reviews: 362 },
-    sizeStock: {
+    isOneSize: false,
+    stock: {
       S: 8,
       M: 10,
       L: 5,
@@ -275,7 +308,8 @@ export let clothes = [
     description: "Light and breezy cover-up for beach days.",
     isFavorite: false,
     rating: { stars: 2.9, reviews: 52 },
-    stock: 15, // One size
+    isOneSize: true,
+    stock: 15,
   },
   {
     id: "17",
@@ -289,7 +323,8 @@ export let clothes = [
       "A classic polo shirt available in green and navy for smart casual looks.",
     isFavorite: false,
     rating: { stars: 3.7, reviews: 144 },
-    sizeStock: {
+    isOneSize: false,
+    stock: {
       S: 10,
       M: 8,
       L: 2,
@@ -307,7 +342,8 @@ export let clothes = [
     description: "Flowy maxi skirt for a feminine touch.",
     isFavorite: false,
     rating: { stars: 4.1, reviews: 209 },
-    sizeStock: {
+    isOneSize: false,
+    stock: {
       S: 5,
       M: 4,
       L: 2,
@@ -326,7 +362,8 @@ export let clothes = [
       "Perfect for transitional weather, this jacket is lightweight and stylish.",
     isFavorite: false,
     rating: { stars: 4.7, reviews: 391 },
-    sizeStock: {
+    isOneSize: false,
+    stock: {
       S: 10,
       M: 5,
       L: 3,
@@ -344,7 +381,8 @@ export let clothes = [
     description: "A stylish bikini set for beach outings.",
     isFavorite: false,
     rating: { stars: 3.2, reviews: 123 },
-    stock: 18, // One size
+    isOneSize: true,
+    stock: 18,
   },
 ];
 

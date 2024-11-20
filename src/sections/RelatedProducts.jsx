@@ -17,7 +17,8 @@ function RelatedProducts({
           rating={clothe.rating}
           isFavorite={clothe.isFavorite}
           priceCents={clothe.priceCents}
-          color={clothe.color}
+          isOneSize={clothe.isOneSize}
+          stock={clothe.stock}
           setRenderTotalQuantity={setRenderTotalQuantity}
           animatedAddedTooltip={animatedAddedTooltip}
           animatedRemovedTooltip={animatedRemovedTooltip}
