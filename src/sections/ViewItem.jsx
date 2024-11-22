@@ -1,3 +1,4 @@
+import { useMemo, useState } from "react";
 import { clothes } from "../constants/clothes";
 import { formatCurrency } from "../utils/money";
 import RelatedProducts from "./RelatedProducts";
@@ -8,43 +9,73 @@ function ViewItem({
   animatedRemovedTooltip,
   setRenderTotalQuantity,
 }) {
-  console.log(typeof id);
   const chosenItem = clothes.find((item) => item.id === id);
+  const [selectedSize, setSelectedSize] = useState(null);
+  const [sizeWarning, setSizeWarning] = useState(false);
+  const [stockWarning, setStockWarning] = useState(false);
+  const [trembleWarning, setTrembleWarning] = useState(false);
 
   const itemStars = chosenItem.rating.stars;
-  console.log(itemStars);
 
-  const ratingElements = [];
-
-  for (let i = 1; i <= 5; i++) {
-    if (i <= itemStars) {
-      if (itemStars - i > 0 && itemStars - i < 1) {
-        ratingElements.push(
-          <span key={i}>
-            <img src="src/assets/icons/star-half.svg" alt="Half Star Icon" />
-          </span>
-        );
+  const ratingElements = useMemo(() => {
+    const elements = [];
+    for (let i = 1; i <= 5; i++) {
+      if (i <= itemStars) {
+        if (itemStars - i > 0 && itemStars - i < 1) {
+          elements.push(
+            <span key={i}>
+              <img src="src/assets/icons/star-half.svg" alt="Half Star Icon" />
+            </span>
+          );
+        } else {
+          elements.push(
+            <span key={i}>
+              <img src="src/assets/icons/star.svg" alt="Star Icon" />
+            </span>
+          );
+        }
       } else {
-        ratingElements.push(
+        elements.push(
           <span key={i}>
-            <img src="src/assets/icons/star.svg" alt="Star Icon" />
+            <img src="src/assets/icons/star-empty.svg" alt="Empty Star Icon" />
           </span>
         );
       }
-    } else {
-      ratingElements.push(
-        <span key={i}>
-          <img src="src/assets/icons/star-empty.svg" alt="Empty Star Icon" />
-        </span>
-      );
     }
+    return elements;
+  }, [itemStars]);
+
+  function handlePickingSize(size, quantity) {
+    setSelectedSize(size);
+    setStockWarning(quantity === 0);
   }
+
+  const sizeElements = Object.entries(chosenItem.stock).map(
+    ([size, quantity]) => (
+      <div
+        key={size}
+        className={`bg-gray-300 px-3 py-1 rounded-lg cursor-pointer border-2 ${
+          selectedSize === size ? "border-accent" : "border-black"
+        } text-slate-50 font-semibold`}
+        data-quantity={quantity}
+        onClick={() => handlePickingSize(size, quantity)}
+      >
+        {size}
+      </div>
+    )
+  );
 
   return (
     <div className="mt-20 bg-white w-full h-fit flex flex-col gap-10 px-3 pt-2 pb-10 lg:pb-2">
       <div className="flex flex-col lg:flex-row">
-        <div>
-          <img src={chosenItem.image} alt="Clothe Image" width={800} />
+        <div className="relative w-fit h-fit overflow-hidden">
+          <img
+            src={chosenItem.image}
+            alt="Clothe Image"
+            width={800}
+            className=""
+          />
+          <div></div>
         </div>
         <div className="flex flex-col md:flex-row lg:flex-col ml-10 lg:justify-start lg:gap-10">
           <div className="py-1 lg:mt-10 flex flex-col">
@@ -68,6 +99,16 @@ function ViewItem({
                 </p>
               </div>
             </div>
+            <h4 className="mt-4 font-semibold text-xl">Sizes</h4>
+            <div className="flex gap-1 mt-2">{sizeElements}</div>
+            {sizeWarning && (
+              <p className="text-red-600">Please select a size</p>
+            )}
+            {stockWarning && (
+              <p className={`text-red-600 ${trembleWarning && "tremble"}`}>
+                Currently out of stock
+              </p>
+            )}
             <div>
               <div className="text-sm mt-4 block lg:hidden w-full">
                 <h3 className="text-gray-700">Description:</h3>
@@ -75,29 +116,35 @@ function ViewItem({
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center">
-            <div
-              style={{ backgroundColor: chosenItem.color }}
-              className="w-6 h-6 rounded-lg outline outline-1 outline-black mt-5 lg:mt-0 mr-auto"
-            ></div>
-            <div className="text-sm mt-4 hidden lg:block">
+          <div className="flex flex-col">
+            <div className="text-sm mt-2 hidden lg:block">
               <h3 className="text-gray-700">Description:</h3>
               <p className="text-gray-600 italic">{chosenItem.description}</p>
             </div>
-            <div className="flex flex-col md:ml-16 lg:ml-0  w-48 lg:w-56 gap-5 justify-between">
-              <button
-                className="main-button main-button-hover mt-7"
-                onClick={() => {
-                  animatedAddedTooltip();
-                  setRenderTotalQuantity((oldValue) => oldValue + 1);
-                }}
-              >
-                Add to Cart
-              </button>
-              <button className="font-primary font-bold bg-slate-100 py-4 px-10 rounded-full text-accent shadow-lg hover:bg-slate-50 hover:scale-105 hover:shadow-xl transition-transform transform">
-                Checkout Now
-              </button>
-            </div>
+          </div>
+          <div className="flex flex-col md:ml-16 lg:ml-0 w-48 lg:w-56 gap-5 justify-center">
+            <button
+              className="main-button main-button-hover mt-7 whitespace-nowrap"
+              onClick={() => {
+                if (selectedSize) {
+                  if (!stockWarning) {
+                    setSizeWarning(false);
+                    animatedAddedTooltip();
+                    setRenderTotalQuantity((oldValue) => oldValue + 1);
+                  } else {
+                    setTrembleWarning(true);
+                    setTimeout(() => setTrembleWarning(false), 500);
+                  }
+                } else {
+                  setSizeWarning(true);
+                }
+              }}
+            >
+              Add to Cart
+            </button>
+            <button className="font-primary font-bold whitespace-nowrap bg-slate-100 py-4 px-10 rounded-full text-accent shadow-lg hover:bg-slate-50 hover:scale-105 hover:shadow-xl transition-transform transform">
+              Checkout Now
+            </button>
           </div>
         </div>
       </div>

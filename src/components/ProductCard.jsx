@@ -67,7 +67,6 @@ function ProductCard({
       setIsTrembling(false);
     }, 500);
   }
-  //na ftiaksw to outofstock
 
   return (
     <div className="bg-slate-100 p-5 font-secondary flex flex-col gap-1 justify-center items-start rounded-md shadow-lg flex-shrink-0 w-52 text-sm">
