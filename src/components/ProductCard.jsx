@@ -18,6 +18,7 @@ function ProductCard({
 }) {
   const [selectedSize, setSelectedSize] = useState(Object.keys(stock)[0]);
   const [productQuantity, setProductQuantity] = useState(0);
+  const isInCart = productQuantity > 0;
   const [favorited, setFavorited] = useState(isFavorite);
 
   useEffect(() => {
@@ -27,8 +28,6 @@ function ProductCard({
     setProductQuantity(currentItem ? currentItem.quantity : 0);
   }, [cart, id, selectedSize]);
 
-  const isInCart = productQuantity > 0;
-
   const handleSizeChange = (event) => {
     setSelectedSize(event.target.value);
   };
@@ -36,12 +35,14 @@ function ProductCard({
   const handleAddToCart = () => {
     animatedAddedTooltip();
     setRenderTotalQuantity((oldValue) => oldValue + 1);
+    setProductQuantity((oldValue) => oldValue + 1);
     addToCart(id, selectedSize);
   };
 
   const handleDecrement = () => {
     animatedRemovedTooltip();
     setRenderTotalQuantity((oldValue) => oldValue - 1);
+    setProductQuantity((oldValue) => oldValue - 1);
     removeFromCart(id, selectedSize);
   };
 
@@ -66,35 +67,38 @@ function ProductCard({
           <img src="src/assets/icons/non-favorite.svg" alt="non-favorite" />
         )}
       </button>
-      Link to={`/item?id=${encodeURIComponent(id)}`} key={id}
-      <img src={image} alt={name} width={150} />
-      <div className="flex w-full font-secondary justify-between items-center">
-        <div className="flex items-center gap-0.5">
-          {(rating.stars * 10) % 10 === 0 ? (
-            <img src="src/assets/icons/star.svg" alt="star-rating" />
-          ) : (
-            <img src="src/assets/icons/star-half.svg" alt="half-star-rating" />
-          )}
-          <p>{rating.stars.toFixed(1)}</p>
+      <Link to={`/item?id=${encodeURIComponent(id)}`} key={id}>
+        <img src={image} alt={name} width={150} />
+        <div className="flex w-full font-secondary justify-between items-center">
+          <div className="flex items-center gap-0.5">
+            {(rating.stars * 10) % 10 === 0 ? (
+              <img src="src/assets/icons/star.svg" alt="star-rating" />
+            ) : (
+              <img
+                src="src/assets/icons/star-half.svg"
+                alt="half-star-rating"
+              />
+            )}
+            <p>{rating.stars.toFixed(1)}</p>
+          </div>
+          <select
+            className="bg-accent border border-1 border-gray-500 text-slate-50 rounded-full px-1 py-0.5"
+            onChange={handleSizeChange}
+            value={selectedSize}
+          >
+            {Object.entries(stock).map(([size, quantity]) => (
+              <option key={size} value={size} data-quantity={quantity}>
+                {size}
+              </option>
+            ))}
+          </select>
         </div>
-        <select
-          className="bg-gray-400 border border-1 border-black text-slate-50 rounded-full px-1 py-0.5"
-          onChange={handleSizeChange}
-          value={selectedSize}
-        >
-          {Object.entries(stock).map(([size, quantity]) => (
-            <option key={size} value={size} data-quantity={quantity}>
-              {size}
-            </option>
-          ))}
-        </select>
-      </div>
-      <h3 className="font-secondary font-semibold">{name}</h3>
-      <div className="font-secondary">
-        <span className="text-[0.6rem]">€</span>
-        {formatCurrency(priceCents)}
-      </div>
-      Link
+        <h3 className="font-secondary font-semibold">{name}</h3>
+        <div className="font-secondary">
+          <span className="text-[0.6rem]">€</span>
+          {formatCurrency(priceCents)}
+        </div>
+      </Link>
       <div className="mt-2">
         {!isInCart ? (
           <button
