@@ -2,19 +2,6 @@ export const cart = [];
 
 export let totalQuantity = 0;
 
-export function importProductToCart(id) {
-  const existingItem = cart.find((item) => item.id === id);
-  if (existingItem) {
-    existingItem.quantity++;
-  } else {
-    cart.push({
-      id: id,
-      quantity: 1,
-    });
-  }
-  addingToTotalQuantity();
-}
-
 function addingToTotalQuantity() {
   totalQuantity++;
 }
@@ -23,18 +10,25 @@ function subtractingToTotalQuantity() {
   totalQuantity--;
 }
 
-export function addToCart(id) {
-  cart.forEach((item) => {
-    if (item.id === id) {
-      item.quantity++;
-      addingToTotalQuantity();
-    }
-  });
+export function addToCart(id, size) {
+  const existingItem = cart.find(
+    (item) => item.id === id && item.size === size
+  );
+  if (existingItem) {
+    existingItem.quantity++;
+  } else {
+    cart.push({
+      id: id,
+      size: size,
+      quantity: 1,
+    });
+  }
+  addingToTotalQuantity();
 }
 
-export function removeFromCart(id) {
+export function removeFromCart(id, size) {
   cart.forEach((item, index) => {
-    if (item.id === id) {
+    if (item.id === id && item.size === size) {
       item.quantity--;
       subtractingToTotalQuantity();
       if (item.quantity === 0) {

@@ -6,7 +6,6 @@ import { useState } from "react";
 import { totalQuantity } from "./constants/cart";
 
 export default function App() {
-  console.log(totalQuantity);
   const [renderTotalQuantity, setRenderTotalQuantity] = useState(totalQuantity);
   const [renderAddedTooltip, setRenderAddedTooltip] = useState(false);
   const [renderRemovedTooltip, setRenderRemovedTooltip] = useState(false);

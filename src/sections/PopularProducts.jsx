@@ -18,7 +18,6 @@ function PopularProducts({
         rating={clothe.rating}
         isFavorite={clothe.isFavorite}
         priceCents={clothe.priceCents}
-        isOneSize={clothe.isOneSize}
         stock={clothe.stock}
         setRenderTotalQuantity={setRenderTotalQuantity}
         animatedAddedTooltip={animatedAddedTooltip}

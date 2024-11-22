@@ -1,10 +1,5 @@
-import { useState } from "react";
-import {
-  addToCart,
-  cart,
-  importProductToCart,
-  removeFromCart,
-} from "../constants/cart";
+import { useEffect, useState } from "react";
+import { addToCart, cart, removeFromCart } from "../constants/cart";
 import { formatCurrency } from "../utils/money";
 import { clothes } from "../constants/clothes";
 import { Link } from "react-router-dom";
@@ -16,67 +11,54 @@ function ProductCard({
   rating,
   isFavorite,
   priceCents,
-  isOneSize,
   stock,
   setRenderTotalQuantity,
   animatedAddedTooltip,
   animatedRemovedTooltip,
 }) {
-  const existingItem = cart.some((item) => item.id === id);
-
-  const [cartButton, setCartButton] = useState(existingItem);
-
-  function changeCartButton() {
-    setCartButton(cart.some((item) => item.id === id));
-  }
-
-  let productQuantity;
-  cart.forEach((item) => {
-    if (item.id === id) {
-      productQuantity = item.quantity;
-    }
-  });
-
+  const [selectedSize, setSelectedSize] = useState(Object.keys(stock)[0]);
+  const [productQuantity, setProductQuantity] = useState(0);
   const [favorited, setFavorited] = useState(isFavorite);
 
-  function changeIsFavorite() {
+  useEffect(() => {
+    const currentItem = cart.find(
+      (item) => item.id === id && item.size === selectedSize
+    );
+    setProductQuantity(currentItem ? currentItem.quantity : 0);
+  }, [cart, id, selectedSize]);
+
+  const isInCart = productQuantity > 0;
+
+  const handleSizeChange = (event) => {
+    setSelectedSize(event.target.value);
+  };
+
+  const handleAddToCart = () => {
+    animatedAddedTooltip();
+    setRenderTotalQuantity((oldValue) => oldValue + 1);
+    addToCart(id, selectedSize);
+  };
+
+  const handleDecrement = () => {
+    animatedRemovedTooltip();
+    setRenderTotalQuantity((oldValue) => oldValue - 1);
+    removeFromCart(id, selectedSize);
+  };
+
+  const handleToggleFavorite = () => {
     clothes.forEach((clothe) => {
       if (clothe.id === id) {
         clothe.isFavorite = !clothe.isFavorite;
         setFavorited(clothe.isFavorite);
       }
     });
-  }
-
-  const optionElements = isOneSize ? (
-    <select>
-      <option value="One Size" data-quantity={stock}>
-        One Size
-      </option>
-    </select>
-  ) : (
-    <select>
-      {Object.entries(stock).map(([size, quantity]) => (
-        <option key={size} value={size} data-quantity={quantity}>
-          {size}
-        </option>
-      ))}
-    </select>
-  );
-  // (<option selected value="1">
-  //  1
-  //</option>
-  //<option value="2">2</option>
-  //<option value="3">3</option>
-  //<option value="4">4</option>)
+  };
 
   return (
-    <div className="bg-slate-100 p-5 font-secondary flex flex-col gap-1 justify-center items-start rounded-md shadow-lg  flex-shrink-0 w-52 text-sm">
+    <div className="bg-slate-100 p-5 font-secondary flex flex-col gap-1 justify-center items-start rounded-md shadow-lg flex-shrink-0 w-52 text-sm">
       <button
         className="ml-auto bg-white p-1 rounded-full shadow-md"
-        onClick={() => {
-          changeIsFavorite();
-        }}
+        onClick={handleToggleFavorite}
       >
         {favorited ? (
           <img src="src/assets/icons/favorite.svg" alt="favorite" />
@@ -95,7 +77,17 @@ function ProductCard({
           )}
           <p>{rating.stars.toFixed(1)}</p>
         </div>
-        <div className="flex gap-1">{optionElements}</div>
+        <select
+          className="bg-gray-400 border border-1 border-black text-slate-50 rounded-full px-1 py-0.5"
+          onChange={handleSizeChange}
+          value={selectedSize}
+        >
+          {Object.entries(stock).map(([size, quantity]) => (
+            <option key={size} value={size} data-quantity={quantity}>
+              {size}
+            </option>
+          ))}
+        </select>
       </div>
       <h3 className="font-secondary font-semibold">{name}</h3>
       <div className="font-secondary">
@@ -104,15 +96,10 @@ function ProductCard({
       </div>
       Link
       <div className="mt-2">
-        {!cartButton ? (
+        {!isInCart ? (
           <button
             className="flex w-40 h-10 gap-2 text-[#666666] text-sm px-3 py-2 bg-slate-50 rounded-3xl justify-center items-center font-semibold shadow-md hover:bg-slate-100 active:scale-95"
-            onClick={() => {
-              animatedAddedTooltip();
-              setRenderTotalQuantity((oldValue) => oldValue + 1);
-              importProductToCart(id);
-              changeCartButton();
-            }}
+            onClick={handleAddToCart}
           >
             Add to Cart
             <img src="src/assets/icons/add-to-cart.svg" alt="Add to Cart" />
@@ -121,25 +108,14 @@ function ProductCard({
           <div className="flex w-40 h-10 text-[#666666] text-base px-3 py-2 bg-slate-50 rounded-3xl justify-between items-center shadow-md">
             <button
               className="border border-[#666666] rounded-full hover:bg-slate-100 active:scale-95"
-              onClick={() => {
-                animatedRemovedTooltip();
-                setRenderTotalQuantity((oldValue) => oldValue - 1);
-                removeFromCart(id);
-                if (productQuantity === 1) {
-                  setCartButton(false);
-                }
-              }}
+              onClick={handleDecrement}
             >
               <img src="src/assets/icons/minus.svg" alt="minus-icon" />
             </button>
-            {`${productQuantity}`}
+            {productQuantity}
             <button
               className="border border-[#666666] rounded-full hover:bg-slate-100 active:scale-95"
-              onClick={() => {
-                animatedAddedTooltip();
-                setRenderTotalQuantity((oldValue) => oldValue + 1);
-                addToCart(id);
-              }}
+              onClick={handleAddToCart}
             >
               <img src="src/assets/icons/plus.svg" alt="plus-icon" />
             </button>
