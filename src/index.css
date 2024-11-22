@@ -25,32 +25,45 @@ body {
   }
 
   .go-up {
-    animation-name: transform1;
-    animation-duration: 1.8s;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
+    animation: goup 1.8s ease-in forwards;
   }
 
   .go-down {
-    animation-name: transform2;
-    animation-duration: 1.8s;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
+    animation: godown 1.8s ease-in forwards;
   }
 
-  @keyframes transform1 {
+  @keyframes goup {
     100% {
       transform: translate(0px, -60px);
     }
   }
 
-  @keyframes transform2 {
+  @keyframes godown {
     100% {
       transform: translate(0px, 60px);
+    }
+  }
+
+  .tremble {
+    animation: tremble 0.5s ease;
+  }
+
+  @keyframes tremble {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(-5px);
+    }
+    40% {
+      transform: translateX(5px);
+    }
+    60% {
+      transform: translateX(-5px);
+    }
+    80% {
+      transform: translateX(5px);
     }
   }
 
