@@ -68,14 +68,8 @@ function ViewItem({
   return (
     <div className="mt-20 bg-white w-full h-fit flex flex-col gap-10 px-3 pt-2 pb-10 lg:pb-2">
       <div className="flex flex-col lg:flex-row">
-        <div className="relative w-fit h-fit overflow-hidden">
-          <img
-            src={chosenItem.image}
-            alt="Clothe Image"
-            width={800}
-            className=""
-          />
-          <div></div>
+        <div>
+          <img src={chosenItem.image} alt="Clothe Image" width={800} />
         </div>
         <div className="flex flex-col md:flex-row lg:flex-col ml-10 lg:justify-start lg:gap-10">
           <div className="py-1 lg:mt-10 flex flex-col">
