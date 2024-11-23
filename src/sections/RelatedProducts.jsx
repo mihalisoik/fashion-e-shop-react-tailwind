@@ -7,7 +7,7 @@ function RelatedProducts({
   setRenderTotalQuantity,
 }) {
   const relatedProductsElements = clothes.map((clothe, index) => {
-    if (index < 10) {
+    if (index < 100) {
       return (
         <ProductCard
           key={clothe.id}

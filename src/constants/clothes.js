@@ -10,7 +10,7 @@ export let clothes = [
     category: "T-shirts",
     color: "Red",
     description:
-      "A comfortable classic t-shirt available in red and black for everyday wear.",
+      "A comfortable and versatile t-shirt made from breathable fabric. Designed for casual everyday wear, it is available in a vibrant red color.",
     isFavorite: false,
     rating: { stars: 4.1, reviews: 278 },
     stock: {
@@ -19,6 +19,8 @@ export let clothes = [
       L: 30,
       XL: 20,
     },
+    fitsWith: ["Jackets", "Pants", "Shorts"],
+    style: ["Casual"],
   },
   {
     id: "2",
@@ -29,7 +31,7 @@ export let clothes = [
     category: "Jackets",
     color: "Blue",
     description:
-      "A stylish denim jacket perfect for layering, available in blue and black.",
+      "A durable denim jacket with a classic blue wash. Ideal for layering and casual outings.",
     isFavorite: false,
     rating: { stars: 3.9, reviews: 136 },
     stock: {
@@ -38,6 +40,8 @@ export let clothes = [
       L: 25,
       XL: 10,
     },
+    fitsWith: ["T-shirts", "Hoodies", "Pants"],
+    style: ["Casual", "Streetwear"],
   },
   {
     id: "3",
@@ -48,7 +52,7 @@ export let clothes = [
     category: "Blouses",
     color: "White",
     description:
-      "A chic blouse available in white and pink for a polished look.",
+      "An elegant blouse with a clean and polished design. Available in a bright white shade, suitable for both professional and casual settings.",
     isFavorite: false,
     rating: { stars: 4.5, reviews: 412 },
     stock: {
@@ -57,6 +61,8 @@ export let clothes = [
       L: 5,
       XL: 8,
     },
+    fitsWith: ["Skirts", "Pants"],
+    style: ["Formal", "Elegant"],
   },
   {
     id: "4",
@@ -66,7 +72,8 @@ export let clothes = [
     gender: "Unisex",
     category: "Pants",
     color: "Green",
-    description: "Durable cargo pants with multiple pockets.",
+    description:
+      "Rugged and functional cargo pants made with durable materials, featuring multiple pockets for added utility. Available in green.",
     isFavorite: false,
     rating: { stars: 3.4, reviews: 89 },
     stock: {
@@ -75,6 +82,8 @@ export let clothes = [
       L: 5,
       XL: 0,
     },
+    fitsWith: ["T-shirts", "Hoodies"],
+    style: ["Casual", "Utility"],
   },
   {
     id: "5",
@@ -85,7 +94,7 @@ export let clothes = [
     category: "Shoes",
     color: "Black",
     description:
-      "Lightweight running sneakers for optimal performance, available in black and white.",
+      "High-performance running sneakers with lightweight cushioning and excellent grip. Available in sleek black.",
     isFavorite: false,
     rating: { stars: 5.0, reviews: 952 },
     stock: {
@@ -95,6 +104,8 @@ export let clothes = [
       38: 7,
       40: 0,
     },
+    fitsWith: ["Shorts", "Hoodies"],
+    style: ["Sporty"],
   },
   {
     id: "6",
@@ -104,7 +115,8 @@ export let clothes = [
     gender: "Women",
     category: "Shoes",
     color: "Brown",
-    description: "Stylish leather boots for any occasion.",
+    description:
+      "Sophisticated leather boots crafted for both comfort and style. Available in a rich brown tone.",
     isFavorite: false,
     rating: { stars: 4.0, reviews: 220 },
     stock: {
@@ -114,6 +126,8 @@ export let clothes = [
       38: 0,
       40: 5,
     },
+    fitsWith: ["Skirts", "Dresses"],
+    style: ["Elegant", "Chic"],
   },
   {
     id: "7",
@@ -123,7 +137,8 @@ export let clothes = [
     gender: "Women",
     category: "Dresses",
     color: "Pink",
-    description: "A casual dress available in floral pattern and solid pink.",
+    description:
+      "A relaxed-fit casual dress in a solid pink shade, perfect for summer outings and casual gatherings.",
     isFavorite: false,
     rating: { stars: 3.7, reviews: 134 },
     stock: {
@@ -132,6 +147,8 @@ export let clothes = [
       L: 2,
       XL: 1,
     },
+    fitsWith: ["Sandals"],
+    style: ["Casual"],
   },
   {
     id: "8",
@@ -142,7 +159,7 @@ export let clothes = [
     category: "Shorts",
     color: "Grey",
     description:
-      "Comfortable sports shorts available in grey and black for all your activities.",
+      "Comfortable and breathable sports shorts designed for maximum mobility. Available in a neutral grey shade.",
     isFavorite: false,
     rating: { stars: 4.6, reviews: 303 },
     stock: {
@@ -151,6 +168,8 @@ export let clothes = [
       L: 10,
       XL: 5,
     },
+    fitsWith: ["T-shirts", "Sneakers"],
+    style: ["Sporty"],
   },
   {
     id: "9",
@@ -160,7 +179,8 @@ export let clothes = [
     gender: "Men",
     category: "Sweaters",
     color: "Navy",
-    description: "A cozy wool sweater to keep you warm.",
+    description:
+      "A cozy and warm wool sweater, crafted for chilly days. Comes in a deep navy blue shade.",
     isFavorite: false,
     rating: { stars: 3.8, reviews: 98 },
     stock: {
@@ -169,6 +189,8 @@ export let clothes = [
       L: 5,
       XL: 0,
     },
+    fitsWith: ["Pants", "Jackets"],
+    style: ["Casual", "Warm"],
   },
   {
     id: "10",
@@ -179,7 +201,7 @@ export let clothes = [
     category: "Shirts",
     color: "White",
     description:
-      "A crisp formal shirt available in white and blue for special occasions.",
+      "A crisp and elegant formal shirt made from high-quality fabric. Available in classic white for professional occasions.",
     isFavorite: false,
     rating: { stars: 4.0, reviews: 179 },
     stock: {
@@ -188,6 +210,8 @@ export let clothes = [
       L: 4,
       XL: 0,
     },
+    fitsWith: ["Pants", "Jackets"],
+    style: ["Formal", "Office"],
   },
   {
     id: "11",
@@ -197,12 +221,15 @@ export let clothes = [
     gender: "Women",
     category: "Shoes",
     color: "Pink",
-    description: "Comfortable sandals perfect for summer days.",
+    description:
+      "Lightweight and breathable sandals with a focus on comfort. Available in a soft pink shade.",
     isFavorite: false,
     rating: { stars: 2.8, reviews: 65 },
     stock: {
       "One Size": 0,
     },
+    fitsWith: ["Dresses", "Cover-ups"],
+    style: ["Casual"],
   },
   {
     id: "12",
@@ -212,7 +239,8 @@ export let clothes = [
     gender: "Unisex",
     category: "Jackets",
     color: "Black",
-    description: "A stylish track jacket for sports and leisure.",
+    description:
+      "A modern track jacket with a sleek design and functional features. Available in black.",
     isFavorite: false,
     rating: { stars: 4.1, reviews: 312 },
     stock: {
@@ -221,6 +249,8 @@ export let clothes = [
       L: 3,
       XL: 2,
     },
+    fitsWith: ["Shorts", "Sweatpants"],
+    style: ["Sporty"],
   },
   {
     id: "13",
@@ -230,7 +260,8 @@ export let clothes = [
     gender: "Unisex",
     category: "Pants",
     color: "Blue",
-    description: "Classic blue jeans for casual wear.",
+    description:
+      "Classic straight-cut jeans made from durable denim. Ideal for casual and everyday wear, available in a traditional blue wash.",
     isFavorite: false,
     rating: { stars: 4.5, reviews: 438 },
     stock: {
@@ -239,6 +270,8 @@ export let clothes = [
       L: 8,
       XL: 2,
     },
+    fitsWith: ["T-shirts", "Jackets"],
+    style: ["Casual", "Streetwear"],
   },
   {
     id: "14",
@@ -249,7 +282,7 @@ export let clothes = [
     category: "Hoodies",
     color: "Grey",
     description:
-      "A cozy hoodie with a fun graphic design, available in grey and navy.",
+      "A comfortable hoodie with a bold graphic design. Made from soft fabric for casual wear, available in grey.",
     isFavorite: false,
     rating: { stars: 3.1, reviews: 87 },
     stock: {
@@ -258,6 +291,8 @@ export let clothes = [
       L: 5,
       XL: 5,
     },
+    fitsWith: ["Jeans", "Cargo Pants"],
+    style: ["Casual", "Streetwear"],
   },
   {
     id: "15",
@@ -268,7 +303,7 @@ export let clothes = [
     category: "Pants",
     color: "Black",
     description:
-      "Comfortable sweatpants available in black and grey for lounging or workouts.",
+      "Comfortable and relaxed-fit sweatpants made for lounging or workouts. Available in classic black.",
     isFavorite: false,
     rating: { stars: 4.8, reviews: 362 },
     stock: {
@@ -277,6 +312,8 @@ export let clothes = [
       L: 5,
       XL: 2,
     },
+    fitsWith: ["Hoodies", "Sneakers"],
+    style: ["Casual", "Sporty"],
   },
   {
     id: "16",
@@ -286,12 +323,15 @@ export let clothes = [
     gender: "Women",
     category: "Cover-ups",
     color: "Cyan",
-    description: "Light and breezy cover-up for beach days.",
+    description:
+      "A lightweight and breezy cover-up, ideal for beach outings. Comes in a refreshing cyan color.",
     isFavorite: false,
     rating: { stars: 2.9, reviews: 52 },
     stock: {
       "One Size": 15,
     },
+    fitsWith: ["Swimwear", "Sandals"],
+    style: ["Casual"],
   },
   {
     id: "17",
@@ -302,7 +342,7 @@ export let clothes = [
     category: "Shirts",
     color: "Green",
     description:
-      "A classic polo shirt available in green and navy for smart casual looks.",
+      "A classic polo shirt with a timeless design, made from soft and breathable fabric. Available in a rich green shade.",
     isFavorite: false,
     rating: { stars: 3.7, reviews: 144 },
     stock: {
@@ -311,6 +351,8 @@ export let clothes = [
       L: 2,
       XL: 0,
     },
+    fitsWith: ["Jeans", "Jackets"],
+    style: ["Smart Casual"],
   },
   {
     id: "18",
@@ -320,7 +362,8 @@ export let clothes = [
     gender: "Women",
     category: "Skirts",
     color: "Purple",
-    description: "Flowy maxi skirt for a feminine touch.",
+    description:
+      "A flowy maxi skirt designed for comfort and style. Available in a soft purple shade, perfect for casual or semi-formal occasions.",
     isFavorite: false,
     rating: { stars: 4.1, reviews: 209 },
     stock: {
@@ -329,6 +372,8 @@ export let clothes = [
       L: 2,
       XL: 1,
     },
+    fitsWith: ["Blouses", "Boots"],
+    style: ["Chic", "Elegant"],
   },
   {
     id: "19",
@@ -339,7 +384,7 @@ export let clothes = [
     category: "Jackets",
     color: "Olive",
     description:
-      "Perfect for transitional weather, this jacket is lightweight and stylish.",
+      "A lightweight and stylish jacket, perfect for transitional weather. Available in a versatile olive green shade.",
     isFavorite: false,
     rating: { stars: 4.7, reviews: 391 },
     stock: {
@@ -348,21 +393,29 @@ export let clothes = [
       L: 3,
       XL: 2,
     },
+    fitsWith: ["Sweaters", "Pants"],
+    style: ["Casual", "Outdoor"],
   },
   {
     id: "20",
-    name: "Bikini Set",
+    name: "Swim Trunks",
     image: "src/assets/logo.png",
-    priceCents: 3999,
-    gender: "Women",
+    priceCents: 1999,
+    gender: "Men",
     category: "Swimwear",
-    color: "Red",
-    description: "A stylish bikini set for beach outings.",
+    color: "Yellow",
+    description:
+      "Vibrant swim trunks with a comfortable fit and quick-dry fabric. Available in sunny yellow.",
     isFavorite: false,
-    rating: { stars: 3.2, reviews: 123 },
+    rating: { stars: 3.3, reviews: 75 },
     stock: {
-      "One Size": 18,
+      S: 10,
+      M: 8,
+      L: 6,
+      XL: 4,
     },
+    fitsWith: ["Cover-ups", "Sandals"],
+    style: ["Beach"],
   },
 ];
 
