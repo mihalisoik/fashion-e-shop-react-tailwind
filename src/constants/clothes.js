@@ -21,6 +21,7 @@ export let clothes = [
     },
     fitsWith: ["Jackets", "Pants", "Shorts"],
     style: ["Casual"],
+    matchesWithColors: ["White", "Black", "Blue"],
   },
   {
     id: "2",
@@ -42,6 +43,7 @@ export let clothes = [
     },
     fitsWith: ["T-shirts", "Hoodies", "Pants"],
     style: ["Casual", "Streetwear"],
+    matchesWithColors: ["White", "Grey", "Black"],
   },
   {
     id: "3",
@@ -63,6 +65,7 @@ export let clothes = [
     },
     fitsWith: ["Skirts", "Pants"],
     style: ["Formal", "Elegant"],
+    matchesWithColors: ["Black", "Blue", "Red"],
   },
   {
     id: "4",
@@ -84,6 +87,7 @@ export let clothes = [
     },
     fitsWith: ["T-shirts", "Hoodies"],
     style: ["Casual", "Utility"],
+    matchesWithColors: ["White", "Black", "Brown"],
   },
   {
     id: "5",
@@ -106,6 +110,7 @@ export let clothes = [
     },
     fitsWith: ["Shorts", "Hoodies"],
     style: ["Sporty"],
+    matchesWithColors: ["White", "Grey", "Red"],
   },
   {
     id: "6",
@@ -128,6 +133,7 @@ export let clothes = [
     },
     fitsWith: ["Skirts", "Dresses"],
     style: ["Elegant", "Chic"],
+    matchesWithColors: ["Black", "White", "Green"],
   },
   {
     id: "7",
@@ -149,6 +155,7 @@ export let clothes = [
     },
     fitsWith: ["Sandals"],
     style: ["Casual"],
+    matchesWithColors: ["White", "Black", "Blue"],
   },
   {
     id: "8",
@@ -170,6 +177,7 @@ export let clothes = [
     },
     fitsWith: ["T-shirts", "Sneakers"],
     style: ["Sporty"],
+    matchesWithColors: ["Black", "White", "Red"],
   },
   {
     id: "9",
@@ -191,6 +199,7 @@ export let clothes = [
     },
     fitsWith: ["Pants", "Jackets"],
     style: ["Casual", "Warm"],
+    matchesWithColors: ["White", "Black", "Grey"],
   },
   {
     id: "10",
@@ -212,6 +221,7 @@ export let clothes = [
     },
     fitsWith: ["Pants", "Jackets"],
     style: ["Formal", "Office"],
+    matchesWithColors: ["Black", "Blue", "Grey"],
   },
   {
     id: "11",
@@ -230,6 +240,7 @@ export let clothes = [
     },
     fitsWith: ["Dresses", "Cover-ups"],
     style: ["Casual"],
+    matchesWithColors: ["White", "Black", "Blue"],
   },
   {
     id: "12",
@@ -251,6 +262,7 @@ export let clothes = [
     },
     fitsWith: ["Shorts", "Sweatpants"],
     style: ["Sporty"],
+    matchesWithColors: ["White", "Grey", "Blue"],
   },
   {
     id: "13",
@@ -272,6 +284,7 @@ export let clothes = [
     },
     fitsWith: ["T-shirts", "Jackets"],
     style: ["Casual", "Streetwear"],
+    matchesWithColors: ["White", "Black", "Grey"],
   },
   {
     id: "14",
@@ -293,6 +306,7 @@ export let clothes = [
     },
     fitsWith: ["Jeans", "Cargo Pants"],
     style: ["Casual", "Streetwear"],
+    matchesWithColors: ["Black", "White", "Blue"],
   },
   {
     id: "15",
@@ -314,6 +328,7 @@ export let clothes = [
     },
     fitsWith: ["Hoodies", "Sneakers"],
     style: ["Casual", "Sporty"],
+    matchesWithColors: ["White", "Grey", "Blue"],
   },
   {
     id: "16",
@@ -332,6 +347,7 @@ export let clothes = [
     },
     fitsWith: ["Swimwear", "Sandals"],
     style: ["Casual"],
+    matchesWithColors: ["White", "Black", "Yellow"],
   },
   {
     id: "17",
@@ -353,6 +369,7 @@ export let clothes = [
     },
     fitsWith: ["Jeans", "Jackets"],
     style: ["Smart Casual"],
+    matchesWithColors: ["Black", "White", "Grey"],
   },
   {
     id: "18",
@@ -374,6 +391,7 @@ export let clothes = [
     },
     fitsWith: ["Blouses", "Boots"],
     style: ["Chic", "Elegant"],
+    matchesWithColors: ["White", "Black", "Pink"],
   },
   {
     id: "19",
@@ -395,6 +413,7 @@ export let clothes = [
     },
     fitsWith: ["Sweaters", "Pants"],
     style: ["Casual", "Outdoor"],
+    matchesWithColors: ["Black", "White", "Grey"],
   },
   {
     id: "20",
@@ -416,6 +435,7 @@ export let clothes = [
     },
     fitsWith: ["Cover-ups", "Sandals"],
     style: ["Beach"],
+    matchesWithColors: ["White", "Black", "Blue"],
   },
 ];
 

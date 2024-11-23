@@ -144,6 +144,7 @@ function ViewItem({
       </div>
       <div>
         <RelatedProducts
+          id={id}
           animatedAddedTooltip={animatedAddedTooltip}
           animatedRemovedTooltip={animatedRemovedTooltip}
           setRenderTotalQuantity={setRenderTotalQuantity}
