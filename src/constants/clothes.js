@@ -1,6 +1,6 @@
 //import { nanoid } from "nanoid";
 
-export let clothes = [
+export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "1",
     name: "Classic T-Shirt",

@@ -43,9 +43,8 @@ function Filter({
         />
       </button>
       {["Men", "Women", "Unisex"].map((gender) => (
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center" key={gender}>
           <div
-            key={gender}
             className="group text-center font-primary font-bold border border-gray-100 rounded-lg cursor-pointer shadow-md text-white bg-accent relative w-48 py-1 hover:bg-light-accent"
             onMouseEnter={() => handleMouseEnter(gender)}
             onMouseLeave={handleMouseLeave}

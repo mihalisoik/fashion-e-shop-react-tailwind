@@ -1,6 +1,9 @@
-export const cart = [];
+export const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 export let totalQuantity = 0;
+cart.forEach((item) => {
+  totalQuantity += item.quantity;
+});
 
 function addingToTotalQuantity() {
   totalQuantity++;

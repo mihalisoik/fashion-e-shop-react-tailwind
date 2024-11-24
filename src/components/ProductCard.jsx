@@ -3,6 +3,10 @@ import { addToCart, cart, removeFromCart } from "../constants/cart";
 import { formatCurrency } from "../utils/money";
 import { clothes } from "../constants/clothes";
 import { Link } from "react-router-dom";
+import {
+  saveCartToStorage,
+  saveClothesToStorage,
+} from "../utils/saveToStorage";
 
 function ProductCard({
   id,
@@ -42,6 +46,7 @@ function ProductCard({
     setRenderTotalQuantity((oldValue) => oldValue + 1);
     setProductQuantity((oldValue) => oldValue + 1);
     addToCart(id, selectedSize);
+    saveCartToStorage(cart);
   }
 
   function handleDecrement() {
@@ -49,6 +54,7 @@ function ProductCard({
     setRenderTotalQuantity((oldValue) => oldValue - 1);
     setProductQuantity((oldValue) => oldValue - 1);
     removeFromCart(id, selectedSize);
+    saveCartToStorage(cart);
   }
 
   function handleToggleFavorite() {
@@ -58,6 +64,7 @@ function ProductCard({
         setFavorited(clothe.isFavorite);
       }
     });
+    saveClothesToStorage(clothes);
   }
 
   function handleTrembleClick() {
