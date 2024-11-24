@@ -9,6 +9,7 @@ function Navbar({
   renderTotalQuantity,
 }) {
   const [openMenu, setOpenMenu] = useState(false);
+  const [openFavoriteList, setOpenFavoriteList] = useState(false);
 
   return (
     <nav className="h-16 bg-accent px-3 items-center z-30 w-full top-0 fixed">
@@ -37,22 +38,29 @@ function Navbar({
               className="cursor-pointer mr-auto"
             />
           </a>
-          <p className="text-slate-50 text-xs font-primary max-sm:w-40">
-            Free shipping for purchases of €70 and above
-          </p>
           <div className="flex justify-center items-center gap-2 font-secondary">
-            <button className="border-2 border-white p-1 shadow-lg hover:bg-light-accent active:bg-extra-light-accent relative group">
+            <button
+              className="border-2 border-white p-1 shadow-lg hover:bg-light-accent active:bg-extra-light-accent relative group"
+              onClick={() => {
+                setOpenFavoriteList((oldValue) => !oldValue);
+              }}
+            >
               <img
                 src="src/assets/icons/show-favorite.svg"
                 alt="Show Favorites"
                 width={30}
               />
-              <p className="absolute bg-gray-400/80 px-2 py-1 text-white top-12 -left-2 opacity-0 group-hover:opacity-100 pointer-events-none whitespace-nowrap rounded-md text-sm">
-                Show Favorites
+              <p className="absolute bg-gray-400/80 px-2 py-1 text-white top-12 -left-2 opacity-0 group-hover:opacity-100 pointer-events-none whitespace-nowrap rounded-md text-xs">
+                {openFavoriteList ? "Hide Favorites" : "Show Favorites"}
               </p>
-              <div className="absolute -left-96 pointer-events-none">
-                <FavoriteProducts />
-              </div>
+              {openFavoriteList && (
+                <div
+                  className="absolute top-10 -right-40 md:right-12 md:top-0"
+                  onClick={(event) => event.stopPropagation()}
+                >
+                  <FavoriteProducts />
+                </div>
+              )}
             </button>
             <button className="flex gap-2 justify-center items-center relative bg-accent border-2 p-2 hover:shadow-md hover:bg-light-accent active:bg-extra-light-accent whitespace-nowrap group">
               {renderAddedTooltip && (
