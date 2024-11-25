@@ -7,3 +7,7 @@ na dw an mporw na kounhsw to hero image apo ton public sto src/assets/images
 ta alt sta img na einai me kefalaia
 na allaksw to filter kai na ta valw sto url 
 na kanw ta text-white text-slate-50
+
+
+
+

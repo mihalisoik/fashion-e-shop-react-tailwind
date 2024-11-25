@@ -46,7 +46,6 @@ function ProductCard({
     setRenderTotalQuantity((oldValue) => oldValue + 1);
     setProductQuantity((oldValue) => oldValue + 1);
     addToCart(id, selectedSize);
-    saveCartToStorage(cart);
   }
 
   function handleDecrement() {
@@ -54,7 +53,6 @@ function ProductCard({
     setRenderTotalQuantity((oldValue) => oldValue - 1);
     setProductQuantity((oldValue) => oldValue - 1);
     removeFromCart(id, selectedSize);
-    saveCartToStorage(cart);
   }
 
   function handleToggleFavorite() {

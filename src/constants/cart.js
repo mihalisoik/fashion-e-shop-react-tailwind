@@ -1,3 +1,5 @@
+import { saveCartToStorage } from "../utils/saveToStorage";
+
 export const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 export let totalQuantity = 0;
@@ -27,16 +29,18 @@ export function addToCart(id, size) {
     });
   }
   addingToTotalQuantity();
+  saveCartToStorage(cart);
 }
 
 export function removeFromCart(id, size) {
   cart.forEach((item, index) => {
     if (item.id === id && item.size === size) {
       item.quantity--;
-      subtractingToTotalQuantity();
       if (item.quantity === 0) {
         cart.splice(index, 1);
       }
     }
   });
+  subtractingToTotalQuantity();
+  saveCartToStorage(cart);
 }

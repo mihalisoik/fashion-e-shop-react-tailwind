@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { clothes } from "../constants/clothes";
 import { formatCurrency } from "../utils/money";
 import RelatedProducts from "./RelatedProducts";
+import { addToCart } from "../constants/cart";
 
 function ViewItem({
   id,
@@ -65,6 +66,22 @@ function ViewItem({
     )
   );
 
+  function handleAddToCart() {
+    if (selectedSize) {
+      if (!stockWarning) {
+        setSizeWarning(false);
+        animatedAddedTooltip();
+        setRenderTotalQuantity((oldValue) => oldValue + 1);
+        addToCart(id, selectedSize);
+      } else {
+        setTrembleWarning(true);
+        setTimeout(() => setTrembleWarning(false), 500);
+      }
+    } else {
+      setSizeWarning(true);
+    }
+  }
+
   return (
     <div className="mt-20 bg-white w-full h-fit flex flex-col gap-10 px-3 pt-2 pb-10 lg:pb-2">
       <div className="flex flex-col lg:flex-row">
@@ -119,20 +136,7 @@ function ViewItem({
           <div className="flex flex-col md:ml-16 lg:ml-0 w-48 lg:w-56 gap-5 justify-center">
             <button
               className="main-button main-button-hover mt-7 whitespace-nowrap"
-              onClick={() => {
-                if (selectedSize) {
-                  if (!stockWarning) {
-                    setSizeWarning(false);
-                    animatedAddedTooltip();
-                    setRenderTotalQuantity((oldValue) => oldValue + 1);
-                  } else {
-                    setTrembleWarning(true);
-                    setTimeout(() => setTrembleWarning(false), 500);
-                  }
-                } else {
-                  setSizeWarning(true);
-                }
-              }}
+              onClick={handleAddToCart}
             >
               Add to Cart
             </button>
