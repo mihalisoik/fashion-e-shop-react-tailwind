@@ -7,11 +7,10 @@ function ItemPage({
   renderAddedTooltip,
   renderRemovedTooltip,
   renderTotalQuantity,
-  renderTotalCostCents,
+
   animatedAddedTooltip,
   animatedRemovedTooltip,
   setRenderTotalQuantity,
-  setRenderTotalCostCents,
 }) {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
@@ -24,7 +23,6 @@ function ItemPage({
         renderAddedTooltip={renderAddedTooltip}
         renderRemovedTooltip={renderRemovedTooltip}
         renderTotalQuantity={renderTotalQuantity}
-        renderTotalCostCents={renderTotalCostCents}
       />
       <div className="max-container p-3">
         <ViewItem
@@ -32,7 +30,6 @@ function ItemPage({
           animatedAddedTooltip={animatedAddedTooltip}
           animatedRemovedTooltip={animatedRemovedTooltip}
           setRenderTotalQuantity={setRenderTotalQuantity}
-          setRenderTotalCostCents={setRenderTotalCostCents}
         />
       </div>
       <div className="mt-10">

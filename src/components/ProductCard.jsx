@@ -24,7 +24,6 @@ function ProductCard({
   setRenderTotalQuantity,
   animatedAddedTooltip,
   animatedRemovedTooltip,
-  setRenderTotalCostCents,
 }) {
   const [productQuantity, setProductQuantity] = useState(0);
   const [favorited, setFavorited] = useState(isFavorite);
@@ -51,7 +50,6 @@ function ProductCard({
     animatedAddedTooltip();
     setRenderTotalQuantity((oldValue) => oldValue + 1);
     setProductQuantity((oldValue) => oldValue + 1);
-    setRenderTotalCostCents(totalCostCents);
     addToCart(id, selectedSize);
   }
 

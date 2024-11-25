@@ -6,7 +6,6 @@ function PopularProducts({
   animatedAddedTooltip,
   setRenderTotalQuantity,
   animatedRemovedTooltip,
-  setRenderTotalCostCents,
 }) {
   const popularClothes = clothes.filter((clothe) => clothe.rating.stars >= 4);
   const [currentPage, setCurrentPage] = useState(1);
@@ -31,7 +30,6 @@ function PopularProducts({
       setRenderTotalQuantity={setRenderTotalQuantity}
       animatedAddedTooltip={animatedAddedTooltip}
       animatedRemovedTooltip={animatedRemovedTooltip}
-      setRenderTotalCostCents={setRenderTotalCostCents}
     />
   ));
 

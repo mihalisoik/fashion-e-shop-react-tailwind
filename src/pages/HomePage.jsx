@@ -9,11 +9,10 @@ function HomePage({
   renderAddedTooltip,
   renderRemovedTooltip,
   renderTotalQuantity,
-  renderTotalCostCents,
+
   animatedAddedTooltip,
   animatedRemovedTooltip,
   setRenderTotalQuantity,
-  setRenderTotalCostCents,
 }) {
   return (
     <div>
@@ -22,14 +21,12 @@ function HomePage({
         renderAddedTooltip={renderAddedTooltip}
         renderRemovedTooltip={renderRemovedTooltip}
         renderTotalQuantity={renderTotalQuantity}
-        renderTotalCostCents={renderTotalCostCents}
       />
       <Hero />
       <PopularProducts
         animatedAddedTooltip={animatedAddedTooltip}
         animatedRemovedTooltip={animatedRemovedTooltip}
         setRenderTotalQuantity={setRenderTotalQuantity}
-        setRenderTotalCostCents={setRenderTotalCostCents}
       />
       <CustomerReviews />
       <Newsletter />

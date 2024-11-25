@@ -10,7 +10,6 @@ function Navbar({
   renderAddedTooltip,
   renderRemovedTooltip,
   renderTotalQuantity,
-  renderTotalCostCents,
 }) {
   const [openMenu, setOpenMenu] = useState(false);
   const [openFavoriteList, setOpenFavoriteList] = useState(false);
@@ -44,7 +43,7 @@ function Navbar({
           </a>
           <div className="flex justify-center items-center gap-2 font-secondary">
             <button
-              className="border-2 border-white p-1 shadow-lg hover:bg-light-accent active:bg-extra-light-accent relative group"
+              className="border-2 border-white p-1 shadow-lg hover:bg-light-accent active:bg-extra-light-accent relative group flex justify-center items-center"
               onClick={() => {
                 setOpenFavoriteList((oldValue) => !oldValue);
               }}
@@ -54,7 +53,7 @@ function Navbar({
                 alt="Show Favorites"
                 width={30}
               />
-              <p className="absolute bg-gray-400/80 px-2 py-1 text-white top-12 -left-2 opacity-0 group-hover:opacity-100 pointer-events-none whitespace-nowrap rounded-md text-xs">
+              <p className="absolute bg-gray-400/80 px-2 py-1 text-white top-12 -left-3 opacity-0 group-hover:opacity-100 pointer-events-none whitespace-nowrap rounded-md text-xs">
                 {openFavoriteList ? "Hide Favorites" : "Show Favorites"}
               </p>
               {openFavoriteList && (
@@ -77,8 +76,8 @@ function Navbar({
                   Removed
                 </p>
               )}
-              <p className="absolute bg-gray-400/80 px-2 py-1 text-white top-12 left-5 opacity-0 group-hover:opacity-100 pointer-events-none whitespace-nowrap rounded-md text-sm">
-                Total Cost: {`${formatCurrency(renderTotalCostCents)}`}
+              <p className="absolute bg-gray-400/80 px-2 py-1 text-white top-12 opacity-0 group-hover:opacity-100 pointer-events-none whitespace-nowrap rounded-md text-sm">
+                maybe
               </p>
               <Link to={"/checkout"}>
                 <div className="flex justify-center items-center gap-1">

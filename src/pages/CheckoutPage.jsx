@@ -4,8 +4,6 @@ function CheckoutPage({
   renderAddedTooltip,
   renderRemovedTooltip,
   renderTotalQuantity,
-  renderTotalCostCents,
-  setRenderTotalCostCents,
 }) {
   return (
     <div>
@@ -14,7 +12,6 @@ function CheckoutPage({
         renderAddedTooltip={renderAddedTooltip}
         renderRemovedTooltip={renderRemovedTooltip}
         renderTotalQuantity={renderTotalQuantity}
-        renderTotalCostCents={renderTotalCostCents}
       />
     </div>
   );
