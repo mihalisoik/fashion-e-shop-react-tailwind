@@ -1,10 +1,16 @@
 import { saveCartToStorage } from "../utils/saveToStorage";
+import { clothes } from "./clothes";
 
 export const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 export let totalQuantity = 0;
 cart.forEach((item) => {
   totalQuantity += item.quantity;
+});
+
+export let totalCostCents = 0;
+cart.forEach((item) => {
+  totalCostCents += item.quantity * item.priceCents;
 });
 
 function addingToTotalQuantity() {
@@ -16,6 +22,9 @@ function subtractingToTotalQuantity() {
 }
 
 export function addToCart(id, size) {
+  const matchingItem = clothes.find((item) => item.id === id);
+  const priceCents = matchingItem.priceCents;
+
   const existingItem = cart.find(
     (item) => item.id === id && item.size === size
   );
@@ -26,6 +35,7 @@ export function addToCart(id, size) {
       id: id,
       size: size,
       quantity: 1,
+      priceCents: priceCents,
     });
   }
   addingToTotalQuantity();

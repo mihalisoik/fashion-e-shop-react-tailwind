@@ -31,7 +31,7 @@ function Filter({
         renderFilterSection ? "" : "hidden"
       }`}
     >
-      <button className="flex text-xs text-text-color ml-auto mr-2 items-center bg-gray-200 w-fit shadow-lg px-1 py-1 rounded-full -mt-5 mb-5 md:hidden">
+      <button className="flex text-xs text-text-color ml-auto mr-2 items-center bg-gray-200 w-fit shadow-lg px-1 py-1 rounded-full -mt-5 mb-5 md:hidden hover:scale-105 hover:shadow-2xl">
         <img
           src="src/assets/icons/grey-cancel-icon.svg"
           alt="Close Filters"

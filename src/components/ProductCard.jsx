@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
-import { addToCart, cart, removeFromCart } from "../constants/cart";
+import {
+  addToCart,
+  cart,
+  removeFromCart,
+  totalCostCents,
+} from "../constants/cart";
 import { formatCurrency } from "../utils/money";
 import { clothes } from "../constants/clothes";
 import { Link } from "react-router-dom";
@@ -19,6 +24,7 @@ function ProductCard({
   setRenderTotalQuantity,
   animatedAddedTooltip,
   animatedRemovedTooltip,
+  setRenderTotalCostCents,
 }) {
   const [productQuantity, setProductQuantity] = useState(0);
   const [favorited, setFavorited] = useState(isFavorite);
@@ -45,6 +51,7 @@ function ProductCard({
     animatedAddedTooltip();
     setRenderTotalQuantity((oldValue) => oldValue + 1);
     setProductQuantity((oldValue) => oldValue + 1);
+    setRenderTotalCostCents(totalCostCents);
     addToCart(id, selectedSize);
   }
 

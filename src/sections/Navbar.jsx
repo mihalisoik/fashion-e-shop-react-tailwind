@@ -1,12 +1,16 @@
 import { useState } from "react";
 import MenuBar from "./MenuBar";
 import FavoriteProducts from "./FavoriteProducts";
+import { Link } from "react-router-dom";
+import { totalCostCents } from "../constants/cart";
+import { formatCurrency } from "../utils/money";
 
 function Navbar({
   isHomepage,
   renderAddedTooltip,
   renderRemovedTooltip,
   renderTotalQuantity,
+  renderTotalCostCents,
 }) {
   const [openMenu, setOpenMenu] = useState(false);
   const [openFavoriteList, setOpenFavoriteList] = useState(false);
@@ -62,7 +66,7 @@ function Navbar({
                 </div>
               )}
             </button>
-            <button className="flex gap-2 justify-center items-center relative bg-accent border-2 p-2 hover:shadow-md hover:bg-light-accent active:bg-extra-light-accent whitespace-nowrap group">
+            <button className="flex justify-center items-center relative bg-accent border-2 p-2 hover:shadow-md hover:bg-light-accent active:bg-extra-light-accent whitespace-nowrap group">
               {renderAddedTooltip && (
                 <p className="absolute top-28 whitespace-nowrap bg-gray-800/60 text-sm text-white py-1 px-3 rounded-md z-20 go-up">
                   Added
@@ -74,12 +78,16 @@ function Navbar({
                 </p>
               )}
               <p className="absolute bg-gray-400/80 px-2 py-1 text-white top-12 left-5 opacity-0 group-hover:opacity-100 pointer-events-none whitespace-nowrap rounded-md text-sm">
-                totalCost
+                Total Cost: {`${formatCurrency(renderTotalCostCents)}`}
               </p>
-              <img src="src/assets/icons/cart.svg" alt="Shopping Bag" />
-              <p className="text-slate-50 font-primary text-sm">
-                Shopping Bag ({`${renderTotalQuantity}`})
-              </p>
+              <Link to={"/checkout"}>
+                <div className="flex justify-center items-center gap-1">
+                  <img src="src/assets/icons/cart.svg" alt="Shopping Bag" />
+                  <p className="text-slate-50 font-primary text-sm">
+                    Shopping Bag ({renderTotalQuantity})
+                  </p>
+                </div>
+              </Link>
             </button>
           </div>
         </div>

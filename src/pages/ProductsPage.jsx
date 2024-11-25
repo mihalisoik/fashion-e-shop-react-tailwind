@@ -8,9 +8,11 @@ function ProductsPage({
   renderAddedTooltip,
   renderRemovedTooltip,
   renderTotalQuantity,
+  renderTotalCostCents,
   animatedAddedTooltip,
   animatedRemovedTooltip,
   setRenderTotalQuantity,
+  setRenderTotalCostCents,
 }) {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
@@ -44,6 +46,7 @@ function ProductsPage({
         renderAddedTooltip={renderAddedTooltip}
         renderRemovedTooltip={renderRemovedTooltip}
         renderTotalQuantity={renderTotalQuantity}
+        renderTotalCostCents={renderTotalCostCents}
       />
       <Filter
         addFilter={addFilter}
@@ -58,6 +61,7 @@ function ProductsPage({
           animatedAddedTooltip={animatedAddedTooltip}
           animatedRemovedTooltip={animatedRemovedTooltip}
           setRenderTotalQuantity={setRenderTotalQuantity}
+          setRenderTotalCostCents={setRenderTotalCostCents}
           filters={filters}
           removeFilter={removeFilter}
           setRenderFilterSection={setRenderFilterSection}
