@@ -3,13 +3,12 @@ import HomePage from "./pages/HomePage";
 import ProductsPage from "./pages/ProductsPage";
 import ItemPage from "./pages/ItemPage";
 import { useState } from "react";
-import { totalCostCents, totalQuantity } from "./constants/cart";
+import { totalQuantity } from "./constants/cart";
 import CheckoutPage from "./pages/CheckoutPage";
 
 export default function App() {
   const [renderTotalQuantity, setRenderTotalQuantity] = useState(totalQuantity);
-  const [renderTotalCostCents, setRenderTotalCostCents] =
-    useState(totalCostCents);
+  const [renderTotalCostCents, setRenderTotalCostCents] = useState(0);
   const [renderAddedTooltip, setRenderAddedTooltip] = useState(false);
   const [renderRemovedTooltip, setRenderRemovedTooltip] = useState(false);
 
@@ -57,11 +56,9 @@ export default function App() {
               renderAddedTooltip={renderAddedTooltip}
               renderRemovedTooltip={renderRemovedTooltip}
               renderTotalQuantity={renderTotalQuantity}
-              renderTotalCostCents={renderTotalCostCents}
               animatedAddedTooltip={animatedAddedTooltip}
               animatedRemovedTooltip={animatedRemovedTooltip}
               setRenderTotalQuantity={setRenderTotalQuantity}
-              setRenderTotalCostCents={setRenderTotalCostCents}
             />
           }
         />
@@ -72,11 +69,9 @@ export default function App() {
               renderAddedTooltip={renderAddedTooltip}
               renderRemovedTooltip={renderRemovedTooltip}
               renderTotalQuantity={renderTotalQuantity}
-              renderTotalCostCents={renderTotalCostCents}
               animatedAddedTooltip={animatedAddedTooltip}
               animatedRemovedTooltip={animatedRemovedTooltip}
               setRenderTotalQuantity={setRenderTotalQuantity}
-              setRenderTotalCostCents={setRenderTotalCostCents}
             />
           }
         />
@@ -87,11 +82,9 @@ export default function App() {
               renderAddedTooltip={renderAddedTooltip}
               renderRemovedTooltip={renderRemovedTooltip}
               renderTotalQuantity={renderTotalQuantity}
-              renderTotalCostCents={renderTotalCostCents}
               animatedAddedTooltip={animatedAddedTooltip}
               animatedRemovedTooltip={animatedRemovedTooltip}
               setRenderTotalQuantity={setRenderTotalQuantity}
-              setRenderTotalCostCents={setRenderTotalCostCents}
             />
           }
         />
@@ -102,8 +95,6 @@ export default function App() {
               renderAddedTooltip={renderAddedTooltip}
               renderRemovedTooltip={renderRemovedTooltip}
               renderTotalQuantity={renderTotalQuantity}
-              renderTotalCostCents={renderTotalCostCents}
-              setRenderTotalCostCents={setRenderTotalCostCents}
             />
           }
         />

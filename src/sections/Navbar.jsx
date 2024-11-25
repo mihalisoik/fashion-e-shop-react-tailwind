@@ -2,8 +2,6 @@ import { useState } from "react";
 import MenuBar from "./MenuBar";
 import FavoriteProducts from "./FavoriteProducts";
 import { Link } from "react-router-dom";
-import { totalCostCents } from "../constants/cart";
-import { formatCurrency } from "../utils/money";
 
 function Navbar({
   isHomepage,
@@ -83,7 +81,7 @@ function Navbar({
                 <div className="flex justify-center items-center gap-1">
                   <img src="src/assets/icons/cart.svg" alt="Shopping Bag" />
                   <p className="text-slate-50 font-primary text-sm">
-                    Shopping Bag ({renderTotalQuantity})
+                    Shopping Cart ({renderTotalQuantity})
                   </p>
                 </div>
               </Link>

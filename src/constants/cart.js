@@ -8,7 +8,7 @@ cart.forEach((item) => {
   totalQuantity += item.quantity;
 });
 
-export let totalCostCents = 0;
+let totalCostCents = 0;
 cart.forEach((item) => {
   totalCostCents += item.quantity * item.priceCents;
 });

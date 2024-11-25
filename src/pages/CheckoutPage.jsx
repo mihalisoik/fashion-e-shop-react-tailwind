@@ -1,3 +1,4 @@
+import CheckoutList from "../sections/CheckoutList";
 import Navbar from "../sections/Navbar";
 
 function CheckoutPage({
@@ -13,6 +14,9 @@ function CheckoutPage({
         renderRemovedTooltip={renderRemovedTooltip}
         renderTotalQuantity={renderTotalQuantity}
       />
+      <div className="px-20">
+        <CheckoutList />
+      </div>
     </div>
   );
 }
