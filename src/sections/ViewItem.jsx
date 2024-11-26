@@ -3,7 +3,7 @@ import { clothes } from "../constants/clothes";
 import { formatCurrency } from "../utils/money";
 import RelatedProducts from "./RelatedProducts";
 import { addToCart } from "../constants/cart";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function ViewItem({
   id,
@@ -83,6 +83,25 @@ function ViewItem({
     }
   }
 
+  const navigate = useNavigate();
+
+  function handleCheckoutNow() {
+    if (selectedSize) {
+      if (!stockWarning) {
+        setSizeWarning(false);
+        animatedAddedTooltip();
+        setRenderTotalQuantity((oldValue) => oldValue + 1);
+        addToCart(id, selectedSize);
+        navigate("/checkout");
+      } else {
+        setTrembleWarning(true);
+        setTimeout(() => setTrembleWarning(false), 500);
+      }
+    } else {
+      setSizeWarning(true);
+    }
+  }
+
   return (
     <div className="mt-20 bg-white w-full h-fit flex flex-col gap-10 px-3 pt-2 pb-10 lg:pb-2 shadow-xl">
       <div className="flex flex-col lg:flex-row">
@@ -141,23 +160,13 @@ function ViewItem({
             >
               Add to Cart
             </button>
-            {selectedSize && !stockWarning ? (
-              <Link to="/checkout">
-                <button
-                  className="font-primary font-bold whitespace-nowrap bg-slate-100 py-4 px-10 rounded-full text-primary shadow-lg hover:bg-slate-50 hover:scale-105 hover:shadow-xl transition-transform transform"
-                  onClick={handleAddToCart}
-                >
-                  Checkout Now
-                </button>
-              </Link>
-            ) : (
-              <button
-                className="font-primary font-bold whitespace-nowrap bg-slate-100 py-4 px-10 rounded-full text-primary shadow-lg hover:bg-slate-50 hover:scale-105 hover:shadow-xl transition-transform transform"
-                onClick={handleAddToCart}
-              >
-                Checkout Now
-              </button>
-            )}
+
+            <button
+              className="font-primary font-bold whitespace-nowrap bg-slate-100 py-4 px-10 rounded-full text-primary shadow-lg hover:bg-slate-50 hover:scale-105 hover:shadow-xl transition-transform transform"
+              onClick={handleCheckoutNow}
+            >
+              Checkout Now
+            </button>
           </div>
         </div>
       </div>
