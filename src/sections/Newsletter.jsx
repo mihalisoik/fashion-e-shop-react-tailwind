@@ -43,7 +43,7 @@ function Newsletter() {
       <div className="max-container flex flex-col justify-center items-center gap-10 text-center max-lg:px-5 lg:flex-row lg:justify-around md:p-3">
         <h2 className="text-3xl font-primary font-semibold">
           Don’t Miss a Beat – Join Our{" "}
-          <span className="font-bold text-accent">Newsletter</span> for
+          <span className="font-bold text-primary">Newsletter</span> for
           Exclusive Updates!
         </h2>
         <form className="flex gap-10 items-center max-sm:flex-col max-[1440px]:px-5">

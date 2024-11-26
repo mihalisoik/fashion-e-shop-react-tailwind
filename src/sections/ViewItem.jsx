@@ -56,7 +56,7 @@ function ViewItem({
       <div
         key={size}
         className={`bg-gray-300 px-3 py-1 rounded-lg cursor-pointer border-2 ${
-          selectedSize === size ? "border-accent" : "border-black"
+          selectedSize === size ? "border-primary" : "border-black"
         } text-slate-50 font-semibold`}
         data-quantity={quantity}
         onClick={() => handlePickingSize(size, quantity)}
@@ -140,7 +140,7 @@ function ViewItem({
             >
               Add to Cart
             </button>
-            <button className="font-primary font-bold whitespace-nowrap bg-slate-100 py-4 px-10 rounded-full text-accent shadow-lg hover:bg-slate-50 hover:scale-105 hover:shadow-xl transition-transform transform">
+            <button className="font-primary font-bold whitespace-nowrap bg-slate-100 py-4 px-10 rounded-full text-primary shadow-lg hover:bg-slate-50 hover:scale-105 hover:shadow-xl transition-transform transform">
               Checkout Now
             </button>
           </div>

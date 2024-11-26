@@ -29,7 +29,7 @@ function CustomerReviews() {
     <section id="reviews" className="w-full bg-[#4A5568] py-20 mt-10">
       <div className="max-container flex flex-col gap-10 justify-center items-center">
         <h2 className="text-4xl text-white font-primary text-center">
-          What Our <span className="text-accent">Customers</span> Say?
+          What Our <span className="text-primary">Customers</span> Say?
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4 sm:gap-8 lg:w-full">
           {ReviewElements}

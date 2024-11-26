@@ -12,6 +12,7 @@ na mhn exei px o kwdikas mou
 na aukshsw ta proionta mou 
 na vrw fwtografies gia ta proionta
 na allaksw ta e.target se event.target
+na ftiaksw to checkout
 
 
 

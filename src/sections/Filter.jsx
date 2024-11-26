@@ -31,7 +31,7 @@ function Filter({
         renderFilterSection ? "" : "hidden"
       }`}
     >
-      <button className="flex text-xs text-text-color ml-auto mr-2 items-center bg-gray-200 w-fit shadow-lg px-1 py-1 rounded-full -mt-5 mb-5 md:hidden hover:scale-105 hover:shadow-2xl">
+      <button className="flex text-xs text-textcolor ml-auto mr-2 items-center bg-gray-200 w-fit shadow-lg px-1 py-1 rounded-full -mt-5 mb-5 md:hidden hover:scale-105 hover:shadow-2xl">
         <img
           src="src/assets/icons/grey-cancel-icon.svg"
           alt="Close Filters"
@@ -45,7 +45,7 @@ function Filter({
       {["Men", "Women", "Unisex"].map((gender) => (
         <div className="flex flex-col items-center" key={gender}>
           <div
-            className="group text-center font-primary font-bold border border-gray-100 rounded-lg cursor-pointer shadow-md text-white bg-accent relative w-48 py-1 hover:bg-light-accent"
+            className="group text-center font-primary font-bold border border-gray-100 rounded-lg cursor-pointer shadow-md text-white bg-primary relative w-48 py-1 hover:bg-lightprimary active:bg-extralightprimary"
             onMouseEnter={() => handleMouseEnter(gender)}
             onMouseLeave={handleMouseLeave}
           >
@@ -80,7 +80,7 @@ function Filter({
           Apply
         </button>
         <button
-          className="main-button text-accent bg-slate-50 hover:scale-105 hover:shadow-xl hover:bg-white w-fit px-20"
+          className="main-button text-primary bg-slate-50 hover:scale-105 hover:shadow-xl hover:bg-white w-fit px-20"
           onClick={() => {
             setFilters([]);
           }}

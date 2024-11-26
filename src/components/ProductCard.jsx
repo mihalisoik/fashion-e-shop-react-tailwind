@@ -79,7 +79,7 @@ function ProductCard({
   }
 
   return (
-    <div className="bg-slate-100 p-5 font-secondary flex flex-col gap-1 justify-center items-start rounded-md shadow-lg flex-shrink-0 w-52 text-sm">
+    <div className="bg-background p-6 font-secondary flex flex-col gap-1 justify-center items-start rounded-md shadow-lg flex-shrink-0 w-52 text-sm">
       <button
         className="ml-auto bg-white p-1 rounded-full shadow-md"
         onClick={handleToggleFavorite}
@@ -103,7 +103,7 @@ function ProductCard({
           <p>{rating.stars.toFixed(1)}</p>
         </div>
         <select
-          className="bg-accent border border-1 border-gray-500 text-slate-50 rounded-full px-1 py-0.5"
+          className="bg-primary hover:bg-light-primary border border-1 border-gray-500 text-slate-50 rounded-full px-1 py-0.5"
           onChange={handleSizeChange}
           value={selectedSize}
         >

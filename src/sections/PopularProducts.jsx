@@ -70,7 +70,7 @@ function PopularProducts({
       <div className="max-container mt-10 w-full py-4 px-10 flex flex-1 flex-col justify-center items-start gap-6 font-primary">
         <div className="text-3xl tracking-wide">
           Our{" "}
-          <span className="text-accent font-semibold tracking-wider">
+          <span className="text-primary font-semibold tracking-wider">
             Popular
           </span>{" "}
           Products

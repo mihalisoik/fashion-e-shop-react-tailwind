@@ -14,7 +14,7 @@
 }
 
 body {
-  background-color: #fff8f0;
+  background-color: #f9fbe7;
   min-height: 100vh;
 }
 
@@ -68,11 +68,11 @@ body {
   }
 
   .main-button {
-    @apply font-primary font-bold bg-accent py-4 px-10 rounded-full text-slate-100 shadow-lg;
+    @apply font-primary font-bold bg-primary py-4 px-10 rounded-full text-slate-100 shadow-lg;
   }
 
   .main-button-hover {
-    @apply hover:bg-light-accent active:bg-extra-light-accent hover:scale-105 hover:shadow-xl transition-transform transform;
+    @apply hover:bg-lightprimary active:bg-extralightprimary hover:scale-105 hover:shadow-xl transition-transform transform;
   }
 
   .category-container {

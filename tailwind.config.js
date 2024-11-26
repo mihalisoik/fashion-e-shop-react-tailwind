@@ -8,13 +8,11 @@ export default {
         secondary: ["Open Sans", "sans-serif"],
       },
       colors: {
-        primary: "#FF6F61",
-        secondary: "#FAE3D9",
-        accent: "#A3B18A",
-        "light-accent": "#BCC9A4",
-        "extra-light-accent": "#D6E1BF",
-        background: "#FFF8F0",
-        "text-color": "#4B3E3E",
+        primary: "#81C784",
+        lightprimary: "#A5D6A7",
+        extralightprimary: "#C8E6C9",
+        background: "#F9FBE7",
+        textcolor: "#616161",
       },
       backgroundImage: {
         hero: "url('/hero-image.jpg')",

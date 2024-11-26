@@ -3,8 +3,8 @@ function Hero() {
     <section id="home" className="md:mt-24 mt-10 relative max-container">
       <div className="sm:w-full w-auto h-[50rem] md:h-[40rem] sm:h-[30rem bg-contain bg-no-repeat bg-hero bg-right flex items-center justify-center">
         <div className="container mx-auto px-4 flex flex-col items-center sm:items-start gap-y-4">
-          <h1 className="text-[2.5rem] p-6 sm:p-3 sm:text-[3.5rem] text-text-color font-bold bg-background rounded-xl inline-block max-w-[90%] font-primary">
-            <span className="text-accent">Elevate</span> Your Everyday Style!
+          <h1 className="text-[2.5rem] p-6 sm:p-3 sm:text-[3.5rem] text-textcolor font-bold bg-background rounded-xl inline-block max-w-[90%] font-primary">
+            <span className="text-primary">Elevate</span> Your Everyday Style!
           </h1>
           <p className="font-secondary w-96 sm:w-full md:w-[40rem] leading-5 tracking-widest text-slate-700 bg-background p-4 rounded-xl">
             Discover a collection curated for trendsetters and timeless fashion

@@ -13,7 +13,7 @@ function Navbar({
   const [openFavoriteList, setOpenFavoriteList] = useState(false);
 
   return (
-    <nav className="h-16 bg-accent px-3 items-center z-30 w-full top-0 fixed">
+    <nav className="h-16 bg-primary px-3 items-center z-30 w-full top-0 fixed">
       {openMenu && (
         <div className="p-2 fixed w-full left-0 backdrop-blur-md bg-white/30 z-20 lg:w-96 inset-y-0 overflow-y-auto">
           <MenuBar setOpenMenu={setOpenMenu} />
@@ -41,7 +41,7 @@ function Navbar({
           </a>
           <div className="flex justify-center items-center gap-2 font-secondary">
             <button
-              className="border-2 border-white p-1 shadow-lg hover:bg-light-accent active:bg-extra-light-accent relative group flex justify-center items-center"
+              className="border-2 bg-primary border-white p-1 shadow-lg hover:bg-lightprimary active:bg-extralightprimary relative group flex justify-center items-center"
               onClick={() => {
                 setOpenFavoriteList((oldValue) => !oldValue);
               }}
@@ -63,7 +63,7 @@ function Navbar({
                 </div>
               )}
             </button>
-            <button className="flex justify-center items-center relative bg-accent border-2 p-2 hover:shadow-md hover:bg-light-accent active:bg-extra-light-accent whitespace-nowrap group">
+            <button className="flex justify-center items-center relative bg-primary border-2 p-2 hover:shadow-md hover:bg-lightprimary active:bg-extralightprimary whitespace-nowrap group">
               {renderAddedTooltip && (
                 <p className="absolute top-28 whitespace-nowrap bg-gray-800/60 text-sm text-white py-1 px-3 rounded-md z-20 go-up">
                   Added
@@ -74,9 +74,6 @@ function Navbar({
                   Removed
                 </p>
               )}
-              <p className="absolute bg-gray-400/80 px-2 py-1 text-white top-12 opacity-0 group-hover:opacity-100 pointer-events-none whitespace-nowrap rounded-md text-sm">
-                maybe
-              </p>
               <Link to={"/checkout"}>
                 <div className="flex justify-center items-center gap-1">
                   <img src="src/assets/icons/cart.svg" alt="Shopping Bag" />

@@ -91,7 +91,7 @@ function AllProducts({
   const filtersOfUserElements = filters.map((filter) => (
     <div
       key={filter}
-      className="bg-accent px-5 py-1 rounded-full w-fit text-center whitespace-nowrap relative font-secondary text-white"
+      className="bg-primary px-5 py-1 rounded-full w-fit text-center whitespace-nowrap relative font-secondary text-white"
     >
       {filter}
       <button className="bg-slate-50 p-0.5 w-6 rounded-full shadow-md absolute -top-3 -right-2">
@@ -112,7 +112,7 @@ function AllProducts({
       <div className="flex md:hidden mb-14">
         <div className="absolute top-5 right-5">
           <button
-            className="bg-accent p-1 rounded-md"
+            className="bg-primary p-1 rounded-md"
             onClick={() => {
               setRenderFilterSection((oldValue) => !oldValue);
             }}
