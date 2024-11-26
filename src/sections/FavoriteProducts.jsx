@@ -17,44 +17,53 @@ function FavoriteProducts() {
 
   const favoriteItemElements = favoriteClothesArray.map((item) => {
     return (
-      <div>
-        <div className="flex py-2 px-5 bg-white rounded-sm border border-black text-sm gap-3">
-          <Link to={`/item?id=${encodeURIComponent(item.id)}`} key={item.id}>
-            <img src={item.image} alt="Favorite Product" width={100} />
+      <div
+        key={item.id}
+        className="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden mb-4"
+      >
+        <div className="relative">
+          <Link to={`/item?id=${encodeURIComponent(item.id)}`}>
+            <img
+              src={item.image}
+              alt={item.name}
+              className="w-full h-64 object-cover rounded-t-lg"
+            />
           </Link>
-          <div className="flex items-center gap-3 text-gray-800">
-            <Link to={`/item?id=${encodeURIComponent(item.id)}`} key={item.id}>
-              <div className="flex flex-col gap-4 items-start w-28 md:w-32">
-                <p className="font-semibold text-left">{item.name}</p>
-                <p>
-                  <span className="text-[0.6rem]">€</span>
-                  {formatCurrency(item.priceCents)}
-                </p>
-              </div>
-            </Link>
-            <button
-              className="p-1 border border-gray-800 rounded-sm hover:bg-gray-200 shadow-lg active:scale-95"
-              onClick={(e) => {
-                e.stopPropagation();
-                handleBucketClick(item);
-              }}
-            >
-              <img
-                src="src/assets/icons/bucket.svg"
-                alt="Remove From Favorites"
-              />
-            </button>
-          </div>
+          <button
+            className="absolute top-2 right-2 bg-white border-2 border-gray-400 p-2 rounded-full shadow-md hover:bg-gray-100 focus:outline-none"
+            onClick={(event) => {
+              event.stopPropagation();
+              handleBucketClick(item);
+            }}
+            aria-label="Remove from favorites"
+          >
+            <img
+              src="src/assets/icons/bucket.svg"
+              alt="Remove from favorites"
+              className="w-6 h-6"
+            />
+          </button>
+        </div>
+        <div className="p-4 flex flex-col gap-2">
+          <Link to={`/item?id=${encodeURIComponent(item.id)}`}>
+            <h4 className="text-lg font-semibold text-gray-800 hover:text-primary transition-colors">
+              {item.name}
+            </h4>
+          </Link>
+          <p className="text-sm text-gray-600">
+            <span className="text-xs">€</span>
+            {formatCurrency(item.priceCents)}
+          </p>
         </div>
       </div>
     );
   });
 
   return (
-    <div className="bg-gray-200/90 rounded-md flex flex-col gap-3 max-h-96 overflow-y-auto p-4 w-80 md:w-96 shadow-2xl">
+    <div className="bg-gray-200/90 rounded-md flex flex-col gap-3 p-4 w-80 md:w-96 shadow-2xl max-h-96 overflow-y-auto">
       {favoriteItemElements}
       {favoriteClothesArray.length === 0 && (
-        <p className="text-gray-800 text-xs">No Favorite Items</p>
+        <p className="text-gray-800 text-xs text-center">No Favorite Items</p>
       )}
     </div>
   );

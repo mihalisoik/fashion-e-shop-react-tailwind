@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { cart } from "../constants/cart";
 import { formatCurrency } from "../utils/money";
+import { saveCartToStorage } from "../utils/saveToStorage";
+import { Link } from "react-router-dom";
 
-function PaymentSummary() {
+function PaymentSummary({ setRenderTotalQuantity }) {
   const [deliveryOption, setDeliveryOption] = useState("4");
+  const [showModal, setShowModal] = useState(false);
 
   const deliveryPrices = {
     2: 700,
@@ -26,8 +29,14 @@ function PaymentSummary() {
     return newDate.toDateString();
   }
 
+  function handleShopAgainButton() {
+    cart.length = 0;
+    setRenderTotalQuantity(0);
+    saveCartToStorage(cart);
+  }
+
   return (
-    <div className="bg-white shadow-lg rounded-lg p-8 mt-8 font-secondary">
+    <div className="relative bg-white shadow-lg rounded-lg p-8 mt-8 font-secondary">
       <h3 className="text-2xl font-semibold text-gray-800 mb-6 font-primary">
         Payment Summary
       </h3>
@@ -115,9 +124,36 @@ function PaymentSummary() {
           {formatCurrency(totalPrice)}
         </span>
       </div>
-      <button className="w-full mt-20 main-button main-button-hover">
+      <button
+        className="w-full mt-20 main-button main-button-hover"
+        onClick={() => {
+          setShowModal(true);
+        }}
+      >
         Proceed to Payment
       </button>
+
+      {showModal && (
+        <div className="fixed inset-0 bg-gray-800 bg-opacity-75 z-50 flex justify-center items-center backdrop-blur-sm">
+          <div className="bg-white p-8 rounded-lg text-center">
+            <h2 className="text-2xl font-bold text-gray-800">Thank You!</h2>
+            <p className="mt-4 text-gray-600 w-80 md:w-96">
+              Your payment has been successfully processed. If you’re happy with
+              your experience, we’d love for you to leave us a review. Your
+              feedback helps us improve and helps others make informed
+              decisions. We hope to see you again soon!
+            </p>
+            <Link to="/">
+              <button
+                className="main-button main-button-hover mt-10 text-slate-50 rounded-full"
+                onClick={handleShopAgainButton}
+              >
+                Shop Again
+              </button>
+            </Link>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

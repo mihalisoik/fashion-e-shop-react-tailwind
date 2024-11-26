@@ -1,7 +1,7 @@
 import { saveCartToStorage } from "../utils/saveToStorage";
 import { clothes } from "./clothes";
 
-export const cart = JSON.parse(localStorage.getItem("cart")) || [];
+export let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 export let totalQuantity = 0;
 cart.forEach((item) => {

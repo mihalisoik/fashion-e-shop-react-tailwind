@@ -8,7 +8,6 @@ import CheckoutPage from "./pages/CheckoutPage";
 
 export default function App() {
   const [renderTotalQuantity, setRenderTotalQuantity] = useState(totalQuantity);
-  const [renderTotalCostCents, setRenderTotalCostCents] = useState(0);
   const [renderAddedTooltip, setRenderAddedTooltip] = useState(false);
   const [renderRemovedTooltip, setRenderRemovedTooltip] = useState(false);
 

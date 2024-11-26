@@ -25,7 +25,9 @@ function CheckoutPage({
           animatedRemovedTooltip={animatedRemovedTooltip}
           setRenderTotalQuantity={setRenderTotalQuantity}
         />
-        {cart.length > 0 && <PaymentSummary />}
+        {cart.length > 0 && (
+          <PaymentSummary setRenderTotalQuantity={setRenderTotalQuantity} />
+        )}
       </div>
     </div>
   );
