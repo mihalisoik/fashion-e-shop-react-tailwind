@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        primary: ["Bodoni Moda", "sans-serif"],
-        secondary: ["Open Sans", "sans-serif"],
+        primary: ["Montserrat", "sans-serif"],
+        secondary: ["Merryweather", "sans-serif"],
       },
       colors: {
         primary: "#81C784",
