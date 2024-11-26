@@ -31,7 +31,7 @@ function PaymentSummary() {
 
   return (
     <div className="bg-white shadow-lg rounded-lg p-8 mt-8 font-secondary">
-      <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+      <h3 className="text-2xl font-semibold text-gray-800 mb-6 font-primary">
         Payment Summary
       </h3>
 
@@ -61,7 +61,7 @@ function PaymentSummary() {
               className="form-radio text-blue-500"
             />
             <div className="flex-1">
-              <span className="font-semibold text-gray-800">
+              <span className="font-semibold text-gray-800 font-primary">
                 Express (2 days)
               </span>
               <div className="text-gray-600 text-sm">
@@ -84,7 +84,7 @@ function PaymentSummary() {
               className="form-radio text-blue-500"
             />
             <div className="flex-1">
-              <span className="font-semibold text-gray-800">
+              <span className="font-semibold text-gray-800 font-primary">
                 Standard (4 days)
               </span>
               <div className="text-gray-600 text-sm">
@@ -107,7 +107,7 @@ function PaymentSummary() {
               className="form-radio text-blue-500"
             />
             <div className="flex-1">
-              <span className="font-semibold text-gray-800">
+              <span className="font-semibold text-gray-800 font-primary">
                 Economy (7 days)
               </span>
               <div className="text-gray-600 text-sm">

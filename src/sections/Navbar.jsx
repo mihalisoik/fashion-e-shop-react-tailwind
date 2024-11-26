@@ -74,7 +74,7 @@ function Navbar({
                   Removed
                 </p>
               )}
-              <Link to={"/checkout"}>
+              <Link to="/checkout">
                 <div className="flex justify-center items-center gap-1">
                   <img src="src/assets/icons/cart.svg" alt="Shopping Bag" />
                   <p className="text-slate-50 font-primary text-sm">

@@ -28,7 +28,7 @@ function OrderSummary({
 
       {/* Conditional Rendering: Empty Cart */}
       {cart.length === 0 ? (
-        <div className="flex flex-col items-center justify-center mt-20">
+        <div className="flex flex-col items-center justify-center mt-20 font-secondary">
           <img
             src="src/assets/icons/empty-cart.svg" // Placeholder for empty cart illustration
             alt="Empty Cart"

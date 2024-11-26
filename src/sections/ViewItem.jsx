@@ -3,6 +3,7 @@ import { clothes } from "../constants/clothes";
 import { formatCurrency } from "../utils/money";
 import RelatedProducts from "./RelatedProducts";
 import { addToCart } from "../constants/cart";
+import { Link } from "react-router-dom";
 
 function ViewItem({
   id,
@@ -140,9 +141,23 @@ function ViewItem({
             >
               Add to Cart
             </button>
-            <button className="font-primary font-bold whitespace-nowrap bg-slate-100 py-4 px-10 rounded-full text-primary shadow-lg hover:bg-slate-50 hover:scale-105 hover:shadow-xl transition-transform transform">
-              Checkout Now
-            </button>
+            {selectedSize && !stockWarning ? (
+              <Link to="/checkout">
+                <button
+                  className="font-primary font-bold whitespace-nowrap bg-slate-100 py-4 px-10 rounded-full text-primary shadow-lg hover:bg-slate-50 hover:scale-105 hover:shadow-xl transition-transform transform"
+                  onClick={handleAddToCart}
+                >
+                  Checkout Now
+                </button>
+              </Link>
+            ) : (
+              <button
+                className="font-primary font-bold whitespace-nowrap bg-slate-100 py-4 px-10 rounded-full text-primary shadow-lg hover:bg-slate-50 hover:scale-105 hover:shadow-xl transition-transform transform"
+                onClick={handleAddToCart}
+              >
+                Checkout Now
+              </button>
+            )}
           </div>
         </div>
       </div>
