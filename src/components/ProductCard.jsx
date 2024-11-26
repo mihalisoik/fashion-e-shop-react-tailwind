@@ -1,17 +1,9 @@
 import { useEffect, useState } from "react";
-import {
-  addToCart,
-  cart,
-  removeFromCart,
-  totalCostCents,
-} from "../constants/cart";
+import { addToCart, cart, removeFromCart } from "../constants/cart";
 import { formatCurrency } from "../utils/money";
 import { clothes } from "../constants/clothes";
 import { Link } from "react-router-dom";
-import {
-  saveCartToStorage,
-  saveClothesToStorage,
-} from "../utils/saveToStorage";
+import { saveClothesToStorage } from "../utils/saveToStorage";
 
 function ProductCard({
   id,
@@ -85,9 +77,9 @@ function ProductCard({
         onClick={handleToggleFavorite}
       >
         {favorited ? (
-          <img src="src/assets/icons/favorite.svg" alt="favorite" />
+          <img src="src/assets/icons/favorite.svg" alt="Favorite" />
         ) : (
-          <img src="src/assets/icons/non-favorite.svg" alt="non-favorite" />
+          <img src="src/assets/icons/non-favorite.svg" alt="Not Favorite" />
         )}
       </button>
       <Link to={`/item?id=${encodeURIComponent(id)}`} key={id}>
@@ -96,14 +88,14 @@ function ProductCard({
       <div className="flex w-full font-secondary justify-between items-center">
         <div className="flex items-center gap-0.5">
           {(rating.stars * 10) % 10 === 0 ? (
-            <img src="src/assets/icons/star.svg" alt="star-rating" />
+            <img src="src/assets/icons/star.svg" alt="Star Rating" />
           ) : (
-            <img src="src/assets/icons/star-half.svg" alt="half-star-rating" />
+            <img src="src/assets/icons/star-half.svg" alt="Half Star Rating" />
           )}
           <p>{rating.stars.toFixed(1)}</p>
         </div>
         <select
-          className="bg-primary hover:bg-light-primary border border-1 border-gray-500 text-slate-50 rounded-full px-1 py-0.5"
+          className="bg-primary hover:bg-lightprimary border border-1 border-gray-500 text-slate-50 rounded-full px-1 py-0.5 cursor-pointer"
           onChange={handleSizeChange}
           value={selectedSize}
         >
@@ -149,14 +141,14 @@ function ProductCard({
               className="border border-[#666666] rounded-full hover:bg-slate-100 active:scale-95"
               onClick={handleDecrement}
             >
-              <img src="src/assets/icons/minus.svg" alt="minus-icon" />
+              <img src="src/assets/icons/minus.svg" alt="Decrease Cart" />
             </button>
             {productQuantity}
             <button
               className="border border-[#666666] rounded-full hover:bg-slate-100 active:scale-95"
               onClick={handleAddToCart}
             >
-              <img src="src/assets/icons/plus.svg" alt="plus-icon" />
+              <img src="src/assets/icons/plus.svg" alt="Add To Cart" />
             </button>
           </div>
         )}

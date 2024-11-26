@@ -27,7 +27,7 @@ function Filter({
 
   return (
     <div
-      className={`mt-30 h-[100vh] fixed top-0 right-0 md:w-80 border-l-[1px] border-gray-400 bg-slate-50 md:flex flex-col pt-24 gap-5 pl-5 md:overflow-visible overflow-y-auto w-full z-20 ${
+      className={`mt-30 h-screen fixed top-0 right-0 md:w-80 border-l-[1px] border-gray-400 bg-slate-50 md:flex flex-col pt-24 gap-5 pl-5 md:overflow-visible overflow-y-auto w-full z-20 ${
         renderFilterSection ? "" : "hidden"
       }`}
     >
@@ -45,7 +45,7 @@ function Filter({
       {["Men", "Women", "Unisex"].map((gender) => (
         <div className="flex flex-col items-center" key={gender}>
           <div
-            className="group text-center font-primary font-bold border border-gray-100 rounded-lg cursor-pointer shadow-md text-white bg-primary relative w-48 py-1 hover:bg-lightprimary active:bg-extralightprimary"
+            className="group text-center font-primary font-bold border border-gray-100 rounded-lg cursor-pointer shadow-md text-slate-50 bg-primary relative w-48 py-1 hover:bg-lightprimary active:bg-extralightprimary"
             onMouseEnter={() => handleMouseEnter(gender)}
             onMouseLeave={handleMouseLeave}
           >

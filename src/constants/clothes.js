@@ -438,5 +438,3 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
     matchesWithColors: ["White", "Black", "Blue"],
   },
 ];
-
-console.log(clothes.length);

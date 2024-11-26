@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer className="bg-black">
-      <div className="max-container text-white py-10 max-sm:px-5 sm:px-10 flex flex-col lg:flex-row gap-4">
+      <div className="max-container text-slate-50 py-10 max-sm:px-5 sm:px-10 flex flex-col lg:flex-row gap-4">
         <div>
           logo here
           <p className="font-secondary italic lg:max-w-[50rem]">

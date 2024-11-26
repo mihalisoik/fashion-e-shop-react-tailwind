@@ -7,18 +7,17 @@ function OrderSummary({
   animatedRemovedTooltip,
   setRenderTotalQuantity,
 }) {
-  const increaseQuantity = (id, size) => {
+  function increaseQuantity(id, size) {
     animatedAddedTooltip();
     setRenderTotalQuantity((oldValue) => oldValue + 1);
     addToCart(id, size);
-  };
+  }
 
-  // Handlers for updating quantity
-  const decreaseQuantity = (id, size) => {
+  function decreaseQuantity(id, size) {
     animatedRemovedTooltip();
     setRenderTotalQuantity((oldValue) => oldValue - 1);
     removeFromCart(id, size);
-  };
+  }
 
   return (
     <div>
@@ -26,11 +25,10 @@ function OrderSummary({
         Your Cart
       </h2>
 
-      {/* Conditional Rendering: Empty Cart */}
       {cart.length === 0 ? (
         <div className="flex flex-col items-center justify-center mt-20 font-secondary">
           <img
-            src="src/assets/icons/empty-cart.svg" // Placeholder for empty cart illustration
+            src="src/assets/icons/empty-cart.svg"
             alt="Empty Cart"
             className="w-64 mb-6"
           />
@@ -44,7 +42,6 @@ function OrderSummary({
           </Link>
         </div>
       ) : (
-        // Render cart items
         <div className="font-secondary">
           {cart.map((item, index) => (
             <CartItem

@@ -91,13 +91,13 @@ function AllProducts({
   const filtersOfUserElements = filters.map((filter) => (
     <div
       key={filter}
-      className="bg-primary px-5 py-1 rounded-full w-fit text-center whitespace-nowrap relative font-secondary text-white"
+      className="bg-primary px-5 py-1 rounded-full w-fit text-center whitespace-nowrap relative font-secondary text-slate-50"
     >
       {filter}
       <button className="bg-slate-50 p-0.5 w-6 rounded-full shadow-md absolute -top-3 -right-2">
         <img
           src="src/assets/icons/accent-cancel-icon.svg"
-          alt="cancel-icon"
+          alt="Remove Filter"
           onClick={(event) => {
             const button = event.target.parentElement;
             removeFilter(button.parentElement.textContent);

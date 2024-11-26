@@ -27,7 +27,7 @@ function MenuBar({ setOpenMenu }) {
             <button>
               <img
                 src="src/assets/icons/arrow-expand.svg"
-                alt="Expand"
+                alt="Expand Subcategories"
                 className={
                   renderMaleCategories &&
                   "-rotate-90 transition-transform duration-200"
@@ -50,7 +50,7 @@ function MenuBar({ setOpenMenu }) {
             <button>
               <img
                 src="src/assets/icons/arrow-expand.svg"
-                alt="Expand"
+                alt="Expand Subcategories"
                 className={
                   renderFemaleCategories &&
                   "-rotate-90 transition-transform duration-200"
@@ -73,7 +73,7 @@ function MenuBar({ setOpenMenu }) {
             <button>
               <img
                 src="src/assets/icons/arrow-expand.svg"
-                alt="Expand"
+                alt="Expand Subcategories"
                 className={
                   renderUnisexCategories &&
                   "-rotate-90 transition-transform duration-200"

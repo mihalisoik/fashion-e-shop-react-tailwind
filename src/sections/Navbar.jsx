@@ -51,7 +51,7 @@ function Navbar({
                 alt="Show Favorites"
                 width={30}
               />
-              <p className="absolute bg-gray-400/80 px-2 py-1 text-white top-12 -left-3 opacity-0 group-hover:opacity-100 pointer-events-none whitespace-nowrap rounded-md text-xs">
+              <p className="absolute bg-gray-400/80 px-2 py-1 text-slate-50 top-12 -left-3 opacity-0 group-hover:opacity-100 pointer-events-none whitespace-nowrap rounded-md text-xs">
                 {openFavoriteList ? "Hide Favorites" : "Show Favorites"}
               </p>
               {openFavoriteList && (
@@ -65,12 +65,12 @@ function Navbar({
             </button>
             <button className="flex justify-center items-center relative bg-primary border-2 p-2 hover:shadow-md hover:bg-lightprimary active:bg-extralightprimary whitespace-nowrap group">
               {renderAddedTooltip && (
-                <p className="absolute top-28 whitespace-nowrap bg-gray-800/60 text-sm text-white py-1 px-3 rounded-md z-20 go-up">
+                <p className="absolute top-28 whitespace-nowrap bg-gray-800/60 text-sm text-slate-50 py-1 px-3 rounded-md z-20 go-up">
                   Added
                 </p>
               )}
               {renderRemovedTooltip && (
-                <p className="absolute top-14 whitespace-nowrap bg-gray-800/60 text-sm text-white py-1 px-3 rounded-md z-20 go-down">
+                <p className="absolute top-14 whitespace-nowrap bg-gray-800/60 text-sm text-slate-50 py-1 px-3 rounded-md z-20 go-down">
                   Removed
                 </p>
               )}

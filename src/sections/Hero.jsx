@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Hero() {
   return (
     <section id="home" className="md:mt-24 mt-10 relative max-container">
@@ -13,16 +15,15 @@ function Hero() {
             new arrivals every week, you’re bound to find something that fits
             just right. Step up your wardrobe and shop the looks you’ll love!
           </p>
-          <a href="/products">
+          <Link to="/products">
             <button className="main-button main-button-hover flex gap-3 pr-6">
               <p>Shop Now</p>
               <img
                 src="src/assets/icons/arrow-forward.svg"
-                alt="Arrow Forward"
-                className=""
+                alt="Go to Shopping"
               />
             </button>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

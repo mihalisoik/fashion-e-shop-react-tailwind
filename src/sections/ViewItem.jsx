@@ -3,7 +3,7 @@ import { clothes } from "../constants/clothes";
 import { formatCurrency } from "../utils/money";
 import RelatedProducts from "./RelatedProducts";
 import { addToCart } from "../constants/cart";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function ViewItem({
   id,

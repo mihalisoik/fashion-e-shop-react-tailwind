@@ -87,8 +87,6 @@ function RelatedProducts({
     ].every((array) => array.includes(item))
   );
 
-  console.log(relatedClothesArray);
-
   const randomArrayOfRelatedClothes =
     getThreeRandomClothes(relatedClothesArray);
 
