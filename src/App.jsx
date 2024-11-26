@@ -95,6 +95,9 @@ export default function App() {
               renderAddedTooltip={renderAddedTooltip}
               renderRemovedTooltip={renderRemovedTooltip}
               renderTotalQuantity={renderTotalQuantity}
+              animatedAddedTooltip={animatedAddedTooltip}
+              animatedRemovedTooltip={animatedRemovedTooltip}
+              setRenderTotalQuantity={setRenderTotalQuantity}
             />
           }
         />

@@ -1,21 +1,27 @@
 import { Link } from "react-router-dom";
 import CartItem from "../components/CartItem";
-import { cart } from "../constants/cart";
+import { addToCart, cart, removeFromCart } from "../constants/cart";
 
-function OrderSummary() {
-  // Handlers for updating quantity
-  const decreaseQuantity = (index) => {
-    console.log(`Decrease quantity for item at index ${index}`);
-    // Implement functionality to decrease item quantity
+function OrderSummary({
+  animatedAddedTooltip,
+  animatedRemovedTooltip,
+  setRenderTotalQuantity,
+}) {
+  const increaseQuantity = (id, size) => {
+    animatedAddedTooltip();
+    setRenderTotalQuantity((oldValue) => oldValue + 1);
+    addToCart(id, size);
   };
 
-  const increaseQuantity = (index) => {
-    console.log(`Increase quantity for item at index ${index}`);
-    // Implement functionality to increase item quantity
+  // Handlers for updating quantity
+  const decreaseQuantity = (id, size) => {
+    animatedRemovedTooltip();
+    setRenderTotalQuantity((oldValue) => oldValue - 1);
+    removeFromCart(id, size);
   };
 
   return (
-    <div className="container mx-auto w-full min-h-screen bg-white py-10 px-4 shadow-xl mt-20">
+    <div>
       <h2 className="text-center text-3xl font-bold text-gray-800 mb-6 font-primary">
         Your Cart
       </h2>
@@ -45,8 +51,8 @@ function OrderSummary() {
               key={index}
               item={item}
               index={index}
-              onDecreaseQuantity={decreaseQuantity}
-              onIncreaseQuantity={increaseQuantity}
+              increaseQuantity={increaseQuantity}
+              decreaseQuantity={decreaseQuantity}
             />
           ))}
         </div>

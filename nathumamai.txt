@@ -9,6 +9,9 @@ na allaksw to filter kai na ta valw sto url
 na kanw ta text-white text-slate-50
 na allaksw ta h-[100vh] se h-screen
 na mhn exei px o kwdikas mou
+na aukshsw ta proionta mou 
+na vrw fwtografies gia ta proionta
+na allaksw ta e.target se event.target
 
 
 
