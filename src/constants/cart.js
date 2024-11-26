@@ -23,7 +23,7 @@ function subtractingToTotalQuantity() {
 
 export function addToCart(id, size) {
   const matchingItem = clothes.find((item) => item.id === id);
-  const priceCents = matchingItem.priceCents;
+  const { priceCents, image, name } = matchingItem;
 
   const existingItem = cart.find(
     (item) => item.id === id && item.size === size
@@ -36,6 +36,8 @@ export function addToCart(id, size) {
       size: size,
       quantity: 1,
       priceCents: priceCents,
+      image: image,
+      name: name,
     });
   }
   addingToTotalQuantity();

@@ -26,7 +26,7 @@ function CheckoutList() {
   };
 
   return (
-    <div className="max-container w-full min-h-screen bg-gray-100 flex flex-col items-center py-10 px-4">
+    <div className="max-container w-full min-h-screen bg-white flex flex-col items-center py-10 px-4">
       <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg p-8">
         {/* Header */}
         <h1 className="text-3xl font-bold text-gray-800 mb-6">Checkout</h1>

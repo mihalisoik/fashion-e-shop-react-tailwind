@@ -1,5 +1,5 @@
-import CheckoutList from "../sections/CheckoutList";
 import Navbar from "../sections/Navbar";
+import OrderSummary from "../sections/OrderSummary";
 
 function CheckoutPage({
   renderAddedTooltip,
@@ -15,7 +15,7 @@ function CheckoutPage({
         renderTotalQuantity={renderTotalQuantity}
       />
       <div className="px-20">
-        <CheckoutList />
+        <OrderSummary />
       </div>
     </div>
   );
