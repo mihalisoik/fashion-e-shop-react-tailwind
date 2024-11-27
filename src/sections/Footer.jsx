@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer className="bg-black">
-      <div className="max-container text-slate-50 py-10 max-sm:px-5 sm:px-10 flex flex-col lg:flex-row gap-4">
+      <div className="max-container text-slate-50 py-10 max-sm:px-5 sm:px-10 flex flex-col lg:flex-row gap-4 lg:h-72 h-fit">
         <div>
           logo here
           <p className="font-secondary italic lg:max-w-[50rem]">
@@ -11,22 +11,21 @@ function Footer() {
             latest updates, discounts, and more. Happy shopping!
           </p>
         </div>
-        <div className="flex flex-row justify-between max-lg:max-w-60 lg:ml-auto lg:flex-col lg:gap-5">
-          <img
-            src="src/assets/icons/facebook.svg"
-            alt="Facebook"
-            className="bg-white w-10 h-10 rounded-full p-1 cursor-pointer"
-          />
-          <img
-            src="src/assets/icons/instagram.svg"
-            alt="Instagram"
-            className="bg-white w-10 h-10 rounded-full p-1 cursor-pointer"
-          />
-          <img
-            src="src/assets/icons/twitter.svg"
-            alt="Twitter"
-            className="bg-white w-10 h-10 rounded-full p-1 cursor-pointer"
-          />
+        <div className="flex flex-row max-lg:max-w-60 lg:ml-auto lg:flex-col gap-5">
+          <a href="https://www.facebook.com/mike.oik" target="_blank">
+            <img
+              src="src/assets/icons/facebook.svg"
+              alt="Facebook"
+              className="bg-white w-10 h-10 rounded-full p-1 cursor-pointer"
+            />
+          </a>
+          <a href="https://www.instagram.com/mihalis_oik/" target="_blank">
+            <img
+              src="src/assets/icons/instagram.svg"
+              alt="Instagram"
+              className="bg-white w-10 h-10 rounded-full p-1 cursor-pointer"
+            />
+          </a>
         </div>
         <div className="text-3xl lg:px-10">
           Get in touch
@@ -34,7 +33,7 @@ function Footer() {
             mihalisoik@gmail.com
           </div>
           <div className="text-base mt-1 hover:text-gray-500 cursor-pointer">
-            +30 1234567891
+            +30 1234567890
           </div>
         </div>
       </div>

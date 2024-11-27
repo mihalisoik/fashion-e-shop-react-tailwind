@@ -15,47 +15,61 @@ function FavoriteProducts() {
     setFavoriteClothesArray(clothes.filter((item) => item.isFavorite));
   }
 
-  const favoriteItemElements = favoriteClothesArray.map((item) => {
-    return (
-      <div>
-        <div className="flex py-2 px-5 bg-white rounded-sm border border-black text-sm gap-3">
-          <Link to={`/item?id=${encodeURIComponent(item.id)}`} key={item.id}>
-            <img src={item.image} alt="Favorite Product" width={100} />
-          </Link>
-          <div className="flex items-center gap-3 text-gray-800">
-            <Link to={`/item?id=${encodeURIComponent(item.id)}`} key={item.id}>
-              <div className="flex flex-col gap-4 items-start w-28 md:w-32">
-                <p className="font-semibold text-left">{item.name}</p>
-                <p>
-                  <span className="text-[0.6rem]">€</span>
+  return (
+    <div
+      className={`bg-gray-50/80 rounded-xl shadow-lg p-6 w-80 md:w-96 mx-auto overflow-y-auto ${
+        favoriteClothesArray.length > 0 ? "h-96" : "h-fit"
+      }`}
+    >
+      <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
+        Your Favorite Products
+      </h2>
+      <div className="grid grid-cols-1 gap-6">
+        {favoriteClothesArray.length > 0 ? (
+          favoriteClothesArray.map((item) => (
+            <div
+              key={item.id}
+              className="relative bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-200"
+            >
+              <Link to={`/item?id=${encodeURIComponent(item.id)}`}>
+                <img
+                  src={item.image}
+                  alt={`Preview of ${item.name}`}
+                  className="h-60 object-cover w-full hover:scale-105 transition-transform duration-200"
+                />
+              </Link>
+              <div className="p-4">
+                <Link
+                  to={`/item?id=${encodeURIComponent(item.id)}`}
+                  className="text-lg font-semibold text-gray-800 hover:underline"
+                >
+                  {item.name}
+                </Link>
+                <p className="text-gray-600 mt-2">
+                  <span className="text-xs align-top">€</span>
                   {formatCurrency(item.priceCents)}
                 </p>
               </div>
-            </Link>
-            <button
-              className="p-1 border border-gray-800 rounded-sm hover:bg-gray-200 shadow-lg active:scale-95"
-              onClick={(event) => {
-                event.stopPropagation();
-                handleBucketClick(item);
-              }}
-            >
-              <img
-                src="src/assets/icons/bucket.svg"
-                alt="Remove From Favorites"
-              />
-            </button>
-          </div>
-        </div>
+              <button
+                className="absolute top-2 right-2 p-2 bg-red-500 text-white rounded-full hover:bg-red-600 transition duration-150"
+                onClick={() => {
+                  handleBucketClick(item);
+                }}
+              >
+                <img
+                  src="src/assets/icons/bucket.svg"
+                  alt=""
+                  className="w-4 h-4"
+                />
+              </button>
+            </div>
+          ))
+        ) : (
+          <p className="text-gray-600 text-center col-span-2">
+            No favorite items to display.
+          </p>
+        )}
       </div>
-    );
-  });
-
-  return (
-    <div className="bg-gray-200/90 rounded-md flex flex-col gap-3 max-h-96 overflow-y-auto p-4 w-80 md:w-96 shadow-2xl">
-      {favoriteItemElements}
-      {favoriteClothesArray.length === 0 && (
-        <p className="text-gray-800 text-xs">No Favorite Items</p>
-      )}
     </div>
   );
 }
