@@ -21,29 +21,31 @@ function ViewItem({
 
   const ratingElements = useMemo(() => {
     const elements = [];
+
     for (let i = 1; i <= 5; i++) {
-      if (i <= itemStars) {
-        if (itemStars - i > 0 && itemStars - i < 1) {
-          elements.push(
-            <span key={i}>
-              <img src="src/assets/icons/star-half.svg" alt="Half Star Icon" />
-            </span>
-          );
-        } else {
-          elements.push(
-            <span key={i}>
-              <img src="src/assets/icons/star.svg" alt="Star Icon" />
-            </span>
-          );
-        }
-      } else {
+      if (i <= Math.floor(itemStars)) {
         elements.push(
           <span key={i}>
-            <img src="src/assets/icons/star-empty.svg" alt="Empty Star Icon" />
+            <img src="src/assets/icons/star.svg" alt="Star Icon" />
           </span>
         );
       }
     }
+    if (itemStars - Math.floor(itemStars) > 0) {
+      elements.push(
+        <span key={itemStars - Math.floor(itemStars)}>
+          <img src="src/assets/icons/star-half.svg" alt="Half Star Icon" />
+        </span>
+      );
+    }
+    while (elements.length < 5) {
+      elements.push(
+        <span key={elements.length}>
+          <img src="src/assets/icons/star-empty.svg" alt="Empty Star Icon" />
+        </span>
+      );
+    }
+
     return elements;
   }, [itemStars]);
 
@@ -119,7 +121,7 @@ function ViewItem({
                 1
               )})`}</p>
               <p className="ml-2 text-sm font-secondary tracking-tight">
-                {chosenItem.rating.reviews} Reviews
+                {chosenItem.rating.reviews} reviews
               </p>
             </div>
             <div className="mt-10 flex w-64 lg:w-80 items-center font-secondary">
