@@ -78,23 +78,28 @@ function RelatedProducts({
   const randomArrayOfRelatedClothes =
     getThreeRandomClothes(relatedClothesArray);
 
-  const relatedProductsElements = randomArrayOfRelatedClothes.map((clothe) => {
-    return (
-      <ProductCard
-        key={clothe.id}
-        id={clothe.id}
-        image={clothe.image}
-        name={clothe.name}
-        rating={clothe.rating}
-        isFavorite={clothe.isFavorite}
-        priceCents={clothe.priceCents}
-        stock={clothe.stock}
-        setRenderTotalQuantity={setRenderTotalQuantity}
-        animatedAddedTooltip={animatedAddedTooltip}
-        animatedRemovedTooltip={animatedRemovedTooltip}
-      />
+  const relatedProductsElements =
+    randomArrayOfRelatedClothes.length > 0 ? (
+      randomArrayOfRelatedClothes.map((clothe) => {
+        return (
+          <ProductCard
+            key={clothe.id}
+            id={clothe.id}
+            image={clothe.image}
+            name={clothe.name}
+            rating={clothe.rating}
+            isFavorite={clothe.isFavorite}
+            priceCents={clothe.priceCents}
+            stock={clothe.stock}
+            setRenderTotalQuantity={setRenderTotalQuantity}
+            animatedAddedTooltip={animatedAddedTooltip}
+            animatedRemovedTooltip={animatedRemovedTooltip}
+          />
+        );
+      })
+    ) : (
+      <p>We currently do not have any items that fit this product.</p>
     );
-  });
 
   return (
     <div>

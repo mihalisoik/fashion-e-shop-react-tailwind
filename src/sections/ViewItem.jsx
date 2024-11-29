@@ -155,16 +155,16 @@ function ViewItem({
               <p className="text-gray-600 italic">{chosenItem.description}</p>
             </div>
           </div>
-          <div className="flex flex-col md:ml-16 lg:ml-0 w-48 lg:w-56 gap-5 justify-center">
+          <div className="flex flex-col md:ml-16 lg:ml-0 w-full gap-5 justify-center items-center">
             <button
-              className="main-button main-button-hover mt-7 whitespace-nowrap"
+              className="main-button main-button-hover w-48 lg:w-56 mt-7 whitespace-nowrap "
               onClick={handleAddToCart}
             >
               Add to Cart
             </button>
 
             <button
-              className="font-primary font-bold whitespace-nowrap bg-slate-100 py-4 px-10 rounded-full text-primary shadow-lg hover:bg-slate-50 hover:scale-105 hover:shadow-xl transition-transform transform"
+              className="w-48 lg:w-56 font-primary font-bold whitespace-nowrap bg-slate-100 py-4 px-10 rounded-full text-primary shadow-lg hover:bg-slate-50 hover:scale-105 hover:shadow-xl transition-transform transform"
               onClick={handleCheckoutNow}
             >
               Checkout Now
