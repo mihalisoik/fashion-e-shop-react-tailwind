@@ -8,48 +8,72 @@ function RelatedProducts({
   setRenderTotalQuantity,
 }) {
   function filterTheGender(clothe) {
-    return clothes.filter((item) => {
-      if (clothe.gender === "Men") {
-        return item.gender === "Men" || item.gender === "Unisex";
-      } else if (clothe.gender === "Women") {
-        return item.gender === "Women" || item.gender === "Unisex";
-      } else if (clothe.gender === "Unisex") {
-        return item.gender === "Unisex";
-      }
-      return false;
-    });
+    const array = [];
+    if (clothe.gender === "Men") {
+      clothes.forEach((item) => {
+        if (item.gender === "Men" || item.gender === "Unisex") {
+          array.push(item);
+        }
+      });
+    } else if (clothe.gender === "Women") {
+      clothes.forEach((item) => {
+        if (item.gender === "Women" || item.gender === "Unisex") {
+          array.push(item);
+        }
+      });
+    } else if (clothe.gender === "Unisex") {
+      clothes.forEach((item) => {
+        if (item.gender === "Unisex") {
+          array.push(item);
+        }
+      });
+    }
+
+    return array;
   }
 
   function filterTheFitsWith(clothe) {
-    return clothes.filter((item) => clothe.fitsWith.includes(item.category));
+    const array = [];
+    clothes.forEach((item) => {
+      if (clothe.fitsWith.includes(item.category)) {
+        array.push(item);
+      }
+    });
+    return array;
   }
 
   function filterTheColor(clothe) {
-    return clothes.filter((item) =>
-      item.matchesWithColors.includes(clothe.color)
-    );
+    const array = [];
+    clothes.forEach((item) => {
+      if (item.matchesWithColors.includes(clothe.color)) {
+        array.push(item);
+      }
+    });
+    return array;
   }
 
   function getThreeRandomClothes(array) {
-    const randomArray = [];
-    while (randomArray.length < 3 && array.length > 0) {
-      const randomIndex = Math.floor(Math.random() * array.length);
-      const selectedItem = array[randomIndex];
-      if (!randomArray.includes(selectedItem)) {
-        randomArray.push(selectedItem);
+    if (array.length <= 3) {
+      return array;
+    } else {
+      const randomArray = [];
+      while (randomArray.length < 3) {
+        const randomIndex = Math.floor(Math.random() * array.length);
+        if (!randomArray.includes(array[randomIndex])) {
+          randomArray.push(array[randomIndex]);
+        }
       }
+      return randomArray;
     }
-    return randomArray;
   }
 
   const selectedItem = clothes.find((item) => item.id === id);
 
-  const relatedClothesArray = filterTheGender(selectedItem).filter((item) => {
-    return (
-      filterTheFitsWith(selectedItem).includes(item) &&
-      filterTheColor(selectedItem).includes(item)
-    );
-  });
+  const relatedClothesArray = filterTheGender(selectedItem).filter((item) =>
+    [filterTheFitsWith(selectedItem), filterTheColor(selectedItem)].every(
+      (array) => array.includes(item)
+    )
+  );
 
   const randomArrayOfRelatedClothes =
     getThreeRandomClothes(relatedClothesArray);
