@@ -7,7 +7,7 @@ function PopularProducts({
   setRenderTotalQuantity,
   animatedRemovedTooltip,
 }) {
-  const popularClothes = clothes.filter((clothe) => clothe.rating.stars >= 4);
+  const popularClothes = clothes.filter((clothe) => clothe.rating.stars >= 4.6);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(1);
 

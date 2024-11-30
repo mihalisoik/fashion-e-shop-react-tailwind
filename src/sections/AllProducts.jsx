@@ -91,7 +91,7 @@ function AllProducts({
   const filtersOfUserElements = filters.map((filter) => (
     <div
       key={filter}
-      className="bg-primary px-5 py-1 rounded-full w-fit text-center whitespace-nowrap relative font-secondary text-slate-50"
+      className="bg-primary px-5 py-1 rounded-full w-fit text-center whitespace-nowrap relative font-secondary text-slate-50 shadow-lg cursor-pointer"
     >
       {filter}
       <button className="bg-slate-50 p-0.5 w-6 rounded-full shadow-md absolute -top-3 -right-2">
