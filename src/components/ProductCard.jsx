@@ -71,7 +71,7 @@ function ProductCard({
   }
 
   return (
-    <div className="bg-background p-6 font-secondary flex flex-col gap-1 justify-center items-start rounded-md shadow-lg flex-shrink-0 w-52 text-sm">
+    <div className="bg-background p-6 font-secondary flex flex-col gap-1 justify-center items-start rounded-md shadow-lg flex-shrink-0 w-56 text-sm">
       <button
         className="ml-auto bg-white p-1 rounded-full shadow-md"
         onClick={handleToggleFavorite}
@@ -83,7 +83,11 @@ function ProductCard({
         )}
       </button>
       <Link to={`/item?id=${encodeURIComponent(id)}`} key={id}>
-        <img src={image} alt={name} width={150} />
+        <img
+          src={image}
+          alt={name}
+          className="mt-2 mb-2 rounded-xl shadow-2xl"
+        />
       </Link>
       <div className="flex w-full font-secondary justify-between items-center">
         <div className="flex items-center gap-0.5">

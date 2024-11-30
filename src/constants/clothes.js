@@ -2,7 +2,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "A7d2bC9",
     name: "Classic T-Shirt",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/t-shirt.jpg",
     priceCents: 1999,
     gender: "Unisex",
     category: "T-shirts",
@@ -23,7 +23,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "1v8LpH4",
     name: "Denim Jacket",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/denim-jacket.jpg",
     priceCents: 4999,
     gender: "Men",
     category: "Jackets",
@@ -44,7 +44,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "vG7pFw3",
     name: "Chic Blouse",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/chic-blouse.jpg",
     priceCents: 2999,
     gender: "Women",
     category: "Blouses",
@@ -65,11 +65,11 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "Yt6pXb2",
     name: "Cargo Pants",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/cargo-pants.jpg",
     priceCents: 3999,
     gender: "Unisex",
     category: "Pants",
-    color: "Green",
+    color: "Olive",
     description:
       "Rugged and functional cargo pants made with durable materials, featuring multiple pockets for added utility. Available in green.",
     isFavorite: false,
@@ -86,7 +86,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "n9P3Wx1",
     name: "Running Sneakers",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/running-sneakers.jpg",
     priceCents: 10999,
     gender: "Men",
     category: "Shoes",
@@ -108,7 +108,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "d5zKtY2",
     name: "Leather Boots",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/leather-boots.jpg",
     priceCents: 8999,
     gender: "Women",
     category: "Shoes",
@@ -130,7 +130,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "8YbF2V9",
     name: "Casual Dress",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/casual-dress.jpg",
     priceCents: 5499,
     gender: "Women",
     category: "Dresses",
@@ -151,7 +151,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "J0m3QvP",
     name: "Sports Shorts",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/sports-shorts.jpg",
     priceCents: 2499,
     gender: "Unisex",
     category: "Shorts",
@@ -172,7 +172,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "k2CvJb7",
     name: "Wool Sweater",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/wool-sweater.jpg",
     priceCents: 5999,
     gender: "Men",
     category: "Sweaters",
@@ -193,7 +193,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "Z8w1Ad0",
     name: "Formal Shirt",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/formal-shirt.jpg",
     priceCents: 3999,
     gender: "Men",
     category: "Shirts",
@@ -214,7 +214,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "m7JvK0h",
     name: "Summer Sandals",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/summer-sandals.jpg",
     priceCents: 2999,
     gender: "Women",
     category: "Shoes",
@@ -224,7 +224,11 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
     isFavorite: false,
     rating: { stars: 2.8, reviews: 65 },
     stock: {
-      "One Size": 0,
+      32: 0,
+      34: 0,
+      36: 0,
+      38: 12,
+      40: 21,
     },
     fitsWith: ["Dresses", "Cover-ups"],
     matchesWithColors: ["White", "Black", "Blue"],
@@ -232,7 +236,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "R1h9Lg3",
     name: "Track Jacket",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/track-jacket.jpg",
     priceCents: 4499,
     gender: "Unisex",
     category: "Jackets",
@@ -253,7 +257,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "nV6wRz4",
     name: "Jeans",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/jeans.jpg",
     priceCents: 6999,
     gender: "Women",
     category: "Pants",
@@ -274,7 +278,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "d1WqZ8F",
     name: "Jumper",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/jumper.jpg",
     priceCents: 7999,
     gender: "Unisex",
     category: "Sweaters",
@@ -295,9 +299,9 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "D7pVw1f",
     name: "Varsity Jacket",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/varsity-jacket.jpg",
     priceCents: 7999,
-    gender: "Unisex",
+    gender: "Female",
     category: "Jackets",
     color: "Grey",
     description:
@@ -316,7 +320,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "F3cH9p1",
     name: "Plaid Shirt",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/plaid-shirt.jpg",
     priceCents: 3599,
     gender: "Men",
     category: "Shirts",
@@ -337,7 +341,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "A2xV6j0",
     name: "Denim Skirt",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/denim-skirt.jpg",
     priceCents: 2999,
     gender: "Women",
     category: "Skirts",
@@ -358,7 +362,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "Q8oM2i7",
     name: "Leather Jacket",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/leather-jacket.jpg",
     priceCents: 8999,
     gender: "Unisex",
     category: "Jackets",
@@ -379,7 +383,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "B1tX8y6",
     name: "Chino Pants",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/chino-pants.jpg",
     priceCents: 3999,
     gender: "Men",
     category: "Pants",
@@ -400,9 +404,9 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "T3wO7fP",
     name: "Puffer Vest",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/puffer-vest.jpg",
     priceCents: 6999,
-    gender: "Unisex",
+    gender: "Men",
     category: "Jackets",
     color: "Red",
     description:
@@ -421,7 +425,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "L2wX9V6",
     name: "Striped Polo Shirt",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/striped-polo-shirt.jpg",
     priceCents: 3499,
     gender: "Men",
     category: "Shirts",
@@ -442,7 +446,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "N7vY0W5",
     name: "Pleated Skirt",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/pleated-skirt.jpg",
     priceCents: 2499,
     gender: "Women",
     category: "Skirts",
@@ -463,7 +467,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "P3xV7M8",
     name: "Linen Pants",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/linen-pants.jpg",
     priceCents: 4599,
     gender: "Women",
     category: "Pants",
@@ -484,9 +488,9 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "J2xP9V7",
     name: "Hiking Boots",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/hiking-boots.jpg",
     priceCents: 10999,
-    gender: "Unisex",
+    gender: "Men",
     category: "Shoes",
     color: "Brown",
     description:
@@ -506,7 +510,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "V5nX7L4",
     name: "Cropped Hoodie",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/cropped-hoodie.jpg",
     priceCents: 5999,
     gender: "Women",
     category: "Hoodies",
@@ -527,9 +531,9 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "F8xW2L7",
     name: "Knitted Cardigan",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/knitted-cardigan.jpg",
     priceCents: 7999,
-    gender: "Unisex",
+    gender: "Women",
     category: "Sweaters",
     color: "Green",
     description:
@@ -548,7 +552,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "T9nV8R2",
     name: "Oversized T-shirt",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/oversized-t-shirt.jpg",
     priceCents: 2499,
     gender: "Unisex",
     category: "T-shirts",
@@ -569,7 +573,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "M5xV2W4",
     name: "High-Waist Shorts",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/high-waist-shorts.jpg",
     priceCents: 3199,
     gender: "Women",
     category: "Shorts",
@@ -590,7 +594,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "C9xT1Y6",
     name: "Bomber Jacket",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/bomber-jacket.jpg",
     priceCents: 6999,
     gender: "Unisex",
     category: "Jackets",
@@ -611,7 +615,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "A7xV4L1",
     name: "Cotton Dress",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/cotton-dress.jpg",
     priceCents: 4999,
     gender: "Women",
     category: "Dresses",
@@ -632,7 +636,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "X1yT9L8",
     name: "Casual Hoodie",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/casual-hoodie.jpg",
     priceCents: 4599,
     gender: "Unisex",
     category: "Hoodies",
@@ -653,7 +657,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "W2bM6Y3",
     name: "Workout Leggings",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/workout-leggings.jpg",
     priceCents: 3499,
     gender: "Women",
     category: "Pants",
@@ -674,9 +678,9 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "R3cX9K5",
     name: "Graphic Tee",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/graphic-tee.jpg",
     priceCents: 1999,
-    gender: "Unisex",
+    gender: "Men",
     category: "T-shirts",
     color: "Yellow",
     description:
@@ -695,7 +699,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "V4dL7N2",
     name: "Floral Maxi Dress",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/floral-maxi-dress.jpg",
     priceCents: 7599,
     gender: "Women",
     category: "Dresses",
@@ -716,7 +720,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "T5xL1W8",
     name: "Winter Scarf",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/winter-scarf.jpg",
     priceCents: 2499,
     gender: "Unisex",
     category: "Accessories",
@@ -734,9 +738,9 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "A2xN8L3",
     name: "Printed Joggers",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/printed-joggers.jpg",
     priceCents: 3999,
-    gender: "Unisex",
+    gender: "Men",
     category: "Pants",
     color: "Navy",
     description:
@@ -755,7 +759,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
   {
     id: "M5yT7X9",
     name: "Raincoat",
-    image: "src/assets/logo.png",
+    image: "src/assets/images/raincoat.jpg",
     priceCents: 5299,
     gender: "Unisex",
     category: "Jackets",
