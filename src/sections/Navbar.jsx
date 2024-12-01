@@ -33,7 +33,7 @@ function Navbar({
         <div className="flex items-center justify-between">
           <a href="/" className="flex items-center">
             <img
-              src="src/assets/logo.png"
+              src="/logo.png"
               alt="Company Logo"
               width={60}
               className="cursor-pointer mr-auto"
