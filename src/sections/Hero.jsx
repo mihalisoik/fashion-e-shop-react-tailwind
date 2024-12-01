@@ -9,12 +9,11 @@ function Hero() {
             <span className="text-primary">Elevate</span> Your Everyday Style!
           </h1>
           <p className="font-secondary w-96 sm:w-full md:w-[40rem] leading-5 tracking-widest text-slate-700 bg-background p-4 rounded-xl">
-            stgstgsetstgiDiscover a collection curated for trendsetters and
-            timeless fashion lovers alike. From statement pieces to everyday
-            essentials, our e-shop brings you quality, comfort, and style all in
-            one place. With new arrivals every week, you’re bound to find
-            something that fits just right. Step up your wardrobe and shop the
-            looks you’ll love!
+            Discover a collection curated for trendsetters and timeless fashion
+            lovers alike. From statement pieces to everyday essentials, our
+            e-shop brings you quality, comfort, and style all in one place. With
+            new arrivals every week, you’re bound to find something that fits
+            just right. Step up your wardrobe and shop the looks you’ll love!
           </p>
           <Link to="/products">
             <button className="main-button main-button-hover flex gap-3 pr-6">
