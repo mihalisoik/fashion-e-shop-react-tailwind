@@ -96,7 +96,7 @@ function AllProducts({
       {filter}
       <button className="bg-slate-50 p-0.5 w-6 rounded-full shadow-md absolute -top-3 -right-2">
         <img
-          src="src/assets/icons/cancel-icon.svg"
+          src="/icons/cancel-icon.svg"
           alt="Remove Filter"
           onClick={(event) => {
             const button = event.target.parentElement;
@@ -117,7 +117,7 @@ function AllProducts({
               setRenderFilterSection((oldValue) => !oldValue);
             }}
           >
-            <img src="src/assets/icons/open-filter.svg" alt="Open Filter" />
+            <img src="/icons/open-filter.svg" alt="Open Filter" />
           </button>
         </div>
       </div>

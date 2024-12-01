@@ -27,13 +27,13 @@ function Navbar({
               document.body.style.overflow = "hidden";
             }}
           >
-            <img src="src/assets/icons/menu.svg" alt="Open Menu" />
+            <img src="/icons/menu.svg" alt="Open Menu" />
           </button>
         )}
         <div className="flex items-center justify-between">
           <a href="/" className="flex items-center">
             <img
-              src="/logo.png"
+              src="/icons/logo.png"
               alt="Company Logo"
               width={60}
               className="cursor-pointer mr-auto"
@@ -47,7 +47,7 @@ function Navbar({
               }}
             >
               <img
-                src="src/assets/icons/show-favorite.svg"
+                src="/icons/show-favorite.svg"
                 alt="Show Favorites"
                 width={30}
               />
@@ -76,7 +76,7 @@ function Navbar({
               )}
               <Link to="/checkout">
                 <div className="flex justify-center items-center gap-1">
-                  <img src="src/assets/icons/cart.svg" alt="Shopping Bag" />
+                  <img src="/icons/cart.svg" alt="Shopping Bag" />
                   <p className="text-slate-50 font-primary text-sm">
                     Shopping Cart ({renderTotalQuantity})
                   </p>

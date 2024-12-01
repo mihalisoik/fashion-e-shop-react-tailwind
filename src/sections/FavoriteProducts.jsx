@@ -56,11 +56,7 @@ function FavoriteProducts() {
                   handleBucketClick(item);
                 }}
               >
-                <img
-                  src="src/assets/icons/bucket.svg"
-                  alt=""
-                  className="w-4 h-4"
-                />
+                <img src="/icons/bucket.svg" alt="" className="w-4 h-4" />
               </button>
             </div>
           ))

@@ -3,7 +3,7 @@ function ReviewCard({ comment, name }) {
     <div className="shadow-xl flex flex-col justify-center items-center text-slate-50 py-5 px-10 w-50 gap-2 lg:flex-row">
       <div>
         <img
-          src="src/assets/icons/profile-pic.svg"
+          src="/icons/profile-pic.svg"
           alt="Profile Picture"
           className="w-32"
         />

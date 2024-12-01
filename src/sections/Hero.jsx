@@ -18,10 +18,7 @@ function Hero() {
           <Link to="/products">
             <button className="main-button main-button-hover flex gap-3 pr-6">
               <p>Shop Now</p>
-              <img
-                src="src/assets/icons/arrow-forward.svg"
-                alt="Go to Shopping"
-              />
+              <img src="/icons/arrow-forward.svg" alt="Go to Shopping" />
             </button>
           </Link>
         </div>

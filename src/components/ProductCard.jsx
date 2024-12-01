@@ -17,6 +17,7 @@ function ProductCard({
   animatedAddedTooltip,
   animatedRemovedTooltip,
 }) {
+  console.log(image);
   const [productQuantity, setProductQuantity] = useState(0);
   const [favorited, setFavorited] = useState(isFavorite);
   const [selectedSize, setSelectedSize] = useState(Object.keys(stock)[0]);
@@ -77,9 +78,9 @@ function ProductCard({
         onClick={handleToggleFavorite}
       >
         {favorited ? (
-          <img src="src/assets/icons/favorite.svg" alt="Favorite" />
+          <img src="/icons/favorite.svg" alt="Favorite" />
         ) : (
-          <img src="src/assets/icons/non-favorite.svg" alt="Not Favorite" />
+          <img src="/icons/non-favorite.svg" alt="Not Favorite" />
         )}
       </button>
       <Link to={`/item?id=${encodeURIComponent(id)}`} key={id}>
@@ -92,9 +93,9 @@ function ProductCard({
       <div className="flex w-full font-secondary justify-between items-center">
         <div className="flex items-center gap-0.5">
           {(rating.stars * 10) % 10 === 0 ? (
-            <img src="src/assets/icons/star.svg" alt="Star Rating" />
+            <img src="/icons/star.svg" alt="Star Rating" />
           ) : (
-            <img src="src/assets/icons/star-half.svg" alt="Half Star Rating" />
+            <img src="/icons/star-half.svg" alt="Half Star Rating" />
           )}
           <p>{rating.stars.toFixed(1)}</p>
         </div>
@@ -126,7 +127,7 @@ function ProductCard({
                 onClick={handleAddToCart}
               >
                 <p>Add To Cart</p>
-                <img src="src/assets/icons/add-to-cart.svg" alt="Add to Cart" />
+                <img src="/icons/add-to-cart.svg" alt="Add to Cart" />
               </div>
             ) : (
               <div
@@ -145,14 +146,14 @@ function ProductCard({
               className="border border-[#666666] rounded-full hover:bg-slate-100 active:scale-95"
               onClick={handleDecrement}
             >
-              <img src="src/assets/icons/minus.svg" alt="Decrease Cart" />
+              <img src="/icons/minus.svg" alt="Decrease Cart" />
             </button>
             {productQuantity}
             <button
               className="border border-[#666666] rounded-full hover:bg-slate-100 active:scale-95"
               onClick={handleAddToCart}
             >
-              <img src="src/assets/icons/plus.svg" alt="Add To Cart" />
+              <img src="/icons/plus.svg" alt="Add To Cart" />
             </button>
           </div>
         )}

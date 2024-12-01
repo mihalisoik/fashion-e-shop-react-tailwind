@@ -37,13 +37,13 @@ function PopularProducts({
     function updateItemsPerPage() {
       const width = window.innerWidth;
 
-      if (width < 550) {
+      if (width < 600) {
         setItemsPerPage(1);
-      } else if (width < 800) {
+      } else if (width < 850) {
         setItemsPerPage(2);
-      } else if (width < 1050) {
-        setItemsPerPage(3);
       } else if (width < 1250) {
+        setItemsPerPage(3);
+      } else if (width < 1400) {
         setItemsPerPage(4);
       } else {
         setItemsPerPage(5);
@@ -84,8 +84,8 @@ function PopularProducts({
               key={index}
               src={
                 index + 1 === currentPage
-                  ? "src/assets/icons/dot-filled.svg"
-                  : "src/assets/icons/dot-empty.svg"
+                  ? "/icons/dot-filled.svg"
+                  : "/icons/dot-empty.svg"
               }
               alt={`Page ${index + 1}`}
               className={`cursor-pointer w-4 h-4 ${

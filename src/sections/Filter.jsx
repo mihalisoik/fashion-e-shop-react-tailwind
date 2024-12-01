@@ -33,7 +33,7 @@ function Filter({
     >
       <button className="flex text-xs text-textcolor ml-auto mr-2 items-center bg-gray-200 w-fit shadow-lg px-1 py-1 rounded-full -mt-5 mb-5 md:hidden hover:scale-105 hover:shadow-2xl">
         <img
-          src="src/assets/icons/grey-cancel-icon.svg"
+          src="/icons/grey-cancel-icon.svg"
           alt="Close Filters"
           width={22}
           onClick={() => {

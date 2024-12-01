@@ -28,7 +28,7 @@ function OrderSummary({
       {cart.length === 0 ? (
         <div className="flex flex-col items-center justify-center mt-20 font-secondary">
           <img
-            src="src/assets/icons/empty-cart.svg"
+            src="/icons/empty-cart.svg"
             alt="Empty Cart"
             className="w-64 mb-6"
           />

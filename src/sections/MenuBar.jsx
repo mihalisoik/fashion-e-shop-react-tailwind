@@ -15,7 +15,7 @@ function MenuBar({ setOpenMenu }) {
           document.body.style.overflow = "auto";
         }}
       >
-        <img src="src/assets/icons/grey-cancel-icon.svg" alt="Close Menu" />
+        <img src="/icons/grey-cancel-icon.svg" alt="Close Menu" />
       </button>
       <div className="mt-12">
         <ul>
@@ -26,7 +26,7 @@ function MenuBar({ setOpenMenu }) {
             Men
             <button>
               <img
-                src="src/assets/icons/arrow-expand.svg"
+                src="/icons/arrow-expand.svg"
                 alt="Expand Subcategories"
                 className={
                   renderMaleCategories &&
@@ -49,7 +49,7 @@ function MenuBar({ setOpenMenu }) {
             Women
             <button>
               <img
-                src="src/assets/icons/arrow-expand.svg"
+                src="/icons/arrow-expand.svg"
                 alt="Expand Subcategories"
                 className={
                   renderFemaleCategories &&
@@ -72,7 +72,7 @@ function MenuBar({ setOpenMenu }) {
             Unisex
             <button>
               <img
-                src="src/assets/icons/arrow-expand.svg"
+                src="/icons/arrow-expand.svg"
                 alt="Expand Subcategories"
                 className={
                   renderUnisexCategories &&

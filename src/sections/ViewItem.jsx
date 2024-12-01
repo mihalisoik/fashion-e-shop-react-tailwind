@@ -26,7 +26,7 @@ function ViewItem({
       if (i <= Math.floor(itemStars)) {
         elements.push(
           <span key={i}>
-            <img src="src/assets/icons/star.svg" alt="Star Icon" />
+            <img src="/icons/star.svg" alt="Star Icon" />
           </span>
         );
       }
@@ -34,14 +34,14 @@ function ViewItem({
     if (itemStars - Math.floor(itemStars) > 0) {
       elements.push(
         <span key={itemStars - Math.floor(itemStars)}>
-          <img src="src/assets/icons/star-half.svg" alt="Half Star Icon" />
+          <img src="/icons/star-half.svg" alt="Half Star Icon" />
         </span>
       );
     }
     while (elements.length < 5) {
       elements.push(
         <span key={elements.length}>
-          <img src="src/assets/icons/star-empty.svg" alt="Empty Star Icon" />
+          <img src="/icons/star-empty.svg" alt="Empty Star Icon" />
         </span>
       );
     }
