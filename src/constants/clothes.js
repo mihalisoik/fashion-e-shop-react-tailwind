@@ -492,7 +492,7 @@ export let clothes = JSON.parse(localStorage.getItem("clothes")) || [
     priceCents: 10999,
     gender: "Men",
     category: "Shoes",
-    color: "Brown",
+    color: "Olive",
     description:
       "Durable and weather-resistant hiking boots designed for outdoor adventures. Provides excellent traction.",
     isFavorite: false,

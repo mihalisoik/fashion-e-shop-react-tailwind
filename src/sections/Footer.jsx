@@ -3,7 +3,7 @@ function Footer() {
     <footer className="bg-black">
       <div className="max-container text-slate-50 py-10 max-sm:px-5 sm:px-10 flex flex-col lg:flex-row gap-4 lg:h-72 h-fit">
         <div>
-          logo here
+          <img src="src/assets/logo.png" alt="" width={100} />
           <p className="font-secondary italic lg:max-w-[50rem]">
             Thank you for shopping with us! We’re committed to quality products,
             fast shipping, and excellent customer service. Need assistance? Our
